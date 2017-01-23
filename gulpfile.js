@@ -31,10 +31,3 @@ gulp.task( 'sass', function( done ) {
 gulp.task( 'watch', function() {
 	gulp.watch( paths.sass, [ 'sass' ] );
 } );
-
-gulp.task( 'install', [ 'git-check' ], function() {
-	return bower.commands.install()
-		.on( 'log', function( data ) {
-			gutil.log( 'bower', gutil.colors.cyan( data.id ), data.message );
-		} );
-} );
