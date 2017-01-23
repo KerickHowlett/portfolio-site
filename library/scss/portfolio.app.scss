@@ -18,9 +18,6 @@ $silver:       #EBEBEB !default;
 $slate-gray:   #838285 !default;
 $blackboard:   #363636 !default;
 
-/* The path to the Portfolio Site's Roboto Font Files. */
-$roboto-font-path: '../fonts/Roboto' !default;
-
 /* List of all Child SCSS files to import into master Style Sheet. */
 @import 'about';
 @import 'connect';
