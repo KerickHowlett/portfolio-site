@@ -14,7 +14,7 @@
 
 ( function() {
 
-	'use strict'; /* Establish "Strict Mode". */
+	'use strict'; // Establish "Strict Mode".
 
 	/* Dependencies. */
 	const gulp = require( 'gulp' );
