@@ -51,7 +51,7 @@
 	/* Compiling JavaScript to produce primary uglified JavaScript file. */
 	gulp.task( 'script', function( done ) {
 		gulp.src( './library/js/**/*' )
-			.pipe( concat( 'script.js' ) )
+			.pipe( concat( 'script.min.js' ) )
 			.pipe( uglify() )
 			.pipe( gulp.dest( './library/dist/' ) )
 		.on( 'end', done );
