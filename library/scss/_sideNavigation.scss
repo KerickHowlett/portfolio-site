@@ -22,6 +22,16 @@
 		width: 100%;
 		ul {
 			list-style-type: none;
+			.social_media_links {
+				a {
+					display: inline-block;
+					.github-logo,
+					.linkedin-logo {
+						height: auto;
+						width: 10%;
+					}
+				}
+			}
 		}
 	}
 }
