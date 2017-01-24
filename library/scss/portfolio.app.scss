@@ -7,14 +7,17 @@
 
 /* Default Color Variables */
 
-$white:        #FFFFFF !default;
 $black:        #000000 !default;
-$gray:         #CCCCCC !default;
 $blue:		   #70a3f4 !default;
+$gray:         #CCCCCC !default;
+$white:        #FFFFFF !default;
 
-/* List of all Child SCSS files to import into master Style Sheet. */
+
+/* Establishing Typography & Mixins Variables */
 @import 'typography';
 @import 'mixins';
+
+/* List of all Child SCSS files to import into master Style Sheet. */
 @import 'about';
 @import 'blog';
 @import 'connect';

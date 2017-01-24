@@ -5,17 +5,16 @@
  * @author Kerick Howlett
  **/
 
+* {
+	font: 100% $roboto;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
 	font: 100% $roboto_thin;
-}
-
-p,
-span {
-	font: 100% $roboto;
 }
 
 a,
