@@ -1,0 +1,16 @@
+/**
+ * This SCSS file is to establish the styling rules for the side navigation menu.
+ *
+ * @author Kerick Howlett
+ **/
+
+.sidenav {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 20%;
+	background: $blue;
+	transform:  skewX( -5deg ) translateX( -50px );
+	// transition: 2s all ease-in-out;
+	// -webkit-transition: 2s all ease-in-out;
+}

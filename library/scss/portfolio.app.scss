@@ -10,22 +10,17 @@
 $white:        #FFFFFF !default;
 $black:        #000000 !default;
 $gray:         #CCCCCC !default;
-$pale-blue:    #00A8E1 !default;
-$spring-green: #20C4BE !default;
-$lime-green:   #E4FbA5 !default;
-$cucumber:     #8FBE34 !default;
-$silver:       #EBEBEB !default;
-$slate-gray:   #838285 !default;
-$blackboard:   #363636 !default;
+$blue:		   #70a3f4 !default;
 
 /* List of all Child SCSS files to import into master Style Sheet. */
+@import 'typography';
+@import 'mixins';
 @import 'about';
 @import 'blog';
 @import 'connect';
+@import 'general';
 @import 'homepage';
-@import 'mixins';
 @import 'pageTransition';
 @import 'projects';
 @import 'sideNavigation';
 @import 'titleAnimation';
-@import 'typography';
