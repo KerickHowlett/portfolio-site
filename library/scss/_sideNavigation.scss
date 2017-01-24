@@ -24,11 +24,18 @@
 			list-style-type: none;
 			.social_media_links {
 				a {
-					display: inline-block;
 					.github-logo,
 					.linkedin-logo {
-						height: auto;
-						width: 10%;
+						svg {
+							display: inline-block;
+							height: 32px;
+							vertical-align: middle;
+							width: 32px;
+							path {
+								fill: $white;
+								stroke: $white;
+							}
+						}
 					}
 				}
 			}
