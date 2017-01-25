@@ -31,11 +31,30 @@
 		text-align: left;
 		width: 100%;
 		li {
-			display: inline-block;
+			display: table;
 			font: 100% $roboto_medium;
 			font-size: 2.5em;
-			padding: .1em 0em;
+			padding: 0.1em 0em;
 			width: auto;
+			&:hover {
+				a {
+					color: $lime-green;
+					font-size: 1.2em;
+					margin-left: 0.5em;
+					span {
+						svg {
+							path {
+								fill: $lime-green;
+								stroke: $lime-green;
+							}
+						}
+					}
+				}
+			}
+			a {
+				transition: 0.2s all ease-in-out;
+				-webkit-transition: 0.2s all ease-in-out;
+			}
 		}
 	}
 }
@@ -48,7 +67,7 @@
 			display: inline-block;
 			vertical-align: middle;
 			&:nth-child(1) {
-				margin-left: -.2em;
+				margin-left: -0.2em;
 				width: 28%;
 			}
 			&:nth-child(2) {
@@ -69,5 +88,12 @@
 			fill: $white;
 			stroke: $white;
 		}
+	}
+}
+
+.unselected_link a {
+	font-size: .8em;
+	span {
+		width: 27% !important;
 	}
 }
