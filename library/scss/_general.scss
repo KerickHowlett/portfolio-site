@@ -5,10 +5,6 @@
  * @author Kerick Howlett
  **/
 
-* {
-	font: 100% $roboto;
-}
-
 h1,
 h2,
 h3,
@@ -20,4 +16,6 @@ h5 {
 a,
 .button {
 	font: 100% $roboto_medium;
+	text-decoration: none;
+	color: $white;
 }
