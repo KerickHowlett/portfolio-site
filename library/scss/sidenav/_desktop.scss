@@ -1,49 +1,61 @@
 /**
  * This SCSS file is to establish the styling rules for the side navigation menu.
+ * Desktop.
  *
  * @author Kerick Howlett
  **/
 
 .sidenav {
 	background: $blue;
+	-webkit-box-shadow: 9px 5px 14px 1px rgba( 0, 0, 0, 0.42 );
+	-moz-box-shadow: 9px 5px 14px 1px rgba( 0, 0, 0, 0.42 );
+	box-shadow: 9px 5px 14px 1px rgba( 0, 0, 0, 0.42 );
 	color: $white;
 	display: block;
 	height: 100%;
+	min-width: 18em;
 	position: absolute;
 	top: 0;
 	transform:  skewX( -5deg ) translateX( -50px );
-	// transition: 2s all ease-in-out;
-	// -webkit-transition: 2s all ease-in-out;
-	width: 22%;
+	width: 18%;
+}
+
+.menu-icon {
+	display: none;
 }
 
 .nav_links {
 	display: block;
 	height: auto;
-	margin: 20% auto auto 10%;
+	margin-top: 20%;
 	transform:  skewX( 5deg ) translateX( 50px );
-	width: 50%;
 	ul {
 		box-sizing: border-box;
 		display: inline-block;
 		list-style: none;
 		padding: 0;
 		text-align: left;
-		width: 100%;
 		li {
 			display: table;
 			font: 100% $roboto_medium;
 			font-size: 2.5em;
 			padding: 0.1em 0em;
-			width: auto;
 			&:hover {
 				a {
 					color: $lime-green;
-					font-size: 1.2em;
+					@media screen and ( min-width: 1821px ) {
+						font-size: 1.2em;
+					}
+					@media screen and ( min-width: 1613px ) {
+						font-size: 1em;
+					}
 					margin-left: 0.5em;
 					span {
 						&:nth-child(1) {
-							width: 32%;
+							width: 37%;
+							@media screen and ( min-width: 1613px ) {
+								font-size: 41%;
+							}
 						}
 						svg {
 							path {
@@ -55,11 +67,17 @@
 				}
 			}
 			a {
-				transition: 0.2s all ease-in-out;
 				-webkit-transition: 0.2s all ease-in-out;
+				-moz-transition: 0.2s all ease-in-out;
+				-o-transition: 0.2s all ease-in-out;
+				transition: 0.2s all ease-in-out;
 			}
 		}
 	}
+}
+
+.linkedin_link:hover a {
+	margin-left: 0.1em !important;
 }
 
 .github_link,
@@ -71,7 +89,7 @@
 			vertical-align: middle;
 			&:nth-child(1) {
 				margin-left: -0.2em;
-				width: 28%;
+				width: 36%;
 			}
 			&:nth-child(2) {
 				padding-top: 5px;
@@ -86,7 +104,6 @@
 		display: inline-block;
 		height: auto;
 		vertical-align: middle;
-		width: 100%;
 		path {
 			fill: $white;
 			stroke: $white;
@@ -97,6 +114,6 @@
 .unselected_link a {
 	font-size: .8em;
 	span {
-		width: 27% !important;
+		width: 35% !important;
 	}
 }

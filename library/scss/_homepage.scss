@@ -1,9 +1,13 @@
 /**
- * This SCSS file is to establish the styling rules for the Home Page.
+ * This SCSS file is to import the proper homepage style sheet for based on
+ * screen size via Media Queries.
  *
  * @author Kerick Howlett
  **/
-.home_page {
-	background: url( '/library/images/bw-header.jpg' ) center center no-repeat fixed;
-	background-size: cover;
+
+@media screen and ( min-width: 768px ) {
+	@import 'homepage/desktop';
+}
+@media screen and ( max-width: 767px ) {
+	@import 'homepage/mobile';
 }

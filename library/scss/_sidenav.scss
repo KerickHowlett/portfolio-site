@@ -1,0 +1,13 @@
+/**
+ * This SCSS file is to import the proper side navigation menu style sheet for
+ * based on screen size via Media Queries.
+ *
+ * @author Kerick Howlett
+ **/
+
+@media screen and ( min-width: 768px ) {
+	@import 'sidenav/desktop';
+}
+@media screen and ( max-width: 767px ) {
+	@import 'sidenav/mobile';
+}
