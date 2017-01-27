@@ -104,6 +104,17 @@
 						}
 					}
 				}
+				&:active {
+					color: $lime-green;
+					span {
+						svg {
+							path {
+								fill: $lime-green;
+								stroke: $lime-green;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
