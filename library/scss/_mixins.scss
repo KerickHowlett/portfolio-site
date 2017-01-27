@@ -1,0 +1,20 @@
+/**
+ * This SCSS file is to establish the Mixin functions that will be used with the
+ * various SCSS files utilized for this Portfolio Site.
+ *
+ * @author Kerick Howlett
+ **/
+
+@mixin transform( $transform ) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
+}
+
+@mixin transition( $transition ) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}

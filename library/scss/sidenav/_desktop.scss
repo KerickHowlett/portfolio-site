@@ -16,7 +16,7 @@
 	min-width: 18em;
 	position: absolute;
 	top: 0;
-	transform:  skewX( -5deg ) translateX( -50px );
+	@include transform( skewX( -5deg ) translateX( -50px ) );
 	width: 18%;
 }
 
@@ -28,7 +28,7 @@
 	display: block;
 	height: auto;
 	margin-top: 20%;
-	transform:  skewX( 5deg ) translateX( 50px );
+	@include transform( skewX( 5deg ) translateX( 50px ) );
 	ul {
 		box-sizing: border-box;
 		display: inline-block;
@@ -67,10 +67,7 @@
 				}
 			}
 			a {
-				-webkit-transition: 0.2s all ease-in-out;
-				-moz-transition: 0.2s all ease-in-out;
-				-o-transition: 0.2s all ease-in-out;
-				transition: 0.2s all ease-in-out;
+				@include transition( 0.2s all ease-in-out );
 			}
 		}
 	}
