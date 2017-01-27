@@ -6,14 +6,11 @@
 .home_page {
 	background: url( '/library/images/bw-header.jpg' ) center center no-repeat fixed;
 	background-size: cover;
-}
-
-.wrapper {
-	display: block;
-	padding: 1em;
+	.inner-scroll {
+		overflow-y: hidden;
+	}
 }
 
 .cta {
-	display: block;
-	padding: 1em;
+
 }
