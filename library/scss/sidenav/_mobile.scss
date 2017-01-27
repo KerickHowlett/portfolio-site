@@ -71,8 +71,11 @@
 
 .nav_links {
 	background: rgba( 112, 163, 244, 0.8 );
-	display: none;
-	@include transition( all .25s ease );
+	display: table;
+	@include transform( translate( 0, -20em ) );
+	@include transition( all 0.2s ease-out );
+	opacity: 0;
+	visibility: hidden;
 	width: 100%;
 	ul {
 		box-sizing: border-box;
@@ -107,5 +110,7 @@
 }
 
 .show_links {
-	display: table;
+	opacity: 1;
+	@include transform( translate( 0, 0 ) );
+	visibility: visible;
 }
