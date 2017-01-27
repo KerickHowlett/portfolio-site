@@ -5,9 +5,9 @@
  * @author Kerick Howlett
  **/
 
-@media screen and ( min-width: 768px ) {
+@media screen and ( min-width: 1025px ) {
 	@import 'sidenav/desktop';
 }
-@media screen and ( max-width: 767px ) {
-	@import 'sidenav/mobile';
+@media screen and ( max-width: 1024px ) {
+	@import 'sidenav/tablet';
 }

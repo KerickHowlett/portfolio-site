@@ -124,3 +124,50 @@
 		width: 35% !important;
 	}
 }
+
+.page-content {
+	display: block;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 81%;
+	@media screen and ( max-width: 1600px ) {
+		width: 80.5%;
+	}
+	@media screen and ( max-width: 1550px ) {
+		width: 79%;
+	}
+	@media screen and ( max-width: 1465px ) {
+		width: 77.5%;
+	}
+	@media screen and ( max-width: 1335px ) {
+		width: 76.5%;
+	}
+	@media screen and ( max-width: 1275px ) {
+		width: 75.5%;
+	}
+	@media screen and ( max-width: 1220px ) {
+		width: 74.5%;
+	}
+	@media screen and ( max-width: 1140px ) {
+		width: 73.5%;
+	}
+	@media screen and ( max-width: 1105px ) {
+		width: 72.5%;
+	}
+	@media screen and ( max-width: 1085px ) {
+		width: 71.5%;
+	}
+	@media screen and ( min-width: 1025px ) and ( max-width: 1080px ) {
+		width: 70%;
+	}
+}
+
+.inner-scroll {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	position: relative;
+	width: 100%;
+}
