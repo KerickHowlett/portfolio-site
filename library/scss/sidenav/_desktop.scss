@@ -7,15 +7,11 @@
 
 .sidenav {
 	background: $blue;
-	-webkit-box-shadow: 9px 5px 14px 1px rgba( 0, 0, 0, 0.42 );
-	-moz-box-shadow: 9px 5px 14px 1px rgba( 0, 0, 0, 0.42 );
-	box-shadow: 9px 5px 14px 1px rgba( 0, 0, 0, 0.42 );
+	@include box-shadow( 9px 5px 14px 1px rgba( 0, 0, 0, 0.42 ) );
 	color: $white;
-	display: block;
+	display: inline-table;
 	height: 100%;
 	min-width: 18em;
-	position: absolute;
-	top: 0;
 	@include transform( skewX( -5deg ) translateX( -50px ) );
 	width: 18%;
 }
@@ -43,11 +39,9 @@
 			&:hover {
 				a {
 					color: $lime-green;
+					font-size: 1em;
 					@media screen and ( min-width: 1821px ) {
 						font-size: 1.2em;
-					}
-					@media screen and ( min-width: 1613px ) {
-						font-size: 1em;
 					}
 					margin-left: 0.5em;
 					span {
@@ -126,50 +120,16 @@
 }
 
 .page-content {
-	display: block;
+	display: inline-table;
 	height: 100%;
-	position: absolute;
-	right: 0;
-	top: 0;
 	@include transform( skewX( -5deg ) translateX( -50px ) );
 	width: 81%;
-	// @media screen and ( max-width: 1600px ) {
-	// 	width: 80.5%;
-	// }
-	// @media screen and ( max-width: 1550px ) {
-	// 	width: 79%;
-	// }
-	// @media screen and ( max-width: 1465px ) {
-	// 	width: 77.5%;
-	// }
-	// @media screen and ( max-width: 1335px ) {
-	// 	width: 76.5%;
-	// }
-	// @media screen and ( max-width: 1275px ) {
-	// 	width: 75.5%;
-	// }
-	// @media screen and ( max-width: 1220px ) {
-	// 	width: 74.5%;
-	// }
-	// @media screen and ( max-width: 1140px ) {
-	// 	width: 73.5%;
-	// }
-	// @media screen and ( max-width: 1105px ) {
-	// 	width: 72.5%;
-	// }
-	// @media screen and ( max-width: 1085px ) {
-	// 	width: 71.5%;
-	// }
-	// @media screen and ( min-width: 1025px ) and ( max-width: 1080px ) {
-	// 	width: 70%;
-	// }
 }
 
 .inner-scroll {
 	height: 100%;
 	overflow-x: hidden;
 	overflow-y: scroll;
-	position: relative;
 	@include transform( skewX( 5deg ) translateX( 50px ) );
 	width: 100%;
 }

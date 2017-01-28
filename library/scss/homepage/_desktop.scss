@@ -6,8 +6,9 @@
 .home_page {
 	background: url( '/library/images/bw-header.jpg' ) center center no-repeat fixed;
 	background-size: cover;
+	overflow: hidden;
 	.inner-scroll {
-		overflow-y: hidden;
+		overflow: hidden;
 	}
 }
 
