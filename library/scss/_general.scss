@@ -12,6 +12,9 @@ html {
 
 body {
 	display: inline-flex;
+	@media screen and ( max-width: 1024px ) {
+		display: block;
+	}
 	height: 100%;
 	margin: 0;
 	width: 100%;

@@ -10,9 +10,6 @@
 	color: $white;
 	display: inline-block;
 	height: 4.5em;
-	left: 0;
-	position: absolute;
-	top: 0;
 	width: 100%;
 }
 
@@ -124,4 +121,17 @@
 	opacity: 1;
 	@include transform( translate( 0, 0 ) );
 	visibility: visible;
+}
+
+.page-content {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.inner-scroll {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	width: 100%;
 }

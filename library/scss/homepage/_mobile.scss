@@ -6,6 +6,10 @@
 .home_page {
 	background: url( '/library/images/bw-social-profile-1200.jpg' ) center center no-repeat fixed;
 	background-size: cover;
+	overflow: hidden;
+	.inner-scroll {
+		overflow: hidden;
+	}
 }
 
 .cta {
