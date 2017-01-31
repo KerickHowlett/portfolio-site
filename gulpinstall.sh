@@ -13,3 +13,4 @@ sudo npm install gulp-minify-css
 sudo npm install gulp-rename
 sudo npm install gulp-concat
 sudo npm install gulp-uglify
+sudo npm install browser-sync

@@ -58,16 +58,6 @@
 							}
 						}
 					}
-					&:active {
-						color: $active-lime-green;
-						@include transition( none );
-						svg {
-							path {
-								fill: $active-lime-green;
-								stroke: $active-lime-green;
-							}
-						}
-					}
 				}
 			}
 			a {
