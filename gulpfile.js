@@ -60,20 +60,10 @@
 
 	/**
 	 *  Watches file paths for any changes so that the browser will automatically
-	 *  reload the browser when a file change has been detected.
-	 **/
-	gulp.task( 'browserSync', function() {
-		browserSync.init( {
-			proxy: location.local
-		} );
-	} );
-
-	/**
-	 *  Watches file paths for any changes so that the browser will automatically
 	 *  rebuild the master style sheet and the uglified script when a file change
 	 *  has been detected.
 	 **/
-	gulp.task( 'watch', [ 'browserSync' ], function() {
+	gulp.task( 'watch', function() {
 		gulp.watch( paths.sass, [ 'sass' ] );
 		gulp.watch( paths.scripts, [ 'script' ] );
 	} );
