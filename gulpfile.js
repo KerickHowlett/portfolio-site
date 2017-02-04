@@ -23,7 +23,6 @@
 	const rename = require( 'gulp-rename' );
 	const concat = require( 'gulp-concat' );
 	const uglify = require( 'gulp-uglify' );
-	const browserSync = require( 'browser-sync' ).create();
 
 	/* Filepath Locations for Watch Tasks. */
 	const paths = {
