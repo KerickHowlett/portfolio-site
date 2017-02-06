@@ -13,7 +13,7 @@
 	height: 100%;
 	min-width: 18em;
 	@include transform( skewX( -5deg ) translateX( -50px ) );
-	width: 18%;
+	width: 23%;
 }
 
 .menu-icon {
@@ -23,7 +23,6 @@
 .nav_links {
 	display: block;
 	height: auto;
-	margin-top: 20%;
 	@include transform( skewX( 5deg ) translateX( 50px ) );
 	ul {
 		box-sizing: border-box;
