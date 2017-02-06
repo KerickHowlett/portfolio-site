@@ -23,6 +23,7 @@
 .nav_links {
 	display: block;
 	height: auto;
+	margin: 0.75em;
 	@include transform( skewX( 5deg ) translateX( 50px ) );
 	ul {
 		box-sizing: border-box;
@@ -33,15 +34,12 @@
 		li {
 			display: table;
 			font: 100% $roboto_medium;
-			font-size: 2.5em;
+			font-size: 3vw;
 			padding: 0.1em 0em;
 			&:hover {
 				a {
 					color: $lime-green;
-					font-size: 1em;
-					@media screen and ( min-width: 1821px ) {
-						font-size: 1.2em;
-					}
+					font-size: 3.2vw;
 					margin-left: 0.5em;
 					span {
 						&:nth-child(1) {
@@ -101,18 +99,11 @@
 	}
 }
 
-.unselected_link a {
-	font-size: .8em;
-	span {
-		width: 35% !important;
-	}
-}
-
 .page-content {
 	display: inline-table;
 	height: 100%;
 	@include transform( skewX( -5deg ) translateX( -50px ) );
-	width: 81%;
+	width: 73%;
 }
 
 .inner-scroll {
