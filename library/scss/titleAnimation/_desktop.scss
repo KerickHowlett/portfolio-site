@@ -25,7 +25,7 @@
 	h1 {
 		color: $white;
 		font-family: $roboto_medium;
-		// font-size: 2.5vw;
+		font-size: 2.5vw;
 		overflow: hidden;
 		text-transform: uppercase;
 	}
@@ -143,11 +143,9 @@ div[class^="name"] {
 
 @keyframes slideDown {
 	0% {
-		font-size: 8vw;
 		@include transform( translateY( 0% ) );
 	}
 	100% {
-		font-size: 2.5vw;
 		@include transform( translateY( 25% ) );
 	}
 }
