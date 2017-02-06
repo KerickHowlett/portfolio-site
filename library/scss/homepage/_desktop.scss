@@ -13,6 +13,12 @@
 }
 
 .wrapper {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.cta--wrapper {
 	display: table;
 	height: 95%;
 	margin: 0 auto 0 0;

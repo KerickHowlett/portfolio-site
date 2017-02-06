@@ -1,15 +1,12 @@
----
----
 <!DOCTYPE html>
 <html>
 	{% include head.html %}
-	<body class='home_page'>
+	<body>
 		{% include sidenav.html %}
 		<div class='page-content'>
 			<div class="inner-scroll">
 				<div class='wrapper'>
-					{% include title.html %}
-					{% include cta.html %}
+					{{ content }}
 				</div>
 			</div>
 		</div>

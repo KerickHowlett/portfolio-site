@@ -14,10 +14,16 @@
  }
 
 .wrapper {
+ 	display: block;
+ 	height: 100%;
+ 	width: 100%;
+ }
+
+.cta--wrapper {
 	display: table;
-	height: 91%;
-	margin: 0 auto;
-	width: 95%;
+ 	height: 91%;
+ 	margin: 0 auto;
+ 	width: 95%;
 }
 
 .cta {
