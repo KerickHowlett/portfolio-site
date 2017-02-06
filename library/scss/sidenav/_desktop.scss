@@ -111,5 +111,10 @@
 	overflow-x: hidden;
 	overflow-y: scroll;
 	@include transform( skewX( 5deg ) translateX( 50px ) );
-	width: 100%;
+	width: 105.5%;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 95%;
 }
