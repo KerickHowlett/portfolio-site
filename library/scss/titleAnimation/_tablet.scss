@@ -1,10 +1,162 @@
 /**
  * This SCSS file is to establish the styling rules for the Title Sequence embedded
- * in the sidenav - Tablet.
+ * in the sidenav. - Tablet.
  *
  * @author Jef DeWitt & Kerick Howlett
  **/
 
 .title__sequence {
-	display: none;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.block__initials {
+	display: block;
+	position: relative;
+	h1 {
+		color: $white;
+		font-family: $roboto_medium;
+		font-size: 2.5em;
+		text-shadow: 1px 1px 1px $black;
+		text-transform: uppercase;
+	}
+	&:before {
+		animation: 3s rise forwards linear;
+		background: url( '../images/diamond.svg' );
+		background-repeat: no-repeat;
+		content: '';
+		display: inline-block;
+		height: 4.5em;
+		position: absolute;
+			left: 50%;
+			top: 50%;
+		@include transform( translate( -50%, -50% ) );
+		width: 4em;
+	}
+}
+
+// any div class that begins with 'name'
+div[class^="name"] {
+	animation: rise 3s linear;
+	position: absolute;
+		left: 50%;
+		top: 50%;
+	width: 50%;
+}
+
+.name--first {
+	@include transform( translate( -100%, -50% ) );
+	h1 {
+		animation: 2s slideUp 3s forwards ease;
+		height: 0.75em;
+		span {
+			position: absolute;
+				right: 0.1em;
+				top: 50%;
+			@include transform( translate( -50%, -50% ) );
+			@include transition( all 1s ease );
+			&:nth-child(-n+5) {
+				opacity: 0;
+			}
+			&:last-of-type {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.name--last {
+	@include transform( translate( 0%, -50% ) );
+	h1 {
+		animation: 2s slideDown 3s forwards ease;
+		height: 0.75em;
+		span {
+			opacity: 0;
+			position: absolute;
+				left: 0.1em;
+				top: 50%;
+			@include transform( translate( -50%, -50% ) );
+			@include transition( all 1s ease );
+			&:first-of-type {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+#first.shift span {
+	@for $i from 1 through 5 {
+		&:nth-of-type(#{$i}) {
+			opacity: 1;
+		}
+	}
+	&:first-of-type {
+		right: 0.75em;
+	}
+	&:nth-of-type(2) {
+		right: 1.65em;
+	}
+	&:nth-of-type(3) {
+		right: 1.8em;
+	}
+	&:nth-of-type(4) {
+		right: 2.5em;
+	}
+	&:nth-of-type(5) {
+		right: 3.1em;
+	}
+}
+@keyframes slideUp {
+	0% {
+		@include transform( translateY( 0% ) );
+	}
+	100% {
+		@include transform( translateY( -25% ) );
+	}
+}
+
+#last.shift span {
+	@for $i from 2 through 7 {
+		&:nth-of-type(#{$i}) {
+			opacity: 1;
+		}
+	}
+	&:nth-of-type(2) {
+		left: 0.8em;
+	}
+	&:nth-of-type(3) {
+		left: 1.6em;
+	}
+	&:nth-of-type(4) {
+		left: 2.35em;
+	}
+	&:nth-of-type(5) {
+		left: 2.95em;
+	}
+	&:nth-of-type(6) {
+		left: 3.6em;
+	}
+	&:last-of-type {
+		left: 4.25em;
+	}
+}
+
+@keyframes slideDown {
+	0% {
+		@include transform( translateY( 0% ) );
+	}
+	100% {
+		@include transform( translateY( 25% ) );
+	}
+}
+
+@keyframes rise {
+	0% {
+		opacity: 0;
+		@include filter( blur( 0.5em ) );
+	}
+	100% {
+		opacity: 1;
+		@include filter( blur(0) );
+	}
 }
