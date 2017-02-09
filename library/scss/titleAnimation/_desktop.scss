@@ -7,7 +7,7 @@
 
 .title__sequence {
 	height: 18%;
-	margin-left: -16.5%;
+	margin: 10% 0 10% -16.5%;
 	@media screen and ( min-width: 1025px ) and ( max-width: 1400px ) {
 		margin-left: -20%;
 	}
@@ -30,16 +30,16 @@
 		text-transform: uppercase;
 	}
 	&:before {
-		animation: 2s rise linear 3s shrinkDown ease;
+		animation: 3s rise forwards linear, 2s shrinkDown 4.5s forwards ease;
 		background: url( '../images/diamond.svg' );
 		background-repeat: no-repeat;
 		content: '';
 		display: inline-block;
 		height: 9vw;
 		position: absolute;
-			left: 50%;
+			left: 48.5%;
 			top: 50%;
-		@include transform( translate( -50%,-50% ) );
+		@include transform( translate( -50%, -50% ) );
 		width: 9vw;
 	}
 }
@@ -47,21 +47,21 @@
 @keyframes shrinkDown {
 	0% {
 		height: 9vw;
-		left: 50%;
+		left: 48.5%;
 		top: 50%;
 		width: 9vw;
 	}
 	80% {
-		height: 6vw;
-		left: 51%;
-		top: 50%;
-		width: 6vw;
+		height: 5.7vw;
+		left: 50.85%;
+		top: 51%;
+		width: 5.7vw;
 	}
 	100% {
-		height: 6vw;
-		left: 51%;
-		top: 50%;
-		width: 6vw;
+		height: 5.7vw;
+		left: 50.85%;
+		top: 51%;
+		width: 5.7vw;
 	}
 }
 
@@ -81,7 +81,7 @@ div[class^="name"] {
 		height: 3vw;
 		span {
 			position: absolute;
-				right: -2%;
+				right: -0.3vw;
 				top: 50%;
 			@include transform( translate( -50%, -50% ) );
 			@include transition( all 1s ease );
@@ -103,7 +103,7 @@ div[class^="name"] {
 		span {
 			opacity: 0;
 			position: absolute;
-				left: 8%;
+				left: 0.6vw;
 				top: 50%;
 			@include transform( translate( -50%, -50% ) );
 			@include transition( all 1s ease );
@@ -121,19 +121,19 @@ div[class^="name"] {
 		}
 	}
 	&:first-of-type {
-		right: 10%;
+		right: 1.2vw;
 	}
 	&:nth-of-type(2) {
-		right: 26%;
+		right: 3.2vw;
 	}
 	&:nth-of-type(3) {
-		right: 29%;
+		right: 3.4vw;
 	}
 	&:nth-of-type(4) {
-		right: 42%;
+		right: 5vw;
 	}
 	&:nth-of-type(5) {
-		right: 53%;
+		right: 6.4vw;
 	}
 }
 @keyframes slideUp {
@@ -157,22 +157,22 @@ div[class^="name"] {
 		}
 	}
 	&:nth-of-type(2) {
-		left: 21%;
+		left: 2.3vw;
 	}
 	&:nth-of-type(3) {
-		left: 36%;
+		left: 4.2vw;
 	}
 	&:nth-of-type(4) {
-		left: 50%;
+		left: 6vw;
 	}
 	&:nth-of-type(5) {
-		left: 61%;
+		left: 7.4vw;
 	}
 	&:nth-of-type(6) {
-		left: 73%;
+		left: 9vw;
 	}
 	&:last-of-type {
-		left: 86%;
+		left: 10.6vw;
 	}
 }
 
