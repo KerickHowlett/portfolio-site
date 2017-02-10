@@ -46,6 +46,22 @@
 			top: 36px;
 		}
 	}
+	/* Very Small Mobile View for Header */
+	@media screen and ( max-width: 445px ) {
+		height: 43px;
+		margin: 1.85em auto auto 13px;
+		width: 41px;
+		span {
+			height: 4px;
+			&:nth-child(2),
+			&:nth-child(3) {
+				top: 14px;
+			}
+			&:nth-child(4) {
+				top: 28px;
+			}
+		}
+	}
 }
 
 .clicked-icon {

@@ -8,13 +8,16 @@
 .title__sequence {
 	display: inline-block;
 	height: 2.5em;
+	margin-left: 6.5%;
 	vertical-align: bottom;
-	width: 82%;
+	width: 67.5%;
 }
 
 .block__initials {
 	display: inline-block;
+	height: 1em;
 	position: relative;
+	width: 100%;
 	h1 {
 		color: $white;
 		font-family: $roboto_medium;
@@ -30,7 +33,10 @@
 		display: inline-block;
 		height: 4.5em;
 		position: absolute;
-			left: -0.4em;
+			left: 48.15%;
+			@media screen and ( max-width: 650px ) {
+				left: 47.15%;
+			}
 			top: 50%;
 		@include transform( translate( -50%, -50% ) );
 		width: 4em;
