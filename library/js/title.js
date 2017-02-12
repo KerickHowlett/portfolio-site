@@ -6,8 +6,19 @@
 ( function( $ ) {
 	$( document ).ready( function() {
 		function move() {
-			$('.initial h1').addClass('shift');
+			$( '.home_page .initial h1' ).addClass( 'shift' );
 		}
-		setTimeout(move, 5000);
+		setTimeout( move, 5000 );
+		$( '.other-page .title__sequence' ).hover(
+			function() {
+				var timer = setTimeout( function() {
+					$( '.initial h1' ).addClass( 'shift' );
+				}, 100 );
+			},
+			function() {
+				$( '.initial h1' ).removeClass( 'shift' );
+				clearTimeout( timer );
+			}
+		);
 	} );
 } )( jQuery );

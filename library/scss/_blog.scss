@@ -1,0 +1,24 @@
+/**
+ * This SCSS file is for creating the overall look for a standard blog post used
+ * throughout the entire Protfolio Site - Desktop.
+ *
+ * @author Kerick Howlett
+ **/
+
+.post-header {
+	background: url( '/library/images/blue-header.jpg' ) top right no-repeat fixed;
+	background-size: cover;
+	background-position-y: -29px;
+	display: table;
+	height: 25em;
+	position: relative;
+		left: -12em;
+	width: calc( 100% + 14em );
+	h1 {
+		color: $white;
+		display: table-cell;
+		font-size: 6vw;
+		text-align: center;
+		vertical-align: middle;
+	}
+}

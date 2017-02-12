@@ -7,7 +7,7 @@
 
 .title__sequence {
 	height: 18%;
-	margin: 10% 0 10% -16.5%;
+	margin: 10% 0 18% -16.5%;
 	@media screen and ( min-width: 1025px ) and ( max-width: 1400px ) {
 		margin-left: -20%;
 	}
@@ -30,7 +30,8 @@
 		text-transform: uppercase;
 	}
 	&:before {
-		animation: 3s rise forwards linear, 2s shrinkDown 4.5s forwards ease;
+		animation: 0s rise forwards linear;
+		// animation: 3s rise forwards linear, 2s shrinkDown 4.5s forwards ease;
 		background: url( '../images/diamond.svg' );
 		background-repeat: no-repeat;
 		content: '';
@@ -67,7 +68,7 @@
 
 // any div class that begins with 'name'
 div[class^="name"] {
-	animation: rise 3s linear;
+	animation: rise 0s linear;
 	position: absolute;
 		left: 50%;
 		top: 50%;
@@ -77,7 +78,7 @@ div[class^="name"] {
 .name--first {
 	@include transform( translate( -100%, -50% ) );
 	h1 {
-		animation: 2s slideUp 3s forwards ease;
+		// animation: 2s slideUp 3s forwards ease;
 		height: 3vw;
 		span {
 			position: absolute;
@@ -98,7 +99,7 @@ div[class^="name"] {
 .name--last {
 	@include transform( translate( 0%, -50% ) );
 	h1 {
-		animation: 2s slideDown 3s forwards ease;
+		// animation: 2s slideDown 3s forwards ease;
 		height: 3vw;
 		span {
 			opacity: 0;
@@ -197,6 +198,37 @@ div[class^="name"] {
 	}
 	100% {
 		opacity: 1;
-		@include filter( blur(0) );
+		@include filter( blur( 0 ) );
+	}
+}
+
+/* Animation automatically triggers on Home Page. */
+.home_page {
+	.block__initials:before {
+		animation: 3s rise forwards linear, 2s shrinkDown 4.5s forwards ease;
+	}
+	div[class^="name"] {
+		animation: rise 3s linear;
+	}
+	.name--first h1 {
+		animation: 2s slideUp 3s forwards ease;
+	}
+	.name--last h1 {
+		animation: 2s slideDown 3s forwards ease;
+	}
+}
+
+/* Animation to trigger when hovering over title on all other pages but Home. */
+.other-page {
+	.title__sequence:hover {
+		.block__initials:before {
+			animation: 1s shrinkDown forwards ease;
+		}
+		.name--first h1 {
+			animation: 30ms slideUp forwards ease;
+		}
+		.name--last h1 {
+			animation: 30ms slideDown forwards ease;
+		}
 	}
 }

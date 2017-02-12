@@ -11,9 +11,10 @@
 	color: $white;
 	display: inline-table;
 	height: 100%;
-	min-width: 18em;
+	position: relative;
 	@include transform( skewX( -5deg ) translateX( -50px ) );
 	width: 23%;
+	z-index: 100;
 }
 
 .menu-icon {
@@ -23,7 +24,7 @@
 .nav_links {
 	display: block;
 	height: auto;
-	margin: 0.75em;
+	margin: 7%;
 	@include transform( skewX( 5deg ) translateX( 50px ) );
 	ul {
 		display: table;
@@ -94,15 +95,18 @@
 	display: inline-flex;
 	height: 100%;
 	@include transform( skewX( -5deg ) translateX( -50px ) );
-	width: 73%;
+	width: 100%;
 }
 
 .inner-scroll {
 	height: 100%;
 	overflow-x: hidden;
 	overflow-y: scroll;
+	position: relative;
+		left: -3em;
 	@include transform( skewX( 5deg ) translateX( 50px ) );
-	width: 105.5%;
+	width: 99.75%;
+	z-index: -100;
 }
 
 .wrapper {
