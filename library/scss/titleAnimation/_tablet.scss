@@ -26,7 +26,7 @@
 		text-transform: uppercase;
 	}
 	&:before {
-		animation: 3s rise forwards linear;
+		// animation: 3s rise forwards linear;
 		background: url( '../images/diamond.svg' );
 		background-repeat: no-repeat;
 		content: '';
@@ -45,7 +45,7 @@
 
 // any div class that begins with 'name'
 div[class^="name"] {
-	animation: rise 3s linear;
+	animation: rise 0s linear;
 	position: absolute;
 		left: 50%;
 		top: 50%;
@@ -55,7 +55,7 @@ div[class^="name"] {
 .name--first {
 	@include transform( translate( -100%, -50% ) );
 	h1 {
-		animation: 2s slideUp 3s forwards ease;
+		// animation: 2s slideUp 3s forwards ease;
 		height: 0.75em;
 		span {
 			position: absolute;
@@ -76,7 +76,7 @@ div[class^="name"] {
 .name--last {
 	@include transform( translate( 0%, -50% ) );
 	h1 {
-		animation: 2s slideDown 3s forwards ease;
+		// animation: 2s slideDown 3s forwards ease;
 		height: 0.75em;
 		span {
 			opacity: 0;
@@ -92,60 +92,12 @@ div[class^="name"] {
 	}
 }
 
-#first.shift span {
-	@for $i from 1 through 5 {
-		&:nth-of-type(#{$i}) {
-			opacity: 1;
-		}
-	}
-	&:first-of-type {
-		right: 0.75em;
-	}
-	&:nth-of-type(2) {
-		right: 1.65em;
-	}
-	&:nth-of-type(3) {
-		right: 1.8em;
-	}
-	&:nth-of-type(4) {
-		right: 2.5em;
-	}
-	&:nth-of-type(5) {
-		right: 3.1em;
-	}
-}
 @keyframes slideUp {
 	0% {
 		@include transform( translateY( 0% ) );
 	}
 	100% {
 		@include transform( translateY( -25% ) );
-	}
-}
-
-#last.shift span {
-	@for $i from 2 through 7 {
-		&:nth-of-type(#{$i}) {
-			opacity: 1;
-		}
-	}
-	&:nth-of-type(2) {
-		left: 0.8em;
-	}
-	&:nth-of-type(3) {
-		left: 1.6em;
-	}
-	&:nth-of-type(4) {
-		left: 2.35em;
-	}
-	&:nth-of-type(5) {
-		left: 2.95em;
-	}
-	&:nth-of-type(6) {
-		left: 3.6em;
-	}
-	&:last-of-type {
-		left: 4.25em;
 	}
 }
 
@@ -166,5 +118,132 @@ div[class^="name"] {
 	100% {
 		opacity: 1;
 		@include filter( blur(0) );
+	}
+}
+
+/* Animation automatically triggers on Home Page. */
+.home_page {
+	#first.shift span {
+		@for $i from 1 through 5 {
+			&:nth-of-type(#{$i}) {
+				opacity: 1;
+			}
+		}
+		&:first-of-type {
+			right: 0.75em;
+		}
+		&:nth-of-type(2) {
+			right: 1.65em;
+		}
+		&:nth-of-type(3) {
+			right: 1.8em;
+		}
+		&:nth-of-type(4) {
+			right: 2.5em;
+		}
+		&:nth-of-type(5) {
+			right: 3.1em;
+		}
+	}
+
+	#last.shift span {
+		@for $i from 2 through 7 {
+			&:nth-of-type(#{$i}) {
+				opacity: 1;
+			}
+		}
+		&:nth-of-type(2) {
+			left: 0.8em;
+		}
+		&:nth-of-type(3) {
+			left: 1.6em;
+		}
+		&:nth-of-type(4) {
+			left: 2.35em;
+		}
+		&:nth-of-type(5) {
+			left: 2.95em;
+		}
+		&:nth-of-type(6) {
+			left: 3.6em;
+		}
+		&:last-of-type {
+			left: 4.25em;
+		}
+	}
+	.block__initials:before {
+		animation: 3s rise forwards linear, 2s shrinkDown 4.5s forwards ease;
+	}
+	div[class^="name"] {
+		animation: rise 3s linear;
+	}
+	.name--first h1 {
+		animation: 2s slideUp 3s forwards ease;
+	}
+	.name--last h1 {
+		animation: 2s slideDown 3s forwards ease;
+	}
+}
+
+/* No animation on all child pages. */
+.other-page {
+	#first span {
+		@for $i from 1 through 5 {
+			&:nth-of-type(#{$i}) {
+				opacity: 1;
+			}
+		}
+		&:first-of-type {
+			right: 0.75em;
+		}
+		&:nth-of-type(2) {
+			right: 1.65em;
+		}
+		&:nth-of-type(3) {
+			right: 1.8em;
+		}
+		&:nth-of-type(4) {
+			right: 2.5em;
+		}
+		&:nth-of-type(5) {
+			right: 3.1em;
+		}
+	}
+
+	#last span {
+		@for $i from 2 through 7 {
+			&:nth-of-type(#{$i}) {
+				opacity: 1;
+			}
+		}
+		&:nth-of-type(2) {
+			left: 0.8em;
+		}
+		&:nth-of-type(3) {
+			left: 1.6em;
+		}
+		&:nth-of-type(4) {
+			left: 2.35em;
+		}
+		&:nth-of-type(5) {
+			left: 2.95em;
+		}
+		&:nth-of-type(6) {
+			left: 3.6em;
+		}
+		&:last-of-type {
+			left: 4.25em;
+		}
+	}
+	.title__sequence {
+		.block__initials:before {
+			animation: 0s shrinkDown forwards ease;
+		}
+		.name--first h1 {
+			animation: 0s slideUp forwards ease;
+		}
+		.name--last h1 {
+			animation: 0s slideDown forwards ease;
+		}
 	}
 }

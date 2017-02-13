@@ -11,7 +11,8 @@
 	color: $white;
 	display: inline-table;
 	height: 100%;
-	position: relative;
+	position: fixed;
+		left: 0;
 	@include transform( skewX( -5deg ) translateX( -50px ) );
 	width: 23%;
 	z-index: 100;
@@ -92,24 +93,15 @@
 }
 
 .page-content {
-	display: inline-flex;
+	display: block;
 	height: 100%;
-	@include transform( skewX( -5deg ) translateX( -50px ) );
+	padding-left: 19%;
 	width: 100%;
-}
-
-.inner-scroll {
-	height: 100%;
-	overflow-x: hidden;
-	overflow-y: scroll;
-	position: relative;
-		left: -3em;
-	@include transform( skewX( 5deg ) translateX( 50px ) );
-	width: 99.75%;
 	z-index: -100;
 }
 
 .wrapper {
+	height: 100%;
 	margin: 0 auto;
-	width: 95%;
+	width: 100%;
 }

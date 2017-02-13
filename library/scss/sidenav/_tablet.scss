@@ -11,7 +11,10 @@
 	color: $white;
 	display: inline-block;
 	height: 5.75em;
+	position: fixed;
+		top: 0;
 	width: 100%;
+	z-index: 100;
 }
 
 .menu-icon {
@@ -145,12 +148,13 @@
 .page-content {
 	display: block;
 	height: 100%;
+	padding-top: 5.75em;
 	width: 100%;
+	z-index: -100;
 }
 
-.inner-scroll {
+.wrapper {
 	height: 100%;
-	overflow-x: hidden;
-	overflow-y: scroll;
+	margin: 0 auto;
 	width: 100%;
 }
