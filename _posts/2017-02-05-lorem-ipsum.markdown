@@ -2,6 +2,7 @@
 layout: posts
 title:  "Lorem Ipsum"
 permalink: /test/
+feature_image: test
 date:   2017-02-05 17:34:11 -0400
 ---
 Remembering new names. Setting up a new development environment. Where do I park? Beginning a role with a new company can be stressful. And beyond what's written in the new hire docs, what are people really doing? Do devs leave on time or are they working late? Do they actually step away from their workstations for lunch or are they eating while they work? What's implicitly expected? So many questions.

@@ -10,43 +10,41 @@
 	.inner-scroll {
 		overflow: hidden;
 	}
+	.cta--wrapper {
+		display: table;
+		height: 88%;
+		margin: 0 auto;
+		width: 93%;
+	}
+	.cta {
+		color: $white;
+		display: table-cell;
+		font-size: 3em;
+		@media screen and ( min-width: 767px ) and ( max-width: 850px ) {
+			font-size: 2.8em;
+		}
+		text-align: center;
+		text-shadow: 2px 2px 2px rgba( 0, 0, 0, 1 );
+		vertical-align: bottom;
+		width: 90%;
+		p {
+			margin-bottom: .4em;
+			span {
+				white-space: nowrap;
+			}
+		}
+		a {
+			color: $lime-green;
+			@include transition( 0.2s all ease-in-out );
+			&:hover {
+				color: $blue;
+			}
+		}
+	}
 }
 
 .wrapper {
  	display: block;
  	height: 100%;
  	width: 100%;
-}
-
-.cta--wrapper {
-	display: table;
-	height: 88%;
-	margin: 0 auto;
-	width: 93%;
-}
-
-.cta {
-	color: $white;
-	display: table-cell;
-	font-size: 3em;
-	@media screen and ( min-width: 767px ) and ( max-width: 850px ) {
-		font-size: 2.8em;
-	}
-	text-align: center;
-	text-shadow: 2px 2px 2px rgba( 0, 0, 0, 1 );
-	vertical-align: bottom;
-	width: 90%;
-	p {
-		margin-bottom: .4em;
-		span {
-			white-space: nowrap;
-		}
-	}
-	a {
-		color: $lime-green;
-		@include transition( 0.2s all ease-in-out );
-		&:hover {
-			color: $blue;
-		}
-	}
 }

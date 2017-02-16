@@ -13,41 +13,39 @@
 		@include transform( skewX( 5deg ) translateX( 50px ) );
 		width: 105.5%;
 	}
+	.cta--wrapper {
+		display: table;
+		height: 95%;
+		margin: 0 auto 0 4em;
+		width: 35em;
+	}
+	.cta {
+		color: $white;
+		display: table-cell;
+		font-size: 3em;
+		@media screen and ( min-width: 1025px ) and ( max-width: 1455px ) {
+			font-size: 2.7em;
+		}
+		text-shadow: 2px 2px 2px rgba( 0, 0, 0, 1 );
+		vertical-align: bottom;
+		p {
+			margin-bottom: .4em;
+			span {
+				white-space: nowrap;
+			}
+		}
+		a {
+			color: $lime-green;
+			@include transition( 0.2s all ease-in-out );
+			&:hover {
+				color: $blue;
+			}
+		}
+	}
 }
 
 .wrapper {
 	display: block;
 	height: 100%;
 	width: 100%;
-}
-
-.cta--wrapper {
-	display: table;
-	height: 95%;
-	margin: 0 auto 0 4em;
-	width: 35em;
-}
-
-.cta {
-	color: $white;
-	display: table-cell;
-	font-size: 3em;
-	@media screen and ( min-width: 1025px ) and ( max-width: 1455px ) {
-		font-size: 2.7em;
-	}
-	text-shadow: 2px 2px 2px rgba( 0, 0, 0, 1 );
-	vertical-align: bottom;
-	p {
-		margin-bottom: .4em;
-		span {
-			white-space: nowrap;
-		}
-	}
-	a {
-		color: $lime-green;
-		@include transition( 0.2s all ease-in-out );
-		&:hover {
-			color: $blue;
-		}
-	}
 }

@@ -11,6 +11,37 @@
  	.inner-scroll {
  		overflow: hidden;
  	}
+	.cta--wrapper {
+		display: table;
+	 	height: 89%;
+	 	margin: 0 auto;
+	 	width: 95%;
+	}
+	.cta {
+		color: $white;
+		display: table-cell;
+		font-size: 2.4em;
+		@media screen and ( max-width: 665px ) {
+			font-size: 2.2em;
+		}
+		text-align: center;
+		text-shadow: 2px 2px 2px rgba( 0, 0, 0, 1 );
+		vertical-align: bottom;
+		p {
+			margin-bottom: .4em;
+			span {
+				white-space: nowrap;
+			}
+		}
+		a {
+			color: $lime-green;
+			@include transition( 0.2s all ease-in-out );
+			white-space: nowrap;
+			&:hover {
+				color: $blue;
+			}
+		}
+	}
  }
 
 .wrapper {
@@ -18,36 +49,3 @@
  	height: 100%;
  	width: 100%;
  }
-
-.cta--wrapper {
-	display: table;
- 	height: 89%;
- 	margin: 0 auto;
- 	width: 95%;
-}
-
-.cta {
-	color: $white;
-	display: table-cell;
-	font-size: 2.4em;
-	@media screen and ( max-width: 665px ) {
-		font-size: 2.2em;
-	}
-	text-align: center;
-	text-shadow: 2px 2px 2px rgba( 0, 0, 0, 1 );
-	vertical-align: bottom;
-	p {
-		margin-bottom: .4em;
-		span {
-			white-space: nowrap;
-		}
-	}
-	a {
-		color: $lime-green;
-		@include transition( 0.2s all ease-in-out );
-		white-space: nowrap;
-		&:hover {
-			color: $blue;
-		}
-	}
-}
