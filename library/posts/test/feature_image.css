@@ -1,0 +1,13 @@
+/**
+ * This is the style rules for the post header.
+ **/
+
+.post-header {
+	background: url( '/library/posts/test/feature_image.jpg' ) top right no-repeat fixed;
+	background-size: cover;
+	background-position-y: -29px;
+}
+
+.post-content {
+	margin: 3em 0 0 4em;
+}

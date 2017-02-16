@@ -6,18 +6,16 @@
  **/
 
 .post-header {
-	background: url( '/library/images/blue-header.jpg' ) top right no-repeat fixed;
-	background-size: cover;
-	background-position-y: -29px;
 	display: table;
 	height: 25em;
+	overflow: hidden;
 	position: relative;
-		left: -12em;
-	width: calc( 100% + 14em );
+		left: -1em;
+	width: calc( 100% + 1.5em );
 	h1 {
 		color: $white;
 		display: table-cell;
-		font-size: 6vw;
+		font-size: 8vw;
 		text-align: center;
 		vertical-align: middle;
 	}
