@@ -1,0 +1,87 @@
+/**
+ * This SCSS file is for creating the overall look for a standard blog post used
+ * throughout the entire Protfolio Site - Mobile.
+ *
+ * @author Kerick Howlett
+ **/
+
+.post {
+	&-header {
+		display: table;
+		height: 25em;
+		overflow: hidden;
+		width: 100%;
+		h1 {
+			color: $white;
+			display: table-cell;
+			font-size: 8vw;
+			text-align: center;
+			vertical-align: middle;
+		}
+	}
+	&-content {
+		display: block;
+		margin: 2em;
+		&_body {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+.sidebar {
+	display: block;
+	width: 100%;
+	&__header {
+		color: $blue;
+		font-size: 2.5em;
+		line-height: 1.5em;
+		margin-bottom: 0.5em;
+		text-align: left;
+	}
+	.divider {
+		border: 1px solid $blue;
+		border-radius: 25px;
+		display: block;
+		height: 0px;
+		margin-bottom: 3em;
+		margin-left: 0;
+		margin-right: auto;
+		overflow: hidden;
+		position: relative;
+			left: -0.2em;
+		text-align: left;
+		width: 91%;
+	}
+	.cta_wrapper {
+		display: block;
+		width: 100%;
+		margin-left: auto;
+		img {
+			display: block;
+			height: auto;
+			margin-bottom: 2em;
+			margin-right: auto;
+			width: 90%;
+		}
+		.cta {
+			margin-right: auto;
+			width: 80%;
+			p {
+				line-height: 2.25em;
+				text-align: left;
+				width: 100%;
+			}
+			a {
+				color: $black;
+				display: block;
+				font-size: 1.4em;
+				text-align: left;
+				@include transition( 0.2s all ease-in-out );
+				&:hover {
+					color: $blue;
+				}
+			}
+		}
+	}
+}

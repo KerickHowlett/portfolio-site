@@ -15,10 +15,17 @@
 					$( '.initial h1' ).addClass( 'shift' );
 				}, 100 );
 			},
-			function() {
+			function( timer ) {
 				$( '.initial h1' ).removeClass( 'shift' );
 				clearTimeout( timer );
 			}
 		);
+		console.dir($( '.other-page .title__sequence:not( :hover ) .initial h1' ));
+		setInterval( function() {
+			var title = $( '.other-page .title__sequence:not( :hover ) .initial h1' );
+			if ( title.hasClass( 'shift' ) ) {
+				title.removeClass( 'shift' );
+			}
+		}, 100 );
 	} );
 } )( jQuery );

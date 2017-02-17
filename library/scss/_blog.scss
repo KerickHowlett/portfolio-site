@@ -1,53 +1,13 @@
 /**
- * This SCSS file is for creating the overall look for a standard blog post used
- * throughout the entire Protfolio Site - Desktop.
+ * This SCSS file is for creating the overall look for a standard blog post based
+ * on screen size via Media Queries.
  *
  * @author Kerick Howlett
  **/
 
-.post {
-	&-header {
-		display: table;
-		height: 25em;
-		overflow: hidden;
-		position: relative;
-			left: -1em;
-		width: calc( 100% + 1.5em );
-		h1 {
-			color: $white;
-			display: table-cell;
-			font-size: 8vw;
-			text-align: center;
-			vertical-align: middle;
-		}
-	}
-	&-content {
-		display: flex;
-		margin: 3em 0 0 4em;
-		&_body {
-			align-self: flex-start;
-			display: inline-block;
-			padding-right: 3em;
-			width: 65%;
-		}
-	}
+@media screen and ( min-width: 767px ) {
+	@import 'blog/desktop';
 }
-
-.sidebar {
-	align-self: flex-end;
-	display: inline-block;
-	width: 35%;
-	&__header {
-		color: $blue;
-	}
-	.cta_wrapper {
-		display: block;
-		width: 100%;
-		img {
-			display: block;
-			height: auto;
-			margin: 1em auto 1em 0;
-			width: 70%;
-		}
-	}
+@media screen and ( max-width: 766px ) {
+	@import 'blog/mobile';
 }

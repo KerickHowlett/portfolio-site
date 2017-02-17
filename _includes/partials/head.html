@@ -1,0 +1,16 @@
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+	<title>Kerick Howlett | Web Developer</title>
+	<link rel='stylesheet' href={{ '/library/dist/portfolio.app.min.css' | prepend: site.baseurl }}>
+	{% if page.feature_image %}
+		<link rel='stylesheet' href='{{site.baseurl}}/library/posts/{{page.feature_image}}/feature_image.css'>
+	{% else %}
+		<link rel='stylesheet' href='{{site.baseurl}}/library/posts/default/feature_image.css'>
+	{% endif %}
+	<script type='text/javascript' src={{ '/library/jquery/dist/jquery.min.js' | prepend: site.baseurl }}></script>
+	<script type='text/javascript' src={{ '/library/dist/script.min.js' | prepend: site.baseurl }}></script>
+
+</head>

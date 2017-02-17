@@ -1,7 +1,10 @@
 <aside class="sidebar">
 	<h1 class="sidebar__header">Kerick Howlett</h1>
+	<span class="divider"></span>
 	<div class="cta_wrapper">
-		<img src={{ '/library/images/portfolio1.jpg' | prepend: site.baseurl }} alt="Kerick Howlett" class="portfolio"/>
+		<a href={{ '/library/images/portfolio1.jpg' | prepend: site.baseurl }}>
+			<img src={{ '/library/images/portfolio1.jpg' | prepend: site.baseurl }} alt="Kerick Howlett" class="portfolio"/>
+		</a>
 		{% include cta.html %}
 	</div>
 </aside>
