@@ -14,7 +14,7 @@
 	position: fixed;
 		left: 0;
 	@include transform( skewX( -5deg ) translateX( -50px ) );
-	width: 23%;
+	width: 24%;
 	z-index: 100;
 }
 
@@ -36,6 +36,7 @@
 			display: table-row;
 			font: 100% $roboto_medium;
 			font-size: 2.5vw;
+			line-height: 1.75em;
 			&:hover {
 				a {
 					color: $lime-green;
