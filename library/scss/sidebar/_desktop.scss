@@ -69,40 +69,32 @@
 }
 
 .technologies {
-	display: table;
 	height: auto;
-	width: 30em;
-	&__header {
-		background: $blue;
-		color: $lime-green;
-		display: table-row;
-		font-size: 2em;
-		line-height: 2em;
-		text-align: center;
-		width: 100%;
-	}
+	margin-left: auto;
+	width: 100%;
 	&__row {
-		display: table-row;
+		height: auto;
 		padding: 1em;
-		width: 100%;
+		overflow: hidden;
 		&__logo {
-			display: table-cell;
-			height: 5em;
-			vertical-align: middle;
-			width: 5em;
+			float: right;
+			height: auto;
+			width: 16%;
 			img {
 				display: block;
 				height: auto;
 				margin: auto;
-				width: 100%;
+				width: 90%;
 			}
 
 		}
 		&__title {
+			color: $black;
 			display: table-cell;
 			height: auto;
+			text-align: left;
 			vertical-align: middle;
-			width: 25em;
+			width: 84%;
 		}
 	}
 }
