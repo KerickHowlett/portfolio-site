@@ -1,0 +1,13 @@
+/**
+ * This SCSS file is to import the proper sidebar style sheet based on screen
+ * size via Media Queries.
+ *
+ * @author Kerick Howlett
+ **/
+
+@media screen and ( min-width: 1025px ) {
+	@import 'sidebar/desktop';
+}
+@media screen and ( max-width: 1024px ) {
+	@import 'sidebar/mobile';
+}

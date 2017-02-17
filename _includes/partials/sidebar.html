@@ -1,10 +1,15 @@
 <aside class="sidebar">
+	{% if page.technologies %}
+		<h1 class="sidebar__header">Related Technologies</h1>
+		<span class="divider"></span>
+		{% include partials/technologies.html %}
+	{% endif %}
 	<h1 class="sidebar__header">Kerick Howlett</h1>
 	<span class="divider"></span>
 	<div class="cta_wrapper">
 		<a href={{ '/library/images/portfolio1.jpg' | prepend: site.baseurl }}>
 			<img src={{ '/library/images/portfolio1.jpg' | prepend: site.baseurl }} alt="Kerick Howlett" class="portfolio"/>
 		</a>
-		{% include cta.html %}
+		{% include partials/cta.html %}
 	</div>
 </aside>

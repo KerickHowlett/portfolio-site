@@ -1,0 +1,105 @@
+/**
+ * This SCSS file is for creating the overall look for the right sidebar that is
+ * used throughout the entire Protfolio Site - Desktop & Tablet.
+ *
+ * @author Kerick Howlett
+ **/
+
+.sidebar {
+	align-self: flex-end;
+	display: inline-block;
+	margin-bottom: auto;
+	padding-right: 4em;
+	width: 35%;
+	&__header {
+		color: $blue;
+		font-size: 2.5em;
+		line-height: 1.5em;
+		margin-bottom: 0.5em;
+		text-align: right;
+	}
+	.divider {
+		border: 1px solid $blue;
+		border-radius: 25px;
+		display: block;
+		height: 0px;
+		margin-right: 0;
+		margin-bottom: 3em;
+		margin-left: auto;
+		overflow: hidden;
+		position: relative;
+			right: -0.2em;
+		text-align: right;
+		width: 91%;
+	}
+	.cta_wrapper {
+		display: block;
+		width: 100%;
+		margin-left: auto;
+		img {
+			display: block;
+			height: auto;
+			margin-bottom: 2em;
+			margin-left: auto;
+			width: 75%;
+		}
+		.cta {
+			margin-left: auto;
+			width: 80%;
+			p {
+				line-height: 2.25em;
+				text-align: right;
+				width: 100%;
+			}
+			a {
+				color: $black;
+				display: block;
+				font-size: 1.4em;
+				text-align: right;
+				@include transition( 0.2s all ease-in-out );
+				&:hover {
+					color: $blue;
+				}
+			}
+		}
+	}
+}
+
+.technologies {
+	display: table;
+	height: auto;
+	width: 30em;
+	&__header {
+		background: $blue;
+		color: $lime-green;
+		display: table-row;
+		font-size: 2em;
+		line-height: 2em;
+		text-align: center;
+		width: 100%;
+	}
+	&__row {
+		display: table-row;
+		padding: 1em;
+		width: 100%;
+		&__logo {
+			display: table-cell;
+			height: 5em;
+			vertical-align: middle;
+			width: 5em;
+			img {
+				display: block;
+				height: auto;
+				margin: auto;
+				width: 100%;
+			}
+
+		}
+		&__title {
+			display: table-cell;
+			height: auto;
+			vertical-align: middle;
+			width: 25em;
+		}
+	}
+}

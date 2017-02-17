@@ -1,0 +1,14 @@
+<div class="technologies">
+	{% for technology in page.technologies %}
+		<div class="technologies__row">
+			<a href="{{technology.link}}" target="_blank">
+				<div class="technologies__row__logo">
+					<img src="{{site.baseurl}}/library/images/technologies/{{technology.image}}" alt="{{technology.name}}"/>
+				</div>
+				<div class="technologies__row__title">
+					<span>{{technology.name}}</span>
+				</div>
+			</a>
+		</div>
+	{% endfor %}
+</div>
