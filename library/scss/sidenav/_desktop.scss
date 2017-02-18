@@ -58,22 +58,28 @@
 	}
 }
 
+.social_media_links {
+	display: inline-block;
+	position: absolute;
+		bottom: 5%;
+		left: 15%;
+	@include transform( skewX( 5deg ) translateX( 50px ) );
+}
+
 .github_link,
 .linkedin_link {
-	display: inline-table;
-	white-space: nowrap;
-	&:hover {
-		a {
-			margin-left: 0.5em;
-		}
-	}
+	display: inline-block;
 	a {
 		display: inline-block;
-		margin-left: -0.1em;
 		span {
 			display: inline-block;
-			&:nth-child(2) {
-				vertical-align: middle;
+		}
+	}
+	&:hover {
+		svg {
+			path {
+				fill: $lime-green;
+				stroke: $lime-green;
 			}
 		}
 	}
@@ -83,12 +89,10 @@
 .linkedin-logo {
 	width: 3.75vw;
 	svg {
-		display: inline-block;
-		@include transition( 0.2s all ease-in-out );
-		vertical-align: middle;
 		path {
 			fill: $white;
 			stroke: $white;
+			@include transition( 0.2s all ease-in-out );
 		}
 	}
 }

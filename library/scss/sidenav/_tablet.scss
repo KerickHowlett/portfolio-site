@@ -139,6 +139,22 @@
 	}
 }
 
+.social_media_links_nav {
+	.github_link,
+	.linkedin_link {
+		display: inline-block;
+		width: 15%;
+		svg {
+			margin: 0 0 -3%;
+			width: 1.65em;
+		}
+	}
+}
+
+.social_media_links {
+	display: none;
+}
+
 .show_links {
 	opacity: 1;
 	@include transform( translate( 0, 0 ) );

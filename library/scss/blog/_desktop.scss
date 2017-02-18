@@ -23,73 +23,13 @@
 	}
 	&-content {
 		display: flex;
-		margin: 3em 0 0 4em;
+		margin: 3em 0 0 5em;
 		&_body {
 			align-self: flex-start;
 			display: inline-block;
 			padding-left: 2em;
 			padding-right: 1em;
 			width: 65%;
-		}
-	}
-}
-
-.sidebar {
-	align-self: flex-end;
-	display: inline-block;
-	margin-bottom: auto;
-	padding-right: 4em;
-	width: 35%;
-	&__header {
-		color: $blue;
-		font-size: 2.5em;
-		line-height: 1.5em;
-		margin-bottom: 0.5em;
-		text-align: right;
-	}
-	.divider {
-		border: 1px solid $blue;
-		border-radius: 25px;
-		display: block;
-		height: 0px;
-		margin-right: 0;
-		margin-bottom: 3em;
-		margin-left: auto;
-		overflow: hidden;
-		position: relative;
-			right: -0.2em;
-		text-align: right;
-		width: 91%;
-	}
-	.cta_wrapper {
-		display: block;
-		width: 100%;
-		margin-left: auto;
-		img {
-			display: block;
-			height: auto;
-			margin-bottom: 2em;
-			margin-left: auto;
-			width: 75%;
-		}
-		.cta {
-			margin-left: auto;
-			width: 80%;
-			p {
-				line-height: 2.25em;
-				text-align: right;
-				width: 100%;
-			}
-			a {
-				color: $black;
-				display: block;
-				font-size: 1.4em;
-				text-align: right;
-				@include transition( 0.2s all ease-in-out );
-				&:hover {
-					color: $blue;
-				}
-			}
 		}
 	}
 }
