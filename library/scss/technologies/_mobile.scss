@@ -1,0 +1,63 @@
+/**
+ * This SCSS file is for creating the overall look for the "Related Technologies"
+ * section of the sidebar - Mobile.
+ *
+ * @author Kerick Howlett
+ **/
+
+.technologies {
+	height: auto;
+	margin-right: auto;
+	width: 90%;
+	&__row {
+		background: none;
+		cursor: pointer;
+		height: auto;
+		margin-bottom: -0.5em;
+		padding: 1em;
+		overflow: hidden;
+		@include transition( 0.2s all ease-in-out );
+		a {
+			height: 3.5em;
+		}
+		&__logo {
+			float: left;
+			height: auto;
+			width: 16%;
+			img {
+				background: $white;
+				border: 1px solid $white;
+				border-radius: 6px;
+				display: block;
+				height: auto;
+				margin: auto;
+				padding: 3px;
+				width: 100%;
+			}
+		}
+		&__title {
+			color: $black;
+			display: inline-block;
+			font-size: 1.3em;
+			text-align: right;
+			width: 84%;
+			@include transition( 0.2s all ease-in-out );
+			span {
+				display: inline-block;
+				line-height: 12.5vw;
+			}
+		}
+	}
+	&__divider {
+		border: 1px solid $gray;
+		border-radius: 25px;
+		display: inline-block;;
+		height: 0px;
+		opacity: 0.5;
+		overflow: hidden;
+		width: 100%;
+		&:last-child {
+			display: none;
+		}
+	}
+}

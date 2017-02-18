@@ -8,13 +8,11 @@
 /* Default Color Variables */
 
 $black:             #000000 !default;
-$blue:		        #70a3f4 !default;
+$blue:		        #70A3F4 !default;
 $gray:              #CCCCCC !default;
-$white:             #FFFFFF !default;
-$spring-green:      #20C4BE !default;
+$light-gray:		#F4F4F4 !default;
 $lime-green:        #E4FBA5 !default;
-$cucumber:          #8FBE34 !default;
-
+$white:             #FFFFFF !default;
 
 /* Establishing Typography & Mixins Variables */
 @import 'typography';
@@ -30,4 +28,5 @@ $cucumber:          #8FBE34 !default;
 @import 'projects';
 @import 'sidebar';
 @import 'sidenav';
+@import 'technologies';
 @import 'titleAnimation';

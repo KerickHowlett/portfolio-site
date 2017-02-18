@@ -27,7 +27,7 @@
 		display: block;
 		height: 0px;
 		margin-right: 0;
-		margin-bottom: 3em;
+		margin-bottom: 2em;
 		margin-left: auto;
 		overflow: hidden;
 		position: relative;
@@ -64,37 +64,6 @@
 					color: $blue;
 				}
 			}
-		}
-	}
-}
-
-.technologies {
-	height: auto;
-	margin-left: auto;
-	width: 100%;
-	&__row {
-		height: auto;
-		padding: 1em;
-		overflow: hidden;
-		&__logo {
-			float: right;
-			height: auto;
-			width: 16%;
-			img {
-				display: block;
-				height: auto;
-				margin: auto;
-				width: 90%;
-			}
-
-		}
-		&__title {
-			color: $black;
-			display: table-cell;
-			height: auto;
-			text-align: left;
-			vertical-align: middle;
-			width: 84%;
 		}
 	}
 }

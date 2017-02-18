@@ -1,0 +1,13 @@
+/**
+ * This SCSS file is to import the proper 'Related Technologies' style sheet
+ * based on screen size via Media Queries.
+ *
+ * @author Kerick Howlett
+ **/
+
+@media screen and ( min-width: 1300px ) {
+	@import 'technologies/desktop';
+}
+@media screen and ( max-width: 1299px ) {
+	@import 'technologies/mobile';
+}

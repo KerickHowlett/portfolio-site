@@ -1,9 +1,4 @@
 <aside class="sidebar">
-	{% if page.technologies %}
-		<h1 class="sidebar__header">Related Technologies</h1>
-		<span class="divider"></span>
-		{% include partials/technologies.html %}
-	{% endif %}
 	<h1 class="sidebar__header">Kerick Howlett</h1>
 	<span class="divider"></span>
 	<div class="cta_wrapper">
@@ -12,4 +7,9 @@
 		</a>
 		{% include partials/cta.html %}
 	</div>
+	{% if page.technologies %}
+		<h1 class="sidebar__header">Related Technologies</h1>
+		<span class="divider"></span>
+		{% include partials/technologies.html %}
+	{% endif %}
 </aside>

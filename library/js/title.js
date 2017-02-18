@@ -20,7 +20,7 @@
 				clearTimeout( timer );
 			}
 		);
-		console.dir($( '.other-page .title__sequence:not( :hover ) .initial h1' ));
+		
 		setInterval( function() {
 			var title = $( '.other-page .title__sequence:not( :hover ) .initial h1' );
 			if ( title.hasClass( 'shift' ) ) {

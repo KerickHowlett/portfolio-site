@@ -22,6 +22,9 @@
 	&-content {
 		display: block;
 		margin: 2em;
+		@media screen and ( min-width: 1025px ) and ( max-width: 1299px ) {
+			margin-left: 4.5em;
+		}
 		&_body {
 			display: block;
 			width: 100%;
