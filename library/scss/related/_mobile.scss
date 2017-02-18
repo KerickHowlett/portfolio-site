@@ -1,0 +1,27 @@
+/**
+ * This SCSS file is for styling the "Related Links" within the sidebar
+ * Mobile.
+ *
+ * @author Kerick Howlett
+ **/
+
+.related_links {
+	display: block;
+	margin-right: auto;
+	text-align: left;
+	ul {
+		list-style: none;
+		padding-left: 0;
+		li {
+			a {
+				color: $black;
+				font-size: 1.5em;
+				line-height: 2.5em;
+				@include transition( 0.2s all ease-in-out );
+				&:hover {
+					color: $blue;
+				}
+			}
+		}
+	}
+}

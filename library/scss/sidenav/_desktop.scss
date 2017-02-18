@@ -36,7 +36,7 @@
 			display: table-row;
 			font: 100% $roboto_medium;
 			font-size: 2.5vw;
-			line-height: 1.75em;
+			line-height: 2em;
 			&:hover {
 				a {
 					color: $lime-green;
@@ -55,6 +55,14 @@
 				@include transition( 0.2s all ease-in-out );
 			}
 		}
+	}
+}
+
+.social_media_links_nav {
+	display: none;
+	.github_link,
+	.linkedin_link {
+		display: none;
 	}
 }
 
@@ -87,7 +95,7 @@
 
 .github-logo,
 .linkedin-logo {
-	width: 3.75vw;
+	width: 2.75em;
 	svg {
 		path {
 			fill: $white;
@@ -95,6 +103,10 @@
 			@include transition( 0.2s all ease-in-out );
 		}
 	}
+}
+
+.linkedin-logo {
+	margin-left: 1vw;
 }
 
 .page-content {

@@ -2,14 +2,43 @@
 	<h1 class="sidebar__header">Kerick Howlett</h1>
 	<span class="divider"></span>
 	<div class="cta_wrapper">
-		<a href={{ '/library/images/portfolio1.jpg' | prepend: site.baseurl }}>
-			<img src={{ '/library/images/portfolio1.jpg' | prepend: site.baseurl }} alt="Kerick Howlett" class="portfolio"/>
-		</a>
+		<img src={{ '/library/images/portfolio1.jpg' | prepend: site.baseurl }} alt="Kerick Howlett" class="portfolio"/>
 		{% include partials/cta.html %}
 	</div>
 	{% if page.technologies %}
 		<h1 class="sidebar__header">Related Technologies</h1>
 		<span class="divider"></span>
-		{% include partials/technologies.html %}
+		<div class="technologies">
+			{% for technology in page.technologies %}
+				<div class="technologies__row">
+					<a href="{{technology.link}}" target="_blank">
+						<div class="technologies__row__logo">
+							<img src="{{site.baseurl}}/library/images/technologies/{{technology.image}}" alt="{{technology.name}}"/>
+						</div>
+						<div class="technologies__row__title">
+							<span>{{technology.name}}</span>
+						</div>
+					</a>
+				</div>
+				<span class="technologies__divider"></span>
+			{% endfor %}
+		</div>
+	{% endif %}
+	{% if page.related_links %}
+		<h1 class="sidebar__header">Related Links</h1>
+		<span class="divider"></span>
+		<div class="related_links">
+			<ul>
+				{% for link in page.related_links %}
+					<li>
+						<span>
+							<a href="{{link.href}}" {% if link.href contains site.baseurl %}target='_blank'{% endif %}>
+								{{link.title}}
+							</a>
+						</span>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
 	{% endif %}
 </aside>
