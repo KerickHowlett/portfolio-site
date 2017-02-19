@@ -7,7 +7,7 @@
 
 .sidenav {
 	background: $blue;
-	@include box-shadow( 9px 5px 14px 1px rgba( 0, 0, 0, 0.42 ) );
+	@include box-shadow( 9px 0px 14px 1px rgba( 0, 0, 0, 0.42 ) );
 	color: $white;
 	display: inline-table;
 	height: 100%;

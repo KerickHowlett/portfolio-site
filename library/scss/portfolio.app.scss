@@ -21,6 +21,7 @@ $white:             #FFFFFF !default;
 /* List of all Child SCSS files to import into master Style Sheet. */
 @import 'about';
 @import 'blog';
+@import 'breadcrumbs';
 @import 'connect';
 @import 'general';
 @import 'homepage';

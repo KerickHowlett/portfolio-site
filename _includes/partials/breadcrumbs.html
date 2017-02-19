@@ -1,0 +1,26 @@
+<div class="breadcrumb">
+	<span>
+		<a href="{{ site.baseurl }}/">Home</a>
+	</span>
+	<span class="slash">/</span>
+	{% capture page_urls %}{{ page.url | remove: "/index.html" }}{% endcapture %}
+	{% capture domain %}{{site.baseurl}}{% endcapture %}
+	{% assign splitted_url_parts = page_urls | split: '/' %}
+	{% for url_part in splitted_url_parts %}
+		{% if url_part == domain %}
+			{% capture previous_url %}{{site.baseurl}}{% endcapture %}
+		{% else %}
+			{% if forloop.last == false %}
+				<span>
+					<a href="{{previous_url}}/{{url_part}}">{{url_part}}</a>
+				</span>
+				<span class="slash">/</span>
+				{% capture previous_url %}{{previous_url}}/{{url_part}}/{% endcapture %}
+			{% else %}
+				<span>
+					<a href="{{previous_url}}/{{url_part}}">{{page.title}}</a>
+				</span>
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+</div>

@@ -1,12 +1,12 @@
 <aside class="sidebar">
-	<h1 class="sidebar__header">Kerick Howlett</h1>
+	<h3 class="sidebar__header">Kerick Howlett</h3>
 	<span class="divider"></span>
 	<div class="cta_wrapper">
 		<img src={{ '/library/images/portfolio1.jpg' | prepend: site.baseurl }} alt="Kerick Howlett" class="portfolio"/>
 		{% include partials/cta.html %}
 	</div>
 	{% if page.technologies %}
-		<h1 class="sidebar__header">Related Technologies</h1>
+		<h3 class="sidebar__header">Related Technologies</h3>
 		<span class="divider"></span>
 		<div class="technologies">
 			{% for technology in page.technologies %}
@@ -25,16 +25,14 @@
 		</div>
 	{% endif %}
 	{% if page.related_links %}
-		<h1 class="sidebar__header">Related Links</h1>
+		<h3 class="sidebar__header">Related Links</h3>
 		<span class="divider"></span>
 		<div class="related_links">
 			<ul>
 				{% for link in page.related_links %}
 					<li>
 						<span>
-							<a href="{{link.href}}" {% if link.href contains site.baseurl %}target='_blank'{% endif %}>
-								{{link.title}}
-							</a>
+							<a href="{{link.href}}">{{link.title}}</a>
 						</span>
 					</li>
 				{% endfor %}

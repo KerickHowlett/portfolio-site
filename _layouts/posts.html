@@ -7,15 +7,27 @@ layout: default
 		<h1 itemprop="name headline">{{ page.title }}</h1>
 	</header>
 
+	{% include partials/breadcrumbs.html %}
+
 	<div class="post-content" itemprop="articleBody">
-		<p class="post-meta">
-			{% if page.author %}
-				<!-- <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-					<span itemprop="name">{{ page.author }}</span>
-				</span> -->
-			{% endif %}
-		</p>
 		<div class="post-content_body">
+			<div class="post-meta">
+				{% if page.author %}
+					{% assign post_author = page.author %}
+				{% else %}
+					{% assign post_author = "Kerick Howlett" %}
+				{% endif %}
+					<span class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+						<span itemprop="name">{{ post_author }}</span>
+					</span>
+				{% if page.date %}
+					<span class="post-time">
+						<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+							{{ page.date | date: "%A, %B %-d, %Y - %I:%M %p" }}
+						</time>
+					</span>
+				{% endif %}
+			</div>
 			{{ content }}
 		</div>
 		{% include partials/sidebar.html %}
