@@ -76,6 +76,20 @@ related_links:
 
 Test *Italic* Test **Bold** Test
 
+---
+
+
+```javascript
+( function( $ ) {
+	$( document ).ready( function() {
+		$( '.technologies__row' ).click( function() {
+			window.open( $( this ).find( 'a' ).attr( 'href' ) );
+			return false;
+		} );
+	} );
+} )( jQuery );
+```
+
 Remembering new names. Setting up a new development environment. Where do I park? Beginning a role with a new company can be stressful. And beyond what's written in the new hire docs, what are people really doing? Do devs leave on time or are they working late? Do they actually step away from their workstations for lunch or are they eating while they work? What's implicitly expected? So many questions.
 
 ## Choking
