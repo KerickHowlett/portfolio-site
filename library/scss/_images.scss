@@ -1,0 +1,13 @@
+/**
+ * This SCSS file is to switch out the styling rules for images used throughout
+ * the entire site based on screen size via Media Queries - Desktop.
+ *
+ * @author Kerick Howlett
+ **/
+
+@media screen and ( min-width: 1025px ) {
+	@import 'images/desktop';
+}
+@media screen and ( max-width: 1024px ) {
+	@import 'images/mobile';
+}

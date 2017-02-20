@@ -1,0 +1,46 @@
+/**
+ * This SCSS file is to establish the styling rules for images used throughout
+ * the entire site - Desktop.
+ *
+ * @author Kerick Howlett
+ **/
+
+img {
+	height: 100%;
+	width: 100%;
+	vertical-align: middle;
+}
+
+[class*='float'] {
+	width: 33%;
+}
+
+.float-right {
+	float: right;
+	margin: 1em 0em 1em 2em;
+}
+
+.float-left {
+	float: left;
+	margin: 1em 2em 1em 0em;
+}
+
+.image-center {
+	display: block;
+	margin: 1em auto;
+}
+
+[class*='float'],
+.image-center {
+	a {
+		span {
+			color: $dark-gray;
+			display: block;
+			font-size: 0.85em;
+			font-style: italic;
+			margin-top: 0.3em;
+			padding: .3em;
+			text-align: left;
+		}
+	}
+}

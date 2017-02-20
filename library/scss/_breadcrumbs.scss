@@ -7,7 +7,7 @@
 
 .breadcrumb {
 	background: $gray;
-	color: $blue;
+	color: $even-darker-gray;
 	display: inline-block;
 	line-height: 3em;
 	padding-left: 7%;
@@ -18,7 +18,7 @@
 		text-transform: capitalize;
 		vertical-align: middle;
 		a {
-			color: $blue;
+			color: $even-darker-gray;
 			@include transition( 0.2s all ease-in-out );
 			&:hover {
 				color: $white;

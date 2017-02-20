@@ -23,7 +23,7 @@ layout: default
 				{% if page.date %}
 					<span class="post-time">
 						<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-							{{ page.date | date: "%A, %B %-d, %Y - %I:%M %p" }}
+							{{ page.date | date: "%A, %B %-d, %Y" }}
 						</time>
 					</span>
 				{% endif %}

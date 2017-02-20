@@ -1,0 +1,31 @@
+/**
+ * This SCSS file is to establish the styling rules for images used throughout
+ * the entire site - Mobile.
+ *
+ * @author Kerick Howlett
+ **/
+
+img {
+	display: block;
+	height: auto;
+	width: auto;
+	vertical-align: middle;
+}
+
+[class*='float'],
+.image-center {
+	display: inline-block;
+	margin: 1em auto;
+	a {
+
+		span {
+			color: $dark-gray;
+			display: block;
+			font-size: 0.85em;
+			font-style: italic;
+			padding: .3em;
+			margin-top: 0.3em;
+			text-align: left;
+		}
+	}
+}

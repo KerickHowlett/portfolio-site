@@ -31,3 +31,53 @@
 		}
 	}
 }
+
+.post-meta {
+	font: 100% $roboto;
+	margin-bottom: 2em;
+	.post-author {
+		display: none;
+	}
+}
+
+.post-content {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		color: $blue;
+	}
+	h1 {
+		font-size: 5em;
+	}
+	h2 {
+		font-size: 4em;
+	}
+	h3 {
+		font-size: 3em;
+	}
+	h4 {
+		font-size: 2em;
+	}
+	h5 {
+		font-size: 1.5em;
+	}
+	hr {
+		background: $light-gray;
+		color: $light-gray;
+	}
+	.inline-code {
+		display: inline-block;
+		line-height: 1em;
+		margin: 0 5px;
+		padding: 0.5em;
+		position: relative;
+			bottom: -6px;
+	}
+}
+
+pre.highlight code {
+	border-radius: 5px;
+	padding: 1em;
+}

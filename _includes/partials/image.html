@@ -1,0 +1,8 @@
+<div class="image">
+	<a href="{{ include.url }}">
+		<img src="{{ include.url | prepend: site.baseurl }}" alt="{{ include.alt }}"/>
+		{% if include.description %}
+			<span>{{ include.description }}</span>
+		{% endif %}
+	</a>
+</div>

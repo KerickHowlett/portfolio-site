@@ -36,6 +36,7 @@
 
 .post-meta {
 	font: 100% $roboto;
+	margin-bottom: 2em;
 	.post-author {
 		display: none;
 	}
@@ -68,5 +69,17 @@
 		background: $light-gray;
 		color: $light-gray;
 	}
+	.inline-code {
+		display: inline-block;
+		line-height: 1em;
+		margin: 0 5px;
+		padding: 0.5em;
+		position: relative;
+			bottom: -6px;
+	}
+}
 
+pre.highlight code {
+	border-radius: 5px;
+	padding: 1em;
 }

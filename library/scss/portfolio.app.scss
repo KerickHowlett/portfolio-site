@@ -8,9 +8,11 @@
 /* Default Color Variables */
 
 $black:             #000000 !default;
-$blue:		        #70A3F4 !default;
+$blue:              #70A3F4 !default;
+$dark-gray:         #A8A8A8 !default;
+$even-darker-gray:  #555555 !default;
 $gray:              #CCCCCC !default;
-$light-gray:		#F4F4F4 !default;
+$light-gray:        #F4F4F4 !default;
 $lime-green:        #E4FBA5 !default;
 $white:             #FFFFFF !default;
 
@@ -23,6 +25,7 @@ $white:             #FFFFFF !default;
 @import 'blog';
 @import 'breadcrumbs';
 @import 'connect';
+@import 'images';
 @import 'general';
 @import 'homepage';
 @import 'projects';
