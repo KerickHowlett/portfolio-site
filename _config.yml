@@ -16,11 +16,11 @@
 title: Kerick Howlett | Web Developer
 email: kahowlett1989@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-    Write an awesome description for your new site here. You can edit this
-    line in _config.yml. It will appear in your document head meta (for
-    Google search results) and in your feed.xml site description.
+    Hey, I'm Kerick Howlett and Louisville's tallest Back-end Developer with a
+    knack for creative solutions in programming. I specialize in PHP, JavaScript,
+    AngularJS, jQuery, WordPress, and Mobile App development.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://kerickhowlett.com/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://thetallestdeveloper.com/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  bigk5000
 linkedin_username: kerickhowlett
 
@@ -34,7 +34,7 @@ exclude:
     - Gemfile.lock
 
 # New permalink structure for posts
-permalink: /archive/:title/
+permalink: /blog/:title/
 
 # New document type
 # Source: https://jekyllrb.com/docs/collections/

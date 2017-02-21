@@ -2,6 +2,7 @@
  * This is the style rules for the post header.
  **/
 
+.archive-header,
 .post-header {
 	background: url( '/library/posts/default/feature_image.jpg' ) top right no-repeat fixed;
 	background-size: cover;

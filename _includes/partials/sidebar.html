@@ -39,4 +39,18 @@
 			</ul>
 		</div>
 	{% endif %}
+	<h3 class="sidebar__header">Recent Posts</h3>
+	<span class="divider"></span>
+	<div class="recent_posts">
+		<ul>
+			{% for post in site.posts reversed sort: 'date' limit: 3 %}
+				<li>
+					<a href="{{post.url}}">
+						<span class="recent_title">{{post.title}}</span>
+						<span class="recent_date">{{ post.date | date: "%A, %B %-d, %Y" }}</span>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
 </aside>

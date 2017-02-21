@@ -1,0 +1,127 @@
+/**
+ * This SCSS file is to import the proper blog/project posts index styles -
+ * Desktop.
+ *
+ * @author Kerick Howlett
+ **/
+
+.archive {
+	&-header {
+		display: table;
+		height: 25em;
+		overflow: hidden;
+		position: relative;
+			left: -1em;
+		width: calc( 100% + 1.5em );
+		h1 {
+			color: $white;
+			display: table-cell;
+			font-size: 8vw;
+			text-align: center;
+			vertical-align: middle;
+		}
+	}
+	&-content {
+		display: flex;
+		margin: 3em 0 0 5em;
+		&_body {
+			align-self: flex-start;
+			display: inline-block;
+			padding: 0 1em 4em 2em;
+			width: 65%;
+		}
+	}
+}
+
+.post_thumbnail {
+	display: table;
+	height: 18em;
+	padding: 1em;
+	@include transition( 0.2s all ease-in-out );
+	width: 100%;
+	&__image {
+		display: table-cell;
+		@include filter( grayscale( 100% ) );
+		height: 21em;
+		overflow: hidden;
+		position: relative;
+		@include transition( 0.2s all ease-in-out );
+		vertical-align: middle;
+		width: 42%;
+		img {
+			height: auto;
+			margin: 0;
+			max-width: none;
+			position: absolute;
+				top: 0;
+				left: -25%;
+			@include transition( 2s all ease-in-out );
+			width: 140%;
+		}
+	}
+	&__details {
+		display: table-cell;
+		padding: 1em 0em 1em 2em;
+		vertical-align: middle;
+		width: 100%;
+		h3 {
+			color: $blue;
+			display: block;
+			font-size: 2em;
+			line-height: 1em;
+			margin: 0;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		h5 {
+			display: block;
+			font-weight: bold;
+			line-height: 1em;
+			margin: 1.5em 0;
+		}
+		span {
+			display: block;
+			font: 100% $roboto;
+			height: 8em;
+			line-height: 2em;
+			overflow: hidden;
+			text-align: justify;
+			text-overflow: ellipsis;
+		}
+	}
+	&:hover {
+		@include transition( 0.2s all ease-in-out );
+		.post_thumbnail__image {
+			@include filter( grayscale( 0% ) );
+			img {
+				left: -30%;
+				width: 150%;
+			}
+		}
+	}
+}
+
+.read_me {
+	background: $blue;
+	border: 2px solid $blue;
+	display: inline-block;
+	font-size: 1.2em;
+	padding: 0.75em 2em;
+	margin-top: 1em;
+	@include transition( 0.2s all ease-in-out );
+	width: auto;
+	&:hover {
+		background: $white;
+		border: 2px solid $blue;
+		color: $blue;
+	}
+}
+
+.thumbnail_divider {
+	border-radius: 25px;
+	display: inline-block;
+	height: 0px;
+	opacity: 0.5;
+	overflow: hidden;
+	width: 100%;
+}

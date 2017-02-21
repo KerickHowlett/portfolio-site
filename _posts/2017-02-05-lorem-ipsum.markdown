@@ -1,11 +1,10 @@
 ---
 layout: posts
 title:  "Lorem Ipsum"
-breadcrumb: "Lorem Ipsum"
 author: "Kerick Howlett"
-permalink: /test/
 feature_image: test
 date:   2017-02-05 17:34:11 -0400
+excerpt: Remembering new names. Setting up a new development environment. Where do I park? Beginning a role with a new company can be stressful. And beyond what's written in the new hire docs, what are people really doing? Do devs leave on time or are they working late? Do they actually step away from their workstations for lunch or are they eating while they work? What's implicitly expected? So many questions.
 technologies:
   - name: "Laravel"
     image: "laravel.png"
@@ -63,6 +62,12 @@ related_links:
   - title: "Native Script at ng-Conf"
     href: "https://www.nativescript.org/blog/nativescript-at-ng-conf"
 ---
+
+## Test Header
+
+Remembering new names. Setting up a new development environment. Where do I park? Beginning a role with a new company can be stressful. And beyond what's written in the new hire docs, what are people really doing? Do devs leave on time or are they working late? Do they actually step away from their workstations for lunch or are they eating while they work? What's implicitly expected? So many questions.
+
+<!-- more -->
 
 # Heading One (H1)
 

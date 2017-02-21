@@ -1,0 +1,16 @@
+/**
+ * This SCSS file is to import the proper blog/project posts index style sheet
+ * for based on screen size via Media Queries.
+ *
+ * @author Kerick Howlett
+ **/
+
+@media screen and ( min-width: 1300px ) {
+	@import 'postIndex/desktop';
+}
+@media screen and ( min-width: 767px ) and ( max-width: 1299px ) {
+	@import 'postIndex/tablet';
+}
+@media screen and ( max-width: 766px ) {
+	@import 'postIndex/mobile';
+}

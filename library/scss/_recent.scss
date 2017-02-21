@@ -1,13 +1,13 @@
 /**
- * This SCSS file is to import the proper "Recent Posts" & "Recent Projects" style
+ * This SCSS file is to import the proper "Related Links" & "Related Posts" style
  * sheet based on screen size via Media Queries.
  *
  * @author Kerick Howlett
  **/
 
 @media screen and ( min-width: 1300px ) {
-	@import 'related/desktop';
+	@import 'recent/desktop';
 }
 @media screen and ( max-width: 1299px ) {
-	@import 'related/mobile';
+	@import 'recent/mobile';
 }

@@ -1,0 +1,44 @@
+/**
+ * This SCSS file is for styling the "Recent Posts" & "Recent Projects" sidebar
+ * Desktop & Tablet.
+ *
+ * @author Kerick Howlett
+ **/
+
+.recent_posts,
+.recent_projects {
+	display: block;
+	margin-left: auto;
+	text-align: right;
+	ul {
+		list-style: none;
+		padding-left: 0;
+		li {
+			line-height: 2em;
+			a {
+				color: $black;
+				display: block;
+				@include transition( 0.2s all ease-in-out );
+				&:hover {
+					color: $blue;
+				}
+				span {
+					display: block;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+			}
+		}
+	}
+	.recent_title {
+		font-size: 2em !important;
+	}
+	.recent_date {
+		color: $black;
+		font: 100% $roboto_thin;
+		font-size: 1.2em !important;
+		&:hover {
+			color: $black;
+		}
+	}
+}
