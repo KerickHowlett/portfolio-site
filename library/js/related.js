@@ -11,8 +11,6 @@
 			var url = $( link ).attr( 'href' );
 			if ( !url.includes( window.location.hostname ) ) {
 				$( link ).attr( 'target', '_blank' );
-			} else {
-				console.log( 'INTERNAL LINK!' );
 			}
 		}
 	} );

@@ -8,7 +8,8 @@
 img {
 	display: block;
 	height: auto;
-	width: auto;
+	margin: auto;
+	max-width: 100%;
 	vertical-align: middle;
 }
 
@@ -16,15 +17,16 @@ img {
 .image-center {
 	display: inline-block;
 	margin: 1em auto;
+	text-align: center;
+	width: 100%;
 	a {
 
 		span {
 			color: $dark-gray;
-			display: block;
+			display: inline-block;
 			font-size: 0.85em;
 			font-style: italic;
-			padding: .3em;
-			margin-top: 0.3em;
+			margin: 1em auto;
 			text-align: left;
 		}
 	}

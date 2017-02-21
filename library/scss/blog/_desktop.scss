@@ -27,8 +27,7 @@
 		&_body {
 			align-self: flex-start;
 			display: inline-block;
-			padding-left: 2em;
-			padding-right: 1em;
+			padding: 0 1em 4em 2em;
 			width: 65%;
 		}
 	}
@@ -36,13 +35,20 @@
 
 .post-meta {
 	font: 100% $roboto;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 	.post-author {
 		display: none;
 	}
 }
 
 .post-content {
+	a {
+		color: $black;
+		@include transition( 0.2s all ease-in-out );
+		&:hover {
+			color: $blue;
+		}
+	}
 	h1,
 	h2,
 	h3,
@@ -77,9 +83,43 @@
 		position: relative;
 			bottom: -6px;
 	}
+	ol,
+	ul {
+		line-height: 2em;
+	}
 }
 
 pre.highlight code {
 	border-radius: 5px;
 	padding: 1em;
+}
+
+.page_navigation {
+	display: inline-block;
+	font-size: 1.5em;
+	margin: 2em 0;
+	width: 100%;
+	a {
+		color: $black;
+		@include transition( 0.2s all ease-in-out );
+		&:visited {
+			color: $black;
+		}
+		&:hover {
+			color: $blue;
+		}
+	}
+	&__next {
+		float: right;
+	}
+}
+
+.navigation_arrow {
+	position: relative;
+	bottom: 1px;
+}
+
+.post-time {
+	font: 100% $roboto_thin;
+	font-weight: bold;
 }
