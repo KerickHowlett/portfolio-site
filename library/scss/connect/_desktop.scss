@@ -25,8 +25,38 @@
 		}
 	}
 	&__body {
+		display: flex;
+		padding: 1.5em;
+		margin: 1.5em 0 3em 5%;
+		&__cta {
+			align-items: flex-start;
+			width: 40%;
+			img {
+				height: auto;
+				width: 100%;
+			}
+		}
+		&__form {
+			align-items: flex-end;
+			margin-right: 2em;
+			width: 60%;
+		}
+	}
+}
+
+.connect__message {
+	display: hidden;
+}
+
+.form {
+	display: block;
+	width: 100%;
+	&__block {
 		display: block;
-		padding: 1.5em
-		margin: 3em 0;
+		padding: 1em;
+		width: 100%;
+		&__email {
+			display: none;
+		}
 	}
 }

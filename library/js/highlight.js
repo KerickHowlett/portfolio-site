@@ -15,6 +15,8 @@
 		var code = document.querySelector( '.highlight code' );
 		var worker = new Worker( '/library/js/worker.js' );
 		worker.onmessage = function( event ) { code.innerHTML = event.data; }
-		worker.postMessage( code.textContent );
+		if ( code ) {
+			worker.postMessage( code.textContent );
+		}
 	} );
 } )( jQuery );

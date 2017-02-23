@@ -36,7 +36,6 @@
 .post_thumbnail {
 	display: table;
 	height: 18em;
-	padding: 1em;
 	@include transition( 0.2s all ease-in-out );
 	width: 100%;
 	&__image {
@@ -54,9 +53,9 @@
 			max-width: none;
 			position: absolute;
 				top: 0;
-				left: -25%;
+				left: -50%;
 			@include transition( 2s all ease-in-out );
-			width: 140%;
+			width: 200%;
 		}
 	}
 	&__details {
@@ -94,8 +93,8 @@
 		.post_thumbnail__image {
 			@include filter( grayscale( 0% ) );
 			img {
-				left: -30%;
-				width: 150%;
+				left: -55%;
+				width: 210%;
 			}
 		}
 	}

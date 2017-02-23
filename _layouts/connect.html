@@ -17,13 +17,30 @@ layout: default
 			<div class="connect__message">
 				Your message was succesfully sent! I'll get back to you as soon as possible!
 			</div>
-			<form action="/mail.php" method="post">
-				<input id="name" type="text" name="name" placeholder="Your Name" required/>
-				<input id="email" type="email" name="email"/>
-				<input id="your_email" type="email" name="your_email" placeholder="Your Email" required/>
-				<input id="subject" type="text" name="subject" placeholder="Subject"/>
-				<input id="message" type="textarea" name="message" placeholder="Message" required/>
-				<input id="submit" class="button disabled" type="submit" name="submit" value="Send"/>
+			<form id="contact_form" class="form" action="/mail.php" method="post">
+				<div class="form__block">
+					<label for="name">Your Name</label>
+					<input id="name" type="text" name="name" />
+				</div>
+				<div class="form__block__email">
+					<label for="email">Email</label>
+					<input id="email" type="email" name="email" />
+				</div>
+				<div class="form__block">
+					<label for="your_email">Your Email</label>
+					<input id="your_email" type="email" name="your_email" />
+				</div>
+				<div class="form__block">
+					<label for="subject">Subject</label>
+					<input id="subject" type="text" name="subject" />
+				</div>
+				<div class="form__block">
+					<label for="message">Message</label>
+					<input id="message" type="textarea" name="message" />
+				</div>
+				<div class="form__block">
+					<input id="submit" class="button disabled" type="submit" name="submit" value="Send"/>
+				</div>
 			</form>
 		</div>
 	</div>
