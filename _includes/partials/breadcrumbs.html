@@ -1,5 +1,5 @@
 <div class="breadcrumb">
-	<span>
+	<span class="breadcrumb__link">
 		<a href="{{ site.baseurl }}/">Home</a>
 	</span>
 	<span class="slash">/</span>
@@ -11,13 +11,13 @@
 			{% capture previous_url %}{{site.baseurl}}{% endcapture %}
 		{% else %}
 			{% if forloop.last == false %}
-				<span>
+				<span class="breadcrumb__link">
 					<a href="{{previous_url}}/{{url_part}}">{{url_part}}</a>
 				</span>
 				<span class="slash">/</span>
 				{% capture previous_url %}{{previous_url}}/{{url_part}}/{% endcapture %}
 			{% else %}
-				<span>
+				<span class="breadcrumb__link">
 					<a href="{{previous_url}}/{{url_part}}">{{page.title}}</a>
 				</span>
 			{% endif %}
