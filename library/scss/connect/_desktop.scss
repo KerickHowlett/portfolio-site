@@ -1,0 +1,32 @@
+/**
+ * This SCSS file is to establish the styling rules for the contact/connect form
+ * Desktop.
+ *
+ * @author Kerick Howlett
+ **/
+
+.connect {
+	&-header {
+		background: url( '/library/images/headers/mail.jpg' ) top right no-repeat fixed;
+		background-size: cover;
+		background-position-y: -20em;
+		display: table;
+		height: 25em;
+		overflow: hidden;
+		position: relative;
+			left: -1em;
+		width: calc( 100% + 1.5em );
+		h1 {
+			color: $white;
+			display: table-cell;
+			font-size: 8vw;
+			text-align: center;
+			vertical-align: middle;
+		}
+	}
+	&__body {
+		display: block;
+		padding: 1.5em
+		margin: 3em 0;
+	}
+}

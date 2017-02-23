@@ -8,7 +8,7 @@ layout: default
 	{% include partials/breadcrumbs.html %}
 	<div class="archive-content">
 		<div class="archive-content_body">
-			{% for post in site.posts %}
+			{% for post in site.projects reversed %}
 				{% include partials/thumbnail.html %}
 				{% if forloop.last == false %}
 					<span class="thumbnail_divider"></span>

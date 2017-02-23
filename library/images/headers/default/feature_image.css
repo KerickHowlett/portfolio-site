@@ -4,7 +4,7 @@
 
 .archive-header,
 .post-header {
-	background: url( '/library/posts/default/feature_image.jpg' ) top right no-repeat fixed;
+	background: url( '/library/images/headers/default/feature_image.jpg' ) top right no-repeat fixed;
 	background-size: cover;
 	background-position-y: -29px;
 }

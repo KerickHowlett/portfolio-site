@@ -56,7 +56,7 @@ technologies:
     link: "http://www.yaml.org/"
 related_links:
   - title: "Switching from iOS to Ionic"
-    href: "https://www.airpair.com/javascript/posts/switching-from-ios-to-ionic"
+    href: "https://www.airpair.com/javascript/headers/switching-from-ios-to-ionic"
   - title: "Eloquent: Mutators"
     href: "https://laravel.com/docs/5.4/eloquent-mutators"
   - title: "Native Script at ng-Conf"

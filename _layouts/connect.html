@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class="connect">
+	<header class="connect-header">
+		<h1 itemprop="name headline">{{ page.title }}</h1>
+	</header>
+	{% include partials/breadcrumbs.html %}
+	<div class="connect__body" itemprop="articleBody">
+		<div class="connect__body__cta">
+			<img src={{ '/library/images/portfolio1.jpg' | prepend: site.baseurl }} alt="Kerick Howlett" class="portfolio"/>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+			</p>
+		</div>
+		<div class="connect__body__form">
+			<div class="connect__message">
+				Your message was succesfully sent! I'll get back to you as soon as possible!
+			</div>
+			<form action="/mail.php" method="post">
+				<input id="name" type="text" name="name" placeholder="Your Name" required/>
+				<input id="email" type="email" name="email"/>
+				<input id="your_email" type="email" name="your_email" placeholder="Your Email" required/>
+				<input id="subject" type="text" name="subject" placeholder="Subject"/>
+				<input id="message" type="textarea" name="message" placeholder="Message" required/>
+				<input id="submit" class="button disabled" type="submit" name="submit" value="Send"/>
+			</form>
+		</div>
+	</div>
+</div>

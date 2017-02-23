@@ -21,7 +21,6 @@ $white:             #FFFFFF !default;
 @import 'mixins';
 
 /* List of all Child SCSS files to import into master Style Sheet. */
-@import 'about';
 @import 'blog';
 @import 'breadcrumbs';
 @import 'connect';
@@ -29,7 +28,6 @@ $white:             #FFFFFF !default;
 @import 'general';
 @import 'homepage';
 @import 'postIndex';
-@import 'projects';
 @import 'recent';
 @import 'related';
 @import 'sidebar';

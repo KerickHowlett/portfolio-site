@@ -1,0 +1,13 @@
+/**
+ * This SCSS file is to import the proper contact/connect form style sheet for
+ * based on screen size via Media Queries.
+ *
+ * @author Kerick Howlett
+ **/
+
+@media screen and ( min-width: 1025px ) {
+	@import 'connect/desktop';
+}
+@media screen and ( max-width: 1024px ) {
+	@import 'connect/mobile';
+}
