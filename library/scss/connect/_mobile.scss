@@ -76,7 +76,7 @@
 .form_label,
 .form_label_textarea {
 	color: $blue;
-	font-size: 1.85em;
+	font-size: 1.2em;
 	opacity: 0.75;
 	position: absolute;
 		left: 0.2em;
@@ -95,7 +95,8 @@
 	border: none;
 	border-bottom: 2px solid $gray;
 	color: $blue;
-	font-size: 1.85em;
+	font-size: 1.2em;
+	line-height: 1.4em;
 	margin-top: 0.15em;
 	padding: 0.2em;
 	@include transition( 0.2s all ease-in-out );
