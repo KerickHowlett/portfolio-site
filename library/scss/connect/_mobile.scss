@@ -4,3 +4,139 @@
  *
  * @author Kerick Howlett
  **/
+
+.connect {
+	&-header {
+		background: url( '/library/images/headers/mail.jpg' ) top right no-repeat fixed;
+		background-size: cover;
+		background-position-y: -20em;
+		display: table;
+		height: 25em;
+		overflow: hidden;
+		position: relative;
+			left: -1em;
+		width: calc( 100% + 1.5em );
+		h1 {
+			color: $white;
+			display: table-cell;
+			font-size: 8vw;
+			text-align: center;
+			vertical-align: middle;
+		}
+	}
+	&__body {
+		display: block;
+		padding: 1.5em;
+		margin: 1.5em 0 3em;
+		&__cta {
+			display: block;
+			width: 100%;
+			img {
+				height: auto;
+				width: 100%;
+			}
+		}
+		&__form {
+			display: block;
+			margin-top: 2em;
+			width: 100%;
+		}
+	}
+}
+
+.connect__message {
+	display: none;
+}
+
+.form {
+	display: block;
+	width: 100%;
+	&__block {
+		display: block;
+		padding: 1.5em 0;
+		position: relative;
+		width: 99%;
+		&:last-child {
+			padding: 0;
+			input {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+.message_block {
+	padding-top: 2em;
+}
+
+.form__block__email {
+	display: none;
+}
+
+.form_label,
+.form_label_textarea {
+	color: $blue;
+	font-size: 1.85em;
+	opacity: 0.75;
+	position: absolute;
+		left: 0.2em;
+		top: 32%;
+	@include transition( 0.2s all ease-in-out );
+}
+
+.form_label_textarea {
+	left: 0.3em;
+	top: 10%;
+}
+
+.form_input,
+.form_textarea {
+	background: none;
+	border: none;
+	border-bottom: 2px solid $gray;
+	color: $blue;
+	font-size: 1.85em;
+	margin-top: 0.15em;
+	padding: 0.2em;
+	@include transition( 0.2s all ease-in-out );
+	width: 100%;
+	&:focus {
+		border-bottom: 2px solid $blue;
+		outline: none;
+	}
+}
+
+.form_input {
+	padding-bottom: 0.5em;
+}
+
+.form_textarea {
+	border-left: 2px solid $gray;
+	height: 8em;
+	margin-top: 0.45em;
+	padding-left: 0.3em;
+	&:focus {
+		border-left: 2px solid $blue;
+	}
+}
+
+.selected_input {
+	font-size: 1.5em;
+	left: 0;
+	opacity: 1;
+	top: 0;
+	&:last-child {
+		top: -0.2em;
+	}
+}
+
+#submit {
+	font-size: 2em;
+	padding: 0.5em 2em;
+	width: 100%;
+}
+
+/* Style for LastPass Insert */
+#__lpform_name {
+	display: none;
+}

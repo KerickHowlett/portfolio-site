@@ -19,27 +19,27 @@ layout: default
 			</div>
 			<form id="contact_form" class="form" action="/mail.php" method="post">
 				<div class="form__block">
-					<label for="name">Your Name*</label>
-					<input id="name" type="text" name="name" />
+					<label class="form_label" for="name">Your Name *</label>
+					<input id="name" class="form_input" type="text" name="name" maxlength="125"/>
 				</div>
 				<div class="form__block__email">
-					<label for="email">Email*</label>
-					<input id="email" type="email" name="email" />
+					<label class="form_label" for="email">Email *</label>
+					<input id="email" class="form_input" type="email" name="email" maxlength="125"/>
 				</div>
 				<div class="form__block">
-					<label for="your_email">Your Email*</label>
-					<input id="your_email" type="email" name="your_email" />
+					<label class="form_label" for="your_email">Your Email *</label>
+					<input id="your_email" class="form_input" type="email" name="your_email" maxlength="125"/>
 				</div>
 				<div class="form__block">
-					<label for="subject">Subject</label>
-					<input id="subject" type="text" name="subject" />
+					<label class="form_label" for="subject">Subject</label>
+					<input id="subject" class="form_input" type="text" name="subject" maxlength="125"/>
+				</div>
+				<div class="form__block message__block">
+					<label class="form_label_textarea" for="message">Message *</label>
+					<textarea id="message" class="form_textarea" name="message"></textarea>
 				</div>
 				<div class="form__block">
-					<label for="message">Message*</label>
-					<input id="message" type="textarea" name="message" />
-				</div>
-				<div class="form__block">
-					<input id="submit" class="button disabled" type="submit" name="submit" value="Send"/>
+					<input id="submit" class="button" type="submit" name="submit" value="Send"/>
 				</div>
 			</form>
 		</div>

@@ -5,9 +5,9 @@
  * @author Kerick Howlett
  **/
 
-@media screen and ( min-width: 1025px ) {
+@media screen and ( min-width: 767px ) {
 	@import 'connect/desktop';
 }
-@media screen and ( max-width: 1024px ) {
+@media screen and ( max-width: 766px ) {
 	@import 'connect/mobile';
 }

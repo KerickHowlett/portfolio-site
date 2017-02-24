@@ -15,7 +15,7 @@
 					<a href="{{previous_url}}/{{url_part}}">{{url_part}}</a>
 				</span>
 				<span class="slash">/</span>
-				{% capture previous_url %}{{previous_url}}/{{url_part}}/{% endcapture %}
+				{% capture previous_url %}{{previous_url}}/{{url_part}}{% endcapture %}
 			{% else %}
 				<span class="breadcrumb__link">
 					<a href="{{previous_url}}/{{url_part}}">{{page.title}}</a>

@@ -25,7 +25,9 @@ body {
 	width: 100%;
 }
 
-p {
+p,
+label,
+input {
 	font: 100% $roboto;
 }
 

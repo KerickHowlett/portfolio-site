@@ -1,18 +1,21 @@
 /**
- * This JavaScript/jQuery file is to remove all the symbols and URL encode from
- * the Breadcrumbs, if there are any.
+ * This JavaScript/jQuery file is to URI decodes and removes all of the special
+ * characters from the breadcrumbs, as the breadcrumbs are created from the
+ * page's URI.
  *
  * @author Kerick Howlett
  **/
 
 ( function( $ ) {
 	$( document ).ready( function() {
-		var breadcrumb = $( '.breadcrumb__link > a' ).html();
-		if ( breadcrumb !== 'Home' ) {
-			breadcrumb = decodeURI( breadcrumb );
-			breadcrumb = string.replace( /([^a-zA-Z0-9 ,*\u2019-]+)/g,' ' );
-			breadcrumb = string.replace(/\s\s+/g, ' ');
-			$( '.breadcrumb__link > a' ).html( breadcrumb );
-		}
+		$.each( $( '.breadcrumb__link a' ), function( index, value ) {
+			var breadcrumb = $( value ).html();
+			if ( breadcrumb !== 'Home' ) {
+				breadcrumb = decodeURI( breadcrumb );
+				breadcrumb = breadcrumb.replace( /[^a-zA-Z ]/g,' ' );
+				breadcrumb = breadcrumb.replace( /\s\s+/g, ' ' );
+				$( value ).html( breadcrumb );
+			}
+		} );
 	} );
 } )( jQuery );
