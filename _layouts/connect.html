@@ -17,7 +17,7 @@ layout: default
 			<div class="connect__message">
 				Your message was succesfully sent! I'll get back to you as soon as possible!
 			</div>
-			<form id="contact_form" class="form" action="/mail.php" method="post">
+			<form id="contact_form" class="form">
 				<div class="form__block">
 					<label class="form_label" for="name">Your Name *</label>
 					<input id="name" class="form_input" type="text" name="name" maxlength="125"/>
@@ -39,7 +39,7 @@ layout: default
 					<textarea id="message" class="form_textarea" name="message"></textarea>
 				</div>
 				<div class="form__block">
-					<input id="submit" class="button" type="submit" name="submit" value="Send"/>
+					<input id="submit" class="button" type="button" name="submit" value="Send"/>
 				</div>
 			</form>
 		</div>
