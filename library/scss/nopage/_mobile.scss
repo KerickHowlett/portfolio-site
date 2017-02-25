@@ -1,0 +1,41 @@
+/**
+ * This SCSS file is to establish the styling rules for the 404 page - Mobile.
+ *
+ * @author Kerick Howlett
+ **/
+
+.nopage {
+	&-header {
+		background: url( '/library/images/headers/map.jpg' ) top right no-repeat fixed;
+		background-size: cover;
+		background-position-y: -20em;
+		display: table;
+		height: 25em;
+		overflow: hidden;
+		position: relative;
+			left: -1em;
+		width: calc( 100% + 1.5em );
+		h1 {
+			color: $white;
+			display: table-cell;
+			font-size: 40vw;
+			text-align: center;
+			vertical-align: middle;
+		}
+	}
+	&__body {
+		display: block;
+		padding: 1.5em;
+		&__message {
+			color: $blue;
+			font-size: 8vw;
+			padding-top: 0.5em;
+			margin: auto;
+			text-align: center;
+			h3 {
+				line-height: 1.5em;
+				margin: 0;
+			}
+		}
+	}
+}

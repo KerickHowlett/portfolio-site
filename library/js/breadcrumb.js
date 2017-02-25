@@ -12,7 +12,7 @@
 			var breadcrumb = $( value ).html();
 			if ( breadcrumb !== 'Home' ) {
 				breadcrumb = decodeURI( breadcrumb );
-				breadcrumb = breadcrumb.replace( /[^a-zA-Z ]/g,' ' );
+				breadcrumb = breadcrumb.replace( /[^a-zA-Z0-9 ]/g,' ' );
 				breadcrumb = breadcrumb.replace( /\s\s+/g, ' ' );
 				$( value ).html( breadcrumb );
 			}

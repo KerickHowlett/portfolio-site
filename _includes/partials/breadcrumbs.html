@@ -1,24 +1,29 @@
 <div class="breadcrumb">
 	<span class="breadcrumb__link">
-		<a href="{{ site.baseurl }}/">Home</a>
+		<a href="{{  site.baseurl  }}/">Home</a>
 	</span>
 	<span class="slash">/</span>
-	{% capture page_urls %}{{ page.url | remove: "/index.html" }}{% endcapture %}
-	{% capture domain %}{{site.baseurl}}{% endcapture %}
+	{% capture page_urls %}{{  page.url | remove: "/index.html"  }}{% endcapture %}
+	{% capture domain %}{{ site.baseurl }}{% endcapture %}
 	{% assign splitted_url_parts = page_urls | split: '/' %}
 	{% for url_part in splitted_url_parts %}
 		{% if url_part == domain %}
-			{% capture previous_url %}{{site.baseurl}}{% endcapture %}
+			{% capture previous_url %}{{ site.baseurl }}{% endcapture %}
 		{% else %}
 			{% if forloop.last == false %}
 				<span class="breadcrumb__link">
-					<a href="{{previous_url}}/{{url_part}}">{{url_part}}</a>
+					<a href="{{ previous_url }}/{{ url_part }}">{{ url_part }}</a>
 				</span>
 				<span class="slash">/</span>
-				{% capture previous_url %}{{previous_url}}/{{url_part}}{% endcapture %}
+				{% capture previous_url %}{{ previous_url }}/{{ url_part }}{% endcapture %}
 			{% else %}
+				{% if page.title %}
+					{% capture last_breadcrumb %}{{ page.title }}{% endcapture %}
+				{% else %}
+					{% capture last_breadcrumb %}{{ url_part | remove: ".html" }}{% endcapture %}
+				{% endif %}
 				<span class="breadcrumb__link">
-					<a href="{{previous_url}}/{{url_part}}">{{page.title}}</a>
+					<a href="{{ previous_url }}/{{ url_part }}">{{ last_breadcrumb }}</a>
 				</span>
 			{% endif %}
 		{% endif %}
