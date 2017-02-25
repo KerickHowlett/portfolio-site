@@ -87,6 +87,7 @@
 							name: name,
 							email: email,
 							subject: subject,
+							date: new Date(),
 							message: message
 						},
 						dataType: 'json',
