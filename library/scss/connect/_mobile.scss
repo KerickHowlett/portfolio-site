@@ -44,10 +44,6 @@
 	}
 }
 
-.connect__message {
-	display: none;
-}
-
 .form {
 	display: block;
 	width: 100%;
@@ -57,7 +53,7 @@
 		position: relative;
 		width: 99%;
 		&:last-child {
-			padding: 0;
+			padding-top: 1.5em;
 			input {
 				margin-top: 0;
 			}
@@ -85,7 +81,7 @@
 }
 
 .form_label_textarea {
-	left: 0.3em;
+	left: 0.2em;
 	top: 14%;
 }
 
@@ -112,13 +108,9 @@
 }
 
 .form_textarea {
-	border-left: 2px solid $gray;
 	height: 8em;
 	margin-top: 0.45em;
 	padding-left: 0.3em;
-	&:focus {
-		border-left: 2px solid $blue;
-	}
 }
 
 .selected_input {
@@ -132,9 +124,41 @@
 }
 
 #submit {
+	cursor: pointer;
 	font-size: 2em;
 	padding: 0.5em 2em;
 	width: 100%;
+}
+
+.missing_field {
+	label {
+		color: $red;
+	}
+	input,
+	textarea {
+		border-bottom: 2px solid $red;
+		&:focus {
+			border-bottom: 2px solid $red;
+		}
+	}
+	span {
+		color: $red;
+		font-size: 0.85em;
+		position: relative;
+			top: 0.5em;
+	}
+}
+
+.connect_confirmation {
+	color: $blue;
+	font-size: 8vw;
+	padding-top: 0.5em;
+	margin: auto;
+	text-align: center;
+	h3 {
+		line-height: 1.5em;
+		margin: 0;
+	}
 }
 
 /* Style for LastPass Insert */

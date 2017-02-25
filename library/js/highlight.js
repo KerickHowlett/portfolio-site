@@ -13,7 +13,7 @@
 	} );
 	addEventListener( 'load', function() {
 		var code = document.querySelector( '.highlight code' );
-		var worker = new Worker( '/library/js/worker.js' );
+		var worker = new Worker( '/library/highlight/worker.js' );
 		worker.onmessage = function( event ) { code.innerHTML = event.data; }
 		if ( code ) {
 			worker.postMessage( code.textContent );

@@ -16,6 +16,9 @@
 				breadcrumb = breadcrumb.replace( /\s\s+/g, ' ' );
 				$( value ).html( breadcrumb );
 			}
+			if ( breadcrumb === 'Connect' && $( value ).attr( 'href' ) === '/confirmation' ) {
+				$( value ).attr( 'href', '/connect' );
+			}
 		} );
 	} );
 } )( jQuery );
