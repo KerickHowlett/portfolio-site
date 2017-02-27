@@ -24,6 +24,7 @@
 	&-content {
 		display: flex;
 		margin: 3em 0 0 5em;
+		padding: 0 1em;
 		&_body {
 			align-self: flex-start;
 			display: inline-block;
@@ -86,6 +87,12 @@
 	ol,
 	ul {
 		line-height: 2em;
+	}
+	p {
+		margin-top: 2em;
+		&:first-child {
+			margin-top: 0em;
+		}
 	}
 }
 
