@@ -44,3 +44,9 @@ collections:
     projects:
         output: true
         permalink: /projects/:title/
+
+exclude:
+  - package.json
+  - node_modules
+  - gulpfile.js
+  - examples

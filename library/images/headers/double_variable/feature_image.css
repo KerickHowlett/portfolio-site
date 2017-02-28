@@ -1,0 +1,10 @@
+/**
+ * This is the style rules for the post header.
+ **/
+
+.archive-header,
+.post-header {
+	background: url( '/library/images/headers/test/feature_image.jpg' ) top right no-repeat fixed;
+	background-size: cover;
+	background-position-y: -29px;
+}
