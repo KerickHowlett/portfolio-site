@@ -4,7 +4,7 @@ title:  "Double Variables"
 author: "Kerick Howlett"
 feature_image: double_variable
 date:   2017-02-28 11:32:00 -0400
-excerpt: Every once in a while, a programmer will come across one of those situations where he or she will find a very useful and practical programming method to resolve a problem, but will not be able to think of many other scenarios where that method would need to be called for again. But yet, I was very proud of myself when I came up with it, as it was something that neither my colleagues nor I get to use very often in a pragmatic way.
+excerpt_separator: <!-- more -->
 technologies:
 - name: "HTML"
   image: "html.png"
@@ -22,6 +22,8 @@ related_links:
     href: "http://www.holidayworld.com/park-tickets/park-hours/"
 ---
 Every once in a while, a programmer will come across one of those situations where he or she will find a very useful and practical programming method to resolve a problem, but will not be able to think of many other scenarios where that method would need to be called for again. But yet, I was very proud of myself when I came up with it, as it was something that neither my colleagues nor I get to use very often in a pragmatic way.
+
+<!-- more -->
 
 ### The Use Case
 I was working on creating a special calendar for Holiday World, which was suppose to dynamically generate special markings on specific days based on a CSV file that they would  provide. In said file, each date would have a special event and/or type of day that was associated with the hours they were opened. Now of course, this also included a set of Legends that would go to describe what everything on the calendar means for each month.
