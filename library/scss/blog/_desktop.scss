@@ -102,9 +102,11 @@ pre.highlight code {
 }
 
 .page_navigation {
+	border-top: 1px solid $gray;
 	display: inline-block;
 	font-size: 1.5em;
 	margin: 2em 0;
+	padding-top: 1.5em;
 	width: 100%;
 	a {
 		color: $black;

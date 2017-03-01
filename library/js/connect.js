@@ -68,7 +68,9 @@
 				 * @return {Boolean}         Is the email address valid?
 				 **/
 				function isEmailValid( address ) {
-					var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+					var at = address.indexOf( '@' );
+					var dot = address.lastIndexOf( '.' );
+					return ( at > -1 && dot > at ) ? true : false;
 					return pattern.test( address );
 				};
 				var name = $( '#name' ).val();
@@ -80,16 +82,27 @@
 					 * Submits the data of the form to the mail.php file, and
 					 * then redirects to the confirmation page upon success.
 					 **/
-					$.ajax( {
-						url: 'https://formspree.io/kahowlett1989@gmail.com',
-						method: 'POST',
-						data: {
+					var dataObject;
+					if ( subject.trim() ) {
+						dataObject = {
 							name: name,
 							email: email,
 							subject: subject,
 							date: new Date(),
 							message: message
-						},
+						}
+					} else {
+						dataObject = {
+							name: name,
+							email: email,
+							date: new Date(),
+							message: message
+						}
+					}
+					$.ajax( {
+						url: 'https://formspree.io/kahowlett1989@gmail.com',
+						method: 'POST',
+						data: dataObject,
 						dataType: 'json',
 						success: successCallback,
 						error: errorCallback

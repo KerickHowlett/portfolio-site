@@ -230,9 +230,11 @@
     border-radius: 5px;
     padding: 1em; }
   .page_navigation {
+    border-top: 1px solid #CCCCCC;
     display: inline-block;
     font-size: 1.5em;
     margin: 2em 0;
+    padding-top: 1.5em;
     width: 100%; }
     .page_navigation a {
       color: #000000;
@@ -336,9 +338,11 @@
     border-radius: 5px;
     padding: 1em; }
   .page_navigation {
+    border-top: 1px solid #CCCCCC;
     display: inline-block;
     font-size: 1.5em;
     margin: 2em 0;
+    padding-top: 1.5em;
     text-overflow: ellipsis;
     width: 100%; }
     .page_navigation a {
