@@ -1,0 +1,2545 @@
+/**
+ * This is the Primary SCSS file that compiles all the other child SCSS files
+ * and SCSS variables to control the overall appearance of the Portfolio Site.
+ *
+ * @author: Kerick Howlett
+ **/
+/* Default Color Variables */
+/* Establishing Typography & Mixins Variables */
+/**
+ * SCSS file that compiles the various fonts for the Portfolio Site.
+ * The Roboto font comes from: https://fonts.google.com/specimen/Roboto
+ *
+ * @author: Kerick Howlett
+ **/
+/* Font Import Declaration */
+/* Roboto Font Family */
+/* Roboto - Normal */
+@font-face {
+  font-family: 'roboto';
+  src: url("../fonts/Roboto/roboto-regular-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Roboto/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/Roboto/roboto-regular-webfont.woff") format("woff"), url("../fonts/Roboto/roboto-regular-webfont.ttf") format("truetype"), url("../fonts/Roboto/roboto-regular-webfont.svg#robotoregular") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal; }
+
+/* Roboto - Bold */
+@font-face {
+  font-family: 'roboto';
+  src: url("../fonts/Roboto/roboto-bold-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Roboto/roboto-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto-bold-webfont.woff2") format("woff2"), url("../fonts/Roboto/roboto-bold-webfont.woff") format("woff"), url("../fonts/Roboto/roboto-bold-webfont.ttf") format("truetype"), url("../fonts/Roboto/roboto-bold-webfont.svg#robotobold") format("svg");
+  /* Legacy iOS */
+  font-weight: bold;
+  font-style: normal; }
+
+/* Roboto - Italic */
+@font-face {
+  font-family: 'roboto';
+  src: url("../fonts/Roboto/roboto-italic-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Roboto/roboto-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto-italic-webfont.woff2") format("woff2"), url("../fonts/Roboto/roboto-italic-webfont.woff") format("woff"), url("../fonts/Roboto/roboto-italic-webfont.ttf") format("truetype"), url("../fonts/Roboto/roboto-italic-webfont.svg#robotoitalic") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: italic; }
+
+/* Roboto - Bold & Italic */
+@font-face {
+  font-family: 'roboto';
+  src: url("../fonts/Roboto/roboto-bolditalic-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Roboto/roboto-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto-bolditalic-webfont.woff2") format("woff2"), url("../fonts/Roboto/roboto-bolditalic-webfont.woff") format("woff"), url("../fonts/Roboto/roboto-bolditalic-webfont.ttf") format("truetype"), url("../fonts/Roboto/roboto-bolditalic-webfont.svg#robotobold_italic") format("svg");
+  /* Legacy iOS */
+  font-weight: bold;
+  font-style: italic; }
+
+/* Roboto Black Font Family */
+/* Roboto Black - Normal */
+@font-face {
+  font-family: 'roboto_black';
+  src: url("../fonts/Roboto/roboto-black-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Roboto/roboto-black-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto-black-webfont.woff2") format("woff2"), url("../fonts/Roboto/roboto-black-webfont.woff") format("woff"), url("../fonts/Roboto/roboto-black-webfont.ttf") format("truetype"), url("../fonts/Roboto/roboto-black-webfont.svg#robotoblack") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal; }
+
+/* Roboto Black - Italic */
+@font-face {
+  font-family: 'roboto_black';
+  src: url("../fonts/Roboto/roboto-blackitalic-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Roboto/roboto-blackitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto-blackitalic-webfont.woff2") format("woff2"), url("../fonts/Roboto/roboto-blackitalic-webfont.woff") format("woff"), url("../fonts/Roboto/roboto-blackitalic-webfont.ttf") format("truetype"), url("../fonts/Roboto/roboto-blackitalic-webfont.svg#robotoblack_italic") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: italic; }
+
+/* Roboto Light Font Family */
+/* Roboto Light - Normal */
+@font-face {
+  font-family: 'roboto_light';
+  src: url("../fonts/Roboto/roboto-light-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Roboto/roboto-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto-light-webfont.woff2") format("woff2"), url("../fonts/Roboto/roboto-light-webfont.woff") format("woff"), url("../fonts/Roboto/roboto-light-webfont.ttf") format("truetype"), url("../fonts/Roboto/roboto-light-webfont.svg#robotolight") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal; }
+
+/* Roboto Light - Italic */
+@font-face {
+  font-family: 'roboto_light';
+  src: url("../fonts/Roboto/roboto-lightitalic-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Roboto/roboto-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto-lightitalic-webfont.woff2") format("woff2"), url("../fonts/Roboto/roboto-lightitalic-webfont.woff") format("woff"), url("../fonts/Roboto/roboto-lightitalic-webfont.ttf") format("truetype"), url("../fonts/Roboto/roboto-lightitalic-webfont.svg#robotolight_italic") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: italic; }
+
+/* Roboto Medium Font Family */
+/* Roboto Medium - Normal */
+@font-face {
+  font-family: 'roboto_medium';
+  src: url("../fonts/Roboto/roboto-medium-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Roboto/roboto-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto-medium-webfont.woff2") format("woff2"), url("../fonts/Roboto/roboto-medium-webfont.woff") format("woff"), url("../fonts/Roboto/roboto-medium-webfont.ttf") format("truetype"), url("../fonts/Roboto/roboto-medium-webfont.svg#robotomedium") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal; }
+
+/* Roboto Medium - Italic */
+@font-face {
+  font-family: 'roboto_medium';
+  src: url("../fonts/Roboto/roboto-mediumitalic-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Roboto/roboto-mediumitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto-mediumitalic-webfont.woff2") format("woff2"), url("../fonts/Roboto/roboto-mediumitalic-webfont.woff") format("woff"), url("../fonts/Roboto/roboto-mediumitalic-webfont.ttf") format("truetype"), url("../fonts/Roboto/roboto-mediumitalic-webfont.svg#robotomedium_italic") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: italic; }
+
+/* Roboto Thin Font Family */
+/* Roboto Thin - Normal */
+@font-face {
+  font-family: 'roboto_thin';
+  src: url("../fonts/Roboto/roboto-thin-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Roboto/roboto-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto-thin-webfont.woff2") format("woff2"), url("../fonts/Roboto/roboto-thin-webfont.woff") format("woff"), url("../fonts/Roboto/roboto-thin-webfont.ttf") format("truetype"), url("../fonts/Roboto/roboto-thin-webfont.svg#robotothin") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal; }
+
+/* Roboto Thin - Italic */
+@font-face {
+  font-family: 'roboto_thin';
+  src: url("../fonts/Roboto/roboto-thinitalic-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Roboto/roboto-thinitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto-thinitalic-webfont.woff2") format("woff2"), url("../fonts/Roboto/roboto-thinitalic-webfont.woff") format("woff"), url("../fonts/Roboto/roboto-thinitalic-webfont.ttf") format("truetype"), url("../fonts/Roboto/roboto-thinitalic-webfont.svg#robotothin_italic") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: italic; }
+
+/**
+ * This SCSS file is to establish the Mixin functions that will be used with the
+ * various SCSS files utilized for this Portfolio Site.
+ *
+ * @author Kerick Howlett
+ **/
+/* List of all Child SCSS files to import into master Style Sheet. */
+/**
+ * This SCSS file is for creating the overall look for a standard blog post based
+ * on screen size via Media Queries.
+ *
+ * @author Kerick Howlett
+ **/
+@media screen and (min-width: 1300px) {
+  /**
+ * This SCSS file is for creating the overall look for a standard blog post used
+ * throughout the entire Protfolio Site - Desktop & Tablet.
+ *
+ * @author Kerick Howlett
+ **/
+  .post-header {
+    display: table;
+    height: 25em;
+    overflow: hidden;
+    position: relative;
+    left: -1em;
+    width: calc( 100% + 1.5em); }
+    .post-header h1 {
+      color: #FFFFFF;
+      display: table-cell;
+      font-size: 8vw;
+      text-align: center;
+      vertical-align: middle; }
+  .post-content {
+    display: flex;
+    margin: 3em 0 0 5em;
+    padding: 0 1em; }
+    .post-content_body {
+      align-self: flex-start;
+      display: inline-block;
+      padding: 0 1em 4em 2em;
+      width: 65%; }
+  .post-meta {
+    font: 100% "roboto";
+    margin-bottom: 1em; }
+    .post-meta .post-author {
+      display: none; }
+  .post-content a {
+    color: #000000;
+    -webkit-transition: 0.2s all ease-in-out;
+    -moz-transition: 0.2s all ease-in-out;
+    -o-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out; }
+    .post-content a:hover {
+      color: #70A3F4; }
+  .post-content h1,
+  .post-content h2,
+  .post-content h3,
+  .post-content h4,
+  .post-content h5 {
+    color: #70A3F4; }
+  .post-content h1 {
+    font-size: 5em; }
+  .post-content h2 {
+    font-size: 4em; }
+  .post-content h3 {
+    font-size: 3em; }
+  .post-content h4 {
+    font-size: 2em; }
+  .post-content h5 {
+    font-size: 1.5em; }
+  .post-content hr {
+    background: #F4F4F4;
+    color: #F4F4F4; }
+  .post-content .inline-code {
+    display: inline-block;
+    line-height: 1em;
+    margin: 0 5px;
+    padding: 0.5em;
+    position: relative;
+    bottom: -6px; }
+  .post-content ol,
+  .post-content ul {
+    line-height: 2em; }
+  .post-content p {
+    margin-top: 2em; }
+    .post-content p:first-child {
+      margin-top: 0em; }
+  pre.highlight code {
+    border-radius: 5px;
+    padding: 1em; }
+  .page_navigation {
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 2em 0;
+    width: 100%; }
+    .page_navigation a {
+      color: #000000;
+      -webkit-transition: 0.2s all ease-in-out;
+      -moz-transition: 0.2s all ease-in-out;
+      -o-transition: 0.2s all ease-in-out;
+      transition: 0.2s all ease-in-out; }
+      .page_navigation a:visited {
+        color: #000000; }
+      .page_navigation a:hover {
+        color: #70A3F4; }
+    .page_navigation__next {
+      float: right; }
+  .navigation_arrow {
+    position: relative;
+    bottom: 1px; }
+  .post-time {
+    font: 100% "roboto_thin";
+    font-weight: bold; }
+  .raw {
+    font-size: 0.85em; }
+  .no-break {
+    white-space: nowrap; } }
+
+@media screen and (max-width: 1299px) {
+  /**
+ * This SCSS file is for creating the overall look for a standard blog post used
+ * throughout the entire Protfolio Site - Mobile.
+ *
+ * @author Kerick Howlett
+ **/
+  .post-header {
+    display: table;
+    height: 25em;
+    overflow: hidden;
+    width: 100%; }
+    .post-header h1 {
+      color: #FFFFFF;
+      display: table-cell;
+      font-size: 8vw;
+      text-align: center;
+      vertical-align: middle; }
+  .post-content {
+    display: block;
+    margin: 2em; } }
+  @media screen and (max-width: 1299px) and (min-width: 1025px) and (max-width: 1299px) {
+    .post-content {
+      margin-left: 4.5em; } }
+
+@media screen and (max-width: 1299px) {
+    .post-content_body {
+      display: block;
+      width: 100%; }
+  .post-meta {
+    font: 100% "roboto";
+    margin-bottom: 1em; }
+    .post-meta .post-author {
+      display: none; }
+  .post-content a {
+    color: #000000;
+    -webkit-transition: 0.2s all ease-in-out;
+    -moz-transition: 0.2s all ease-in-out;
+    -o-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out; }
+    .post-content a:hover {
+      color: #70A3F4; }
+  .post-content h1,
+  .post-content h2,
+  .post-content h3,
+  .post-content h4,
+  .post-content h5 {
+    color: #70A3F4; }
+  .post-content h1 {
+    font-size: 5em; }
+  .post-content h2 {
+    font-size: 4em; }
+  .post-content h3 {
+    font-size: 3em; }
+  .post-content h4 {
+    font-size: 2em; }
+  .post-content h5 {
+    font-size: 1.5em; }
+  .post-content hr {
+    background: #F4F4F4;
+    color: #F4F4F4; }
+  .post-content .inline-code {
+    display: inline-block;
+    line-height: 1em;
+    margin: 0 5px;
+    padding: 0.5em;
+    position: relative;
+    bottom: -6px; }
+  .post-content ol,
+  .post-content ul {
+    line-height: 2em; }
+  .post-content p {
+    margin-top: 2em; }
+    .post-content p:first-child {
+      margin-top: 0em; }
+  pre.highlight code {
+    border-radius: 5px;
+    padding: 1em; }
+  .page_navigation {
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 2em 0;
+    text-overflow: ellipsis;
+    width: 100%; }
+    .page_navigation a {
+      color: #000000;
+      -webkit-transition: 0.2s all ease-in-out;
+      -moz-transition: 0.2s all ease-in-out;
+      -o-transition: 0.2s all ease-in-out;
+      transition: 0.2s all ease-in-out; }
+      .page_navigation a:visited {
+        color: #000000; }
+      .page_navigation a:hover {
+        color: #70A3F4; }
+    .page_navigation__next {
+      float: right; }
+  .navigation_arrow {
+    position: relative;
+    bottom: 1px; }
+  .post-time {
+    font: 100% "roboto_thin";
+    font-weight: bold; }
+  .raw {
+    font-size: 0.85em; }
+  .no-break {
+    white-space: nowrap; } }
+
+/**
+ * This SCSS file is for creating the overall look for the breadcrumb section of
+ * any given page throughout the entire Protfolio Site - Desktop & Tablet.
+ *
+ * @author Kerick Howlett
+ **/
+.breadcrumb {
+  background: #CCCCCC;
+  color: #555555;
+  display: inline-block;
+  line-height: 3em;
+  padding-left: 7%;
+  width: 100%; }
+  .breadcrumb span {
+    display: table-cell;
+    font-size: 1.1em;
+    text-transform: capitalize;
+    vertical-align: middle; }
+    .breadcrumb span a {
+      color: #555555;
+      -webkit-transition: 0.2s all ease-in-out;
+      -moz-transition: 0.2s all ease-in-out;
+      -o-transition: 0.2s all ease-in-out;
+      transition: 0.2s all ease-in-out; }
+      .breadcrumb span a:hover {
+        color: #FFFFFF; }
+  .breadcrumb .slash {
+    font-size: 1.75em;
+    padding: 0 0.75em; }
+
+/**
+ * This SCSS file is to import the proper contact/connect form style sheet for
+ * based on screen size via Media Queries.
+ *
+ * @author Kerick Howlett
+ **/
+@media screen and (min-width: 767px) {
+  /**
+ * This SCSS file is to establish the styling rules for the contact/connect form
+ * Tablet & Desktop.
+ *
+ * @author Kerick Howlett
+ **/
+  .connect-header {
+    background: url("/library/images/headers/mail.jpg") top right no-repeat fixed;
+    background-size: cover;
+    background-position-y: -20em;
+    display: table;
+    height: 25em;
+    overflow: hidden;
+    position: relative;
+    left: -1em;
+    width: calc( 100% + 1.5em); }
+    .connect-header h1 {
+      color: #FFFFFF;
+      display: table-cell;
+      font-size: 8vw;
+      text-align: center;
+      vertical-align: middle; }
+  .connect__body {
+    display: flex;
+    padding: 1.5em;
+    margin: 1.5em 0 3em 5%; } }
+  @media screen and (min-width: 767px) and (min-width: 767px) and (max-width: 1024px) {
+    .connect__body {
+      margin-left: 1.5em; } }
+
+@media screen and (min-width: 767px) {
+    .connect__body__cta {
+      align-items: flex-start;
+      margin-top: 1%;
+      padding: 0 1em;
+      width: 40%; }
+      .connect__body__cta img {
+        height: auto;
+        width: 100%; }
+    .connect__body__form {
+      align-items: flex-end;
+      margin-right: 2em;
+      width: 60%; }
+  .form {
+    display: block;
+    margin: 0em 2em;
+    padding: 0 2em;
+    width: 100%; }
+    .form__block {
+      display: block;
+      padding: 1.5em 0;
+      position: relative;
+      width: 99%; }
+      .form__block:last-child {
+        padding-top: 1.5em; }
+        .form__block:last-child input {
+          margin-top: 0; }
+  .message_block {
+    padding-top: 2em; }
+  .form__block__email {
+    display: none; }
+  .form_label,
+  .form_label_textarea {
+    color: #70A3F4;
+    font-size: 1.2em;
+    opacity: 0.75;
+    position: absolute;
+    left: 0.2em;
+    top: 32%;
+    -webkit-transition: 0.2s all ease-in-out;
+    -moz-transition: 0.2s all ease-in-out;
+    -o-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out; }
+  .form_label_textarea {
+    left: 0.2em;
+    top: 14%; }
+  .form_input,
+  .form_textarea {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #CCCCCC;
+    color: #70A3F4;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    margin-top: 0.15em;
+    padding: 0.2em;
+    -webkit-transition: 0.2s all ease-in-out;
+    -moz-transition: 0.2s all ease-in-out;
+    -o-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
+    width: 100%; }
+    .form_input:focus,
+    .form_textarea:focus {
+      border-bottom: 2px solid #70A3F4;
+      outline: none; }
+  .form_input {
+    padding-bottom: 0.5em; }
+  .form_textarea {
+    height: 8em;
+    margin-top: 0.45em;
+    padding-left: 0.3em; }
+  .selected_input {
+    font-size: 1em;
+    left: 0;
+    opacity: 1;
+    top: 0; }
+    .selected_input:last-child {
+      top: -0.2em; }
+  #submit {
+    cursor: pointer;
+    font-size: 2em;
+    padding: 0.5em 2em; }
+  .missing_field label {
+    color: #FF0000; }
+  .missing_field input,
+  .missing_field textarea {
+    border-bottom: 2px solid #FF0000; }
+    .missing_field input:focus,
+    .missing_field textarea:focus {
+      border-bottom: 2px solid #FF0000; }
+  .missing_field span {
+    color: #FF0000;
+    font-size: 0.85em;
+    position: relative;
+    top: 0.5em; }
+  .connect_confirmation {
+    color: #70A3F4;
+    font-size: 4vw;
+    padding-top: 0.5em;
+    margin: auto; }
+    .connect_confirmation h3 {
+      line-height: 1.5em;
+      margin: 0; }
+  /* Style for LastPass Insert */
+  #__lpform_name {
+    display: none; } }
+
+@media screen and (max-width: 766px) {
+  /**
+ * This SCSS file is to establish the styling rules for the contact/connect form
+ * Mobile.
+ *
+ * @author Kerick Howlett
+ **/
+  .connect-header {
+    background: url("/library/images/headers/mail.jpg") top right no-repeat fixed;
+    background-size: cover;
+    background-position-y: -20em;
+    display: table;
+    height: 25em;
+    overflow: hidden;
+    position: relative;
+    left: -1em;
+    width: calc( 100% + 1.5em); }
+    .connect-header h1 {
+      color: #FFFFFF;
+      display: table-cell;
+      font-size: 8vw;
+      text-align: center;
+      vertical-align: middle; }
+  .connect__body {
+    display: block;
+    padding: 1.5em;
+    margin: 1.5em 0 3em; }
+    .connect__body__cta {
+      display: block;
+      width: 100%; }
+      .connect__body__cta img {
+        height: auto;
+        width: 100%; }
+    .connect__body__form {
+      display: block;
+      margin-top: 2em;
+      width: 100%; }
+  .form {
+    display: block;
+    width: 100%; }
+    .form__block {
+      display: block;
+      padding: 1.5em 0;
+      position: relative;
+      width: 99%; }
+      .form__block:last-child {
+        padding-top: 1.5em; }
+        .form__block:last-child input {
+          margin-top: 0; }
+  .message_block {
+    padding-top: 2em; }
+  .form__block__email {
+    display: none; }
+  .form_label,
+  .form_label_textarea {
+    color: #70A3F4;
+    font-size: 1.2em;
+    opacity: 0.75;
+    position: absolute;
+    left: 0.2em;
+    top: 32%;
+    -webkit-transition: 0.2s all ease-in-out;
+    -moz-transition: 0.2s all ease-in-out;
+    -o-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out; }
+  .form_label_textarea {
+    left: 0.2em;
+    top: 14%; }
+  .form_input,
+  .form_textarea {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #CCCCCC;
+    color: #70A3F4;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    margin-top: 0.15em;
+    padding: 0.2em;
+    -webkit-transition: 0.2s all ease-in-out;
+    -moz-transition: 0.2s all ease-in-out;
+    -o-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
+    width: 100%; }
+    .form_input:focus,
+    .form_textarea:focus {
+      border-bottom: 2px solid #70A3F4;
+      outline: none; }
+  .form_input {
+    padding-bottom: 0.5em; }
+  .form_textarea {
+    height: 8em;
+    margin-top: 0.45em;
+    padding-left: 0.3em; }
+  .selected_input {
+    font-size: 1em;
+    left: 0;
+    opacity: 1;
+    top: 0; }
+    .selected_input:last-child {
+      top: -0.2em; }
+  #submit {
+    cursor: pointer;
+    font-size: 2em;
+    padding: 0.5em 2em;
+    width: 100%; }
+  .missing_field label {
+    color: #FF0000; }
+  .missing_field input,
+  .missing_field textarea {
+    border-bottom: 2px solid #FF0000; }
+    .missing_field input:focus,
+    .missing_field textarea:focus {
+      border-bottom: 2px solid #FF0000; }
+  .missing_field span {
+    color: #FF0000;
+    font-size: 0.85em;
+    position: relative;
+    top: 0.5em; }
+  .connect_confirmation {
+    color: #70A3F4;
+    font-size: 8vw;
+    padding-top: 0.5em;
+    margin: auto;
+    text-align: center; }
+    .connect_confirmation h3 {
+      line-height: 1.5em;
+      margin: 0; }
+  /* Style for LastPass Insert */
+  #__lpform_name {
+    display: none; } }
+
+/**
+ * This SCSS file is to switch out the styling rules for images used throughout
+ * the entire site based on screen size via Media Queries - Desktop.
+ *
+ * @author Kerick Howlett
+ **/
+@media screen and (min-width: 1025px) {
+  /**
+ * This SCSS file is to establish the styling rules for images used throughout
+ * the entire site - Desktop.
+ *
+ * @author Kerick Howlett
+ **/
+  img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle; }
+  [class*='float'] {
+    width: 28%; }
+  .float-right {
+    float: right;
+    margin: 1em 0em 1em 2em; }
+  .float-left {
+    float: left;
+    margin: 1em 2em 1em 0em; }
+  [class*='float'] a span,
+  .image-center a span {
+    color: #A8A8A8;
+    display: block;
+    font-size: 0.85em;
+    font-style: italic;
+    margin-top: 0.3em;
+    padding: .3em;
+    text-align: left; }
+  .image-center {
+    display: block;
+    margin: 1em auto;
+    text-align: center; }
+    .image-center span {
+      display: inline-block !important;
+      text-align: center; } }
+
+@media screen and (max-width: 1024px) {
+  /**
+ * This SCSS file is to establish the styling rules for images used throughout
+ * the entire site - Mobile.
+ *
+ * @author Kerick Howlett
+ **/
+  img {
+    display: block;
+    height: auto;
+    margin: auto;
+    max-width: 100%;
+    vertical-align: middle; }
+  [class*='float'],
+  .image-center {
+    display: inline-block;
+    margin: 1em auto;
+    text-align: center;
+    width: 100%; }
+    [class*='float'] a span,
+    .image-center a span {
+      color: #A8A8A8;
+      display: inline-block;
+      font-size: 0.85em;
+      font-style: italic;
+      margin: 1em auto;
+      text-align: left; } }
+
+/**
+ * This SCSS file is to establish the general styling rules for the entire
+ * Portfolio Site.
+ *
+ * @author Kerick Howlett
+ **/
+* {
+  box-sizing: border-box; }
+
+html {
+  height: 100%;
+  width: 100%; }
+
+body {
+  display: inline-flex;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%; }
+  @media screen and (max-width: 1024px) {
+    body {
+      display: block; } }
+
+p,
+label,
+input,
+span {
+  font: 100% "roboto"; }
+
+.other-page p {
+  line-height: 2.85em;
+  text-align: justify; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font: 100% "roboto_thin"; }
+
+a,
+.button {
+  font: 100% "roboto_medium";
+  text-decoration: none;
+  color: #FFFFFF; }
+
+/**
+ * This SCSS file is to import the proper homepage style sheet for based on
+ * screen size via Media Queries.
+ *
+ * @author Kerick Howlett
+ **/
+@media screen and (min-width: 1025px) {
+  /**
+ * This SCSS file is to establish the styling rules for the Home Page - Desktop.
+ *
+ * @author Kerick Howlett
+ **/
+  .home_page {
+    background: url("/library/images/bw-header.jpg") center center no-repeat fixed;
+    background-size: cover;
+    overflow: hidden; }
+    .home_page .inner-scroll {
+      height: 100%;
+      overflow: hidden;
+      -webkit-transform: skewX(5deg) translateX(50px);
+      -moz-transform: skewX(5deg) translateX(50px);
+      -o-transform: skewX(5deg) translateX(50px);
+      transform: skewX(5deg) translateX(50px);
+      width: 105.5%; }
+    .home_page .cta--wrapper {
+      display: table;
+      height: 95%;
+      margin: 0 auto 0 4em;
+      width: 35em; }
+    .home_page .cta {
+      color: #FFFFFF;
+      display: table-cell;
+      font-size: 3em;
+      text-shadow: 2px 2px 2px black;
+      vertical-align: bottom; } }
+    @media screen and (min-width: 1025px) and (min-width: 1025px) and (max-width: 1455px) {
+      .home_page .cta {
+        font-size: 2.7em; } }
+
+@media screen and (min-width: 1025px) {
+      .home_page .cta p {
+        margin-bottom: .4em; }
+        .home_page .cta p span {
+          white-space: nowrap; }
+      .home_page .cta a {
+        color: #E4FBA5;
+        -webkit-transition: 0.2s all ease-in-out;
+        -moz-transition: 0.2s all ease-in-out;
+        -o-transition: 0.2s all ease-in-out;
+        transition: 0.2s all ease-in-out; }
+        .home_page .cta a:hover {
+          color: #70A3F4; }
+  .wrapper {
+    display: block;
+    height: 100%;
+    width: 100%; } }
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  /**
+ * This SCSS file is to establish the styling rules for the Home Page - Tablet.
+ *
+ * @author Kerick Howlett
+ **/
+  .home_page {
+    background: url("/library/images/bw-header.jpg") center center no-repeat fixed;
+    background-size: cover;
+    overflow: hidden; }
+    .home_page .inner-scroll {
+      overflow: hidden; }
+    .home_page .cta--wrapper {
+      display: table;
+      height: 88%;
+      margin: 0 auto;
+      width: 93%; }
+    .home_page .cta {
+      color: #FFFFFF;
+      display: table-cell;
+      font-size: 3em;
+      text-align: center;
+      text-shadow: 2px 2px 2px black;
+      vertical-align: bottom;
+      width: 90%; } }
+    @media screen and (min-width: 767px) and (max-width: 1024px) and (min-width: 767px) and (max-width: 850px) {
+      .home_page .cta {
+        font-size: 2.8em; } }
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+      .home_page .cta p {
+        margin-bottom: .4em; }
+        .home_page .cta p span {
+          white-space: nowrap; }
+      .home_page .cta a {
+        color: #E4FBA5;
+        -webkit-transition: 0.2s all ease-in-out;
+        -moz-transition: 0.2s all ease-in-out;
+        -o-transition: 0.2s all ease-in-out;
+        transition: 0.2s all ease-in-out; }
+        .home_page .cta a:hover {
+          color: #70A3F4; }
+  .wrapper {
+    display: block;
+    height: 100%;
+    width: 100%; } }
+
+@media screen and (max-width: 766px) {
+  /**
+ * This SCSS file is to establish the styling rules for the Home Page - Mobile.
+ *
+ * @author Kerick Howlett
+ **/
+  .home_page {
+    background: url("/library/images/bw-social-profile-1200.jpg") center center no-repeat fixed;
+    background-position-y: 40px;
+    background-size: cover;
+    overflow: hidden; }
+    .home_page .inner-scroll {
+      overflow: hidden; }
+    .home_page .cta--wrapper {
+      display: table;
+      height: 89%;
+      margin: 0 auto;
+      width: 95%; }
+    .home_page .cta {
+      color: #FFFFFF;
+      display: table-cell;
+      font-size: 2.4em;
+      text-align: center;
+      text-shadow: 2px 2px 2px black;
+      vertical-align: bottom; } }
+    @media screen and (max-width: 766px) and (max-width: 665px) {
+      .home_page .cta {
+        font-size: 2.2em; } }
+
+@media screen and (max-width: 766px) {
+      .home_page .cta p {
+        margin-bottom: .4em; }
+        .home_page .cta p span {
+          white-space: nowrap; }
+      .home_page .cta a {
+        color: #E4FBA5;
+        -webkit-transition: 0.2s all ease-in-out;
+        -moz-transition: 0.2s all ease-in-out;
+        -o-transition: 0.2s all ease-in-out;
+        transition: 0.2s all ease-in-out;
+        white-space: nowrap; }
+        .home_page .cta a:hover {
+          color: #70A3F4; }
+  .wrapper {
+    display: block;
+    height: 100%;
+    width: 100%; } }
+
+/**
+ * This SCSS file is to import the proper 404 page style sheet based on screen
+ * size via Media Queries.
+ *
+ * @author Kerick Howlett
+ **/
+@media screen and (min-width: 1025px) {
+  /**
+ * This SCSS file is to establish the styling rules for the 404 page - Tablet & Desktop.
+ *
+ * @author Kerick Howlett
+ **/
+  .nopage-header {
+    background: url("/library/images/headers/map.jpg") top right no-repeat fixed;
+    background-size: cover;
+    background-position-y: -20em;
+    display: table;
+    height: 25em;
+    overflow: hidden;
+    position: relative;
+    left: -1em;
+    width: calc( 100% + 1.5em); }
+    .nopage-header h1 {
+      color: #FFFFFF;
+      display: table-cell;
+      font-size: 8vw;
+      text-align: center;
+      vertical-align: middle; }
+  .nopage__body {
+    display: block;
+    padding: 1.5em;
+    margin: 1.5em 0 3em 5%; }
+    .nopage__body__message {
+      color: #70A3F4;
+      font-size: 3.5vw;
+      padding-top: 0.5em;
+      margin: auto;
+      width: 46vw; }
+      .nopage__body__message h3 {
+        line-height: 1.5em;
+        margin: 0; } }
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  /**
+ * This SCSS file is to establish the styling rules for the 404 page - Tablet.
+ *
+ * @author Kerick Howlett
+ **/
+  .nopage-header {
+    background: url("/library/images/headers/map.jpg") top right no-repeat fixed;
+    background-size: cover;
+    background-position-y: -20em;
+    display: table;
+    height: 25em;
+    overflow: hidden;
+    position: relative;
+    left: -1em;
+    width: calc( 100% + 1.5em); }
+    .nopage-header h1 {
+      color: #FFFFFF;
+      display: table-cell;
+      font-size: 25vw;
+      text-align: center;
+      vertical-align: middle; }
+  .nopage__body {
+    display: block;
+    padding: 1.5em;
+    margin-left: 1.5em; }
+    .nopage__body__message {
+      color: #70A3F4;
+      font-size: 5.5vw;
+      padding-top: 0.5em;
+      margin: auto;
+      width: 70vw; }
+      .nopage__body__message h3 {
+        line-height: 1.5em;
+        margin: 0; } }
+
+@media screen and (max-width: 766px) {
+  /**
+ * This SCSS file is to establish the styling rules for the 404 page - Mobile.
+ *
+ * @author Kerick Howlett
+ **/
+  .nopage-header {
+    background: url("/library/images/headers/map.jpg") top right no-repeat fixed;
+    background-size: cover;
+    background-position-y: -20em;
+    display: table;
+    height: 25em;
+    overflow: hidden;
+    position: relative;
+    left: -1em;
+    width: calc( 100% + 1.5em); }
+    .nopage-header h1 {
+      color: #FFFFFF;
+      display: table-cell;
+      font-size: 40vw;
+      text-align: center;
+      vertical-align: middle; }
+  .nopage__body {
+    display: block;
+    padding: 1.5em; }
+    .nopage__body__message {
+      color: #70A3F4;
+      font-size: 8vw;
+      padding-top: 0.5em;
+      margin: auto;
+      text-align: center; }
+      .nopage__body__message h3 {
+        line-height: 1.5em;
+        margin: 0; } }
+
+/**
+ * This SCSS file is to import the proper blog/project posts index style sheet
+ * for based on screen size via Media Queries.
+ *
+ * @author Kerick Howlett
+ **/
+@media screen and (min-width: 1300px) {
+  /**
+ * This SCSS file is to import the proper blog/project posts index styles -
+ * Desktop.
+ *
+ * @author Kerick Howlett
+ **/
+  .archive-header {
+    display: table;
+    height: 25em;
+    overflow: hidden;
+    position: relative;
+    left: -1em;
+    width: calc( 100% + 1.5em); }
+    .archive-header h1 {
+      color: #FFFFFF;
+      display: table-cell;
+      font-size: 8vw;
+      text-align: center;
+      vertical-align: middle; }
+  .archive-content {
+    display: flex;
+    margin: 3em 0 0 5em; }
+    .archive-content_body {
+      align-self: flex-start;
+      display: inline-block;
+      padding: 0 1em 4em 2em;
+      width: 65%; }
+  .post_thumbnail {
+    display: table;
+    height: 18em;
+    -webkit-transition: 0.2s all ease-in-out;
+    -moz-transition: 0.2s all ease-in-out;
+    -o-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
+    width: 100%; }
+    .post_thumbnail__image {
+      display: table-cell;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      height: 21em;
+      overflow: hidden;
+      position: relative;
+      -webkit-transition: 0.2s all ease-in-out;
+      -moz-transition: 0.2s all ease-in-out;
+      -o-transition: 0.2s all ease-in-out;
+      transition: 0.2s all ease-in-out;
+      vertical-align: middle;
+      width: 42%; }
+      .post_thumbnail__image img {
+        height: auto;
+        margin: 0;
+        max-width: none;
+        position: absolute;
+        top: 0;
+        left: -50%;
+        -webkit-transition: 2s all ease-in-out;
+        -moz-transition: 2s all ease-in-out;
+        -o-transition: 2s all ease-in-out;
+        transition: 2s all ease-in-out;
+        width: 200%; }
+    .post_thumbnail__details {
+      display: table-cell;
+      padding: 1em 0em 1em 2em;
+      vertical-align: middle;
+      width: 100%; }
+      .post_thumbnail__details h3 {
+        color: #70A3F4;
+        display: block;
+        font-size: 2em;
+        line-height: 1em;
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .post_thumbnail__details h5 {
+        display: block;
+        font-weight: bold;
+        line-height: 1em;
+        margin: 1.5em 0; }
+      .post_thumbnail__details span {
+        display: block;
+        font: 100% "roboto";
+        height: 8em;
+        line-height: 2em;
+        overflow: hidden;
+        text-align: justify;
+        text-overflow: ellipsis; }
+    .post_thumbnail:hover {
+      -webkit-transition: 0.2s all ease-in-out;
+      -moz-transition: 0.2s all ease-in-out;
+      -o-transition: 0.2s all ease-in-out;
+      transition: 0.2s all ease-in-out; }
+      .post_thumbnail:hover .post_thumbnail__image {
+        filter: grayscale(0%);
+        -webkit-filter: grayscale(0%); }
+        .post_thumbnail:hover .post_thumbnail__image img {
+          left: -55%;
+          width: 210%; }
+  .button {
+    background: #70A3F4;
+    border: 2px solid #70A3F4;
+    display: inline-block;
+    font-size: 1.2em;
+    padding: 0.75em 2em;
+    margin-top: 1em;
+    -webkit-transition: 0.2s all ease-in-out;
+    -moz-transition: 0.2s all ease-in-out;
+    -o-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
+    width: auto; }
+    .button:hover {
+      background: #FFFFFF;
+      border: 2px solid #70A3F4;
+      color: #70A3F4; }
+  .thumbnail_divider {
+    border: 1px solid #CCCCCC;
+    border-radius: 25px;
+    display: inline-block;
+    height: 0px;
+    margin: 1.5em 0;
+    opacity: 0.5;
+    overflow: hidden;
+    width: 100%; } }
+
+@media screen and (min-width: 767px) and (max-width: 1299px) {
+  /**
+ * This SCSS file is to import the proper blog/project posts index styles -
+ * Tablet.
+ *
+ * @author Kerick Howlett
+ **/
+  .archive-header {
+    display: table;
+    height: 25em;
+    overflow: hidden;
+    width: 100%; }
+    .archive-header h1 {
+      color: #FFFFFF;
+      display: table-cell;
+      font-size: 8vw;
+      text-align: center;
+      vertical-align: middle; }
+  .archive-content {
+    display: block;
+    margin: 2em; } }
+  @media screen and (min-width: 767px) and (max-width: 1299px) and (min-width: 1025px) and (max-width: 1299px) {
+    .archive-content {
+      margin-left: 4.5em; } }
+
+@media screen and (min-width: 767px) and (max-width: 1299px) {
+    .archive-content_body {
+      display: block;
+      width: 100%; }
+  .post_thumbnail {
+    display: table;
+    height: 18em;
+    padding: 1em;
+    -webkit-transition: 0.2s all ease-in-out;
+    -moz-transition: 0.2s all ease-in-out;
+    -o-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
+    width: 100%; }
+    .post_thumbnail__image {
+      display: table-cell;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      height: 21em;
+      overflow: hidden;
+      position: relative;
+      -webkit-transition: 0.2s all ease-in-out;
+      -moz-transition: 0.2s all ease-in-out;
+      -o-transition: 0.2s all ease-in-out;
+      transition: 0.2s all ease-in-out;
+      vertical-align: middle;
+      width: 42%; }
+      .post_thumbnail__image img {
+        height: auto;
+        margin: 0;
+        max-width: none;
+        position: absolute;
+        top: 0;
+        left: -25%;
+        -webkit-transition: 2s all ease-in-out;
+        -moz-transition: 2s all ease-in-out;
+        -o-transition: 2s all ease-in-out;
+        transition: 2s all ease-in-out;
+        width: 140%; }
+    .post_thumbnail__details {
+      display: table-cell;
+      padding: 1em 0em 1em 2em;
+      vertical-align: middle;
+      width: 100%; }
+      .post_thumbnail__details h3 {
+        color: #70A3F4;
+        display: block;
+        font-size: 2em;
+        line-height: 1em;
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .post_thumbnail__details h5 {
+        display: block;
+        font-weight: bold;
+        line-height: 1em;
+        margin: 1.5em 0; }
+      .post_thumbnail__details span {
+        display: block;
+        font: 100% "roboto";
+        height: 8em;
+        line-height: 2em;
+        overflow: hidden;
+        text-align: justify;
+        text-overflow: ellipsis; }
+    .post_thumbnail:hover {
+      -webkit-transition: 0.2s all ease-in-out;
+      -moz-transition: 0.2s all ease-in-out;
+      -o-transition: 0.2s all ease-in-out;
+      transition: 0.2s all ease-in-out; }
+      .post_thumbnail:hover .post_thumbnail__image {
+        filter: grayscale(0%);
+        -webkit-filter: grayscale(0%); }
+        .post_thumbnail:hover .post_thumbnail__image img {
+          left: -30%;
+          width: 150%; }
+  .button {
+    background: #70A3F4;
+    border: 2px solid #70A3F4;
+    display: inline-block;
+    font-size: 1.2em;
+    padding: 0.75em 2em;
+    margin-top: 1em;
+    -webkit-transition: 0.2s all ease-in-out;
+    -moz-transition: 0.2s all ease-in-out;
+    -o-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
+    width: auto; }
+    .button:hover {
+      background: #FFFFFF;
+      border: 2px solid #70A3F4;
+      color: #70A3F4; }
+  .thumbnail_divider {
+    border: 1px solid #CCCCCC;
+    border-radius: 25px;
+    display: inline-block;
+    height: 0px;
+    margin: 1.5em 0;
+    opacity: 0.5;
+    overflow: hidden;
+    width: 100%; } }
+
+@media screen and (max-width: 766px) {
+  /**
+ * This SCSS file is to import the proper blog/project posts index styles -
+ * Mobile.
+ *
+ * @author Kerick Howlett
+ **/
+  .archive-header {
+    display: table;
+    height: 25em;
+    overflow: hidden;
+    width: 100%; }
+    .archive-header h1 {
+      color: #FFFFFF;
+      display: table-cell;
+      font-size: 8vw;
+      text-align: center;
+      vertical-align: middle; }
+  .archive-content {
+    display: block;
+    margin: 2em; } }
+  @media screen and (max-width: 766px) and (min-width: 1025px) and (max-width: 1299px) {
+    .archive-content {
+      margin-left: 4.5em; } }
+
+@media screen and (max-width: 766px) {
+    .archive-content_body {
+      display: block;
+      width: 100%; }
+  .post_thumbnail {
+    display: block;
+    height: 37em;
+    padding: 1em;
+    width: 100%; }
+    .post_thumbnail__image {
+      display: block;
+      height: 15em;
+      overflow: hidden;
+      position: relative;
+      width: 100%; }
+      .post_thumbnail__image img {
+        height: auto;
+        margin: 0;
+        max-width: none;
+        position: absolute;
+        top: 0;
+        left: -25%;
+        width: 125%; }
+    .post_thumbnail__details {
+      display: block;
+      padding: 1em 0.5em;
+      width: 100%; }
+      .post_thumbnail__details h3 {
+        color: #70A3F4;
+        display: block;
+        font-size: 2em;
+        line-height: 1em;
+        margin: 0.5em 0em 0em 0em;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .post_thumbnail__details h5 {
+        display: block;
+        font-weight: bold;
+        line-height: 1em;
+        margin: 1.5em 0; }
+      .post_thumbnail__details span {
+        display: block;
+        font: 100% "roboto";
+        height: 6em;
+        line-height: 2em;
+        overflow: hidden;
+        text-align: justify;
+        text-overflow: ellipsis; }
+  .button {
+    background: #70A3F4;
+    border: 2px solid #70A3F4;
+    display: inline-block;
+    font-size: 1.2em;
+    padding: 0.75em 2em;
+    margin-top: 1em;
+    width: auto; }
+    .button:active {
+      background: #FFFFFF;
+      border: 2px solid #70A3F4;
+      color: #70A3F4; }
+  .thumbnail_divider {
+    border: 1px solid #CCCCCC;
+    border-radius: 25px;
+    display: inline-block;
+    height: 0px;
+    margin: 1.5em 0;
+    opacity: 0.5;
+    overflow: hidden;
+    width: 100%; } }
+
+/**
+ * This SCSS file is to import the proper "Related Links" & "Related Posts" style
+ * sheet based on screen size via Media Queries.
+ *
+ * @author Kerick Howlett
+ **/
+@media screen and (min-width: 1300px) {
+  /**
+ * This SCSS file is for styling the "Recent Posts" & "Recent Projects" sidebar
+ * Desktop & Tablet.
+ *
+ * @author Kerick Howlett
+ **/
+  .recent_posts,
+  .recent_projects {
+    display: block;
+    margin-left: auto;
+    text-align: right; }
+    .recent_posts ul,
+    .recent_projects ul {
+      list-style: none;
+      padding-left: 0; }
+      .recent_posts ul li,
+      .recent_projects ul li {
+        line-height: 2em;
+        padding-bottom: 1.25em; }
+        .recent_posts ul li a,
+        .recent_projects ul li a {
+          color: #000000;
+          display: block;
+          -webkit-transition: 0.2s all ease-in-out;
+          -moz-transition: 0.2s all ease-in-out;
+          -o-transition: 0.2s all ease-in-out;
+          transition: 0.2s all ease-in-out; }
+          .recent_posts ul li a:hover,
+          .recent_projects ul li a:hover {
+            color: #70A3F4; }
+          .recent_posts ul li a span,
+          .recent_projects ul li a span {
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+    .recent_posts .recent_title,
+    .recent_projects .recent_title {
+      font-size: 2em !important; }
+    .recent_posts .recent_date,
+    .recent_projects .recent_date {
+      color: #000000;
+      font: 100% "roboto_thin";
+      font-size: 1.2em !important; }
+      .recent_posts .recent_date:hover,
+      .recent_projects .recent_date:hover {
+        color: #000000; } }
+
+@media screen and (max-width: 1299px) {
+  /**
+ * This SCSS file is for styling the "Recent Posts" & "Recent Projects" sidebar
+ * Mobile.
+ *
+ * @author Kerick Howlett
+ **/
+  .recent_posts,
+  .recent_projects {
+    display: block;
+    margin-right: auto;
+    text-align: left; }
+    .recent_posts ul,
+    .recent_projects ul {
+      list-style: none;
+      padding-left: 0; }
+      .recent_posts ul li,
+      .recent_projects ul li {
+        line-height: 2em;
+        padding-bottom: 1.25em; }
+        .recent_posts ul li a,
+        .recent_projects ul li a {
+          color: #000000;
+          display: block;
+          -webkit-transition: 0.2s all ease-in-out;
+          -moz-transition: 0.2s all ease-in-out;
+          -o-transition: 0.2s all ease-in-out;
+          transition: 0.2s all ease-in-out; }
+          .recent_posts ul li a:hover,
+          .recent_projects ul li a:hover {
+            color: #70A3F4; }
+          .recent_posts ul li a span,
+          .recent_projects ul li a span {
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+    .recent_posts .recent_title,
+    .recent_projects .recent_title {
+      font-size: 2em !important; }
+    .recent_posts .recent_date,
+    .recent_projects .recent_date {
+      color: #000000;
+      font: 100% "roboto_thin";
+      font-size: 1.2em !important; }
+      .recent_posts .recent_date:hover,
+      .recent_projects .recent_date:hover {
+        color: #000000; } }
+
+/**
+ * This SCSS file is to import the proper "Recent Posts" & "Recent Projects" style
+ * sheet based on screen size via Media Queries.
+ *
+ * @author Kerick Howlett
+ **/
+@media screen and (min-width: 1300px) {
+  /**
+ * This SCSS file is for styling the "Related Links" sidebar
+ * Desktop & Tablet.
+ *
+ * @author Kerick Howlett
+ **/
+  .related_links {
+    display: block;
+    margin-left: auto;
+    text-align: right; }
+    .related_links ul {
+      list-style: none;
+      padding-left: 0; }
+      .related_links ul li a {
+        color: #000000;
+        font-size: 1.5em;
+        line-height: 2.5em;
+        -webkit-transition: 0.2s all ease-in-out;
+        -moz-transition: 0.2s all ease-in-out;
+        -o-transition: 0.2s all ease-in-out;
+        transition: 0.2s all ease-in-out; }
+        .related_links ul li a:hover {
+          color: #70A3F4; } }
+
+@media screen and (max-width: 1299px) {
+  /**
+ * This SCSS file is for styling the "Related Links" within the sidebar
+ * Mobile.
+ *
+ * @author Kerick Howlett
+ **/
+  .related_links {
+    display: block;
+    margin-right: auto;
+    text-align: left; }
+    .related_links ul {
+      list-style: none;
+      padding-left: 0; }
+      .related_links ul li a {
+        color: #000000;
+        font-size: 1.5em;
+        line-height: 2.5em;
+        -webkit-transition: 0.2s all ease-in-out;
+        -moz-transition: 0.2s all ease-in-out;
+        -o-transition: 0.2s all ease-in-out;
+        transition: 0.2s all ease-in-out; }
+        .related_links ul li a:hover {
+          color: #70A3F4; } }
+
+/**
+ * This SCSS file is to import the proper sidebar style sheet based on screen
+ * size via Media Queries.
+ *
+ * @author Kerick Howlett
+ **/
+@media screen and (min-width: 1300px) {
+  /**
+ * This SCSS file is for creating the overall look for the right sidebar that is
+ * used throughout the entire Protfolio Site - Desktop & Tablet.
+ *
+ * @author Kerick Howlett
+ **/
+  .sidebar {
+    align-self: flex-end;
+    display: inline-block;
+    margin-bottom: auto;
+    padding-bottom: 5em;
+    padding-right: 4em;
+    width: 35%; }
+    .sidebar__header {
+      color: #70A3F4;
+      font-size: 2.5em !important;
+      line-height: 1.5em;
+      margin-bottom: 0.5em;
+      text-align: right; }
+      .sidebar__header:first-child {
+        margin-top: 0; }
+    .sidebar .divider {
+      border: 1px solid #70A3F4;
+      border-radius: 25px;
+      display: block;
+      height: 0px;
+      margin-right: 0;
+      margin-bottom: 2em;
+      margin-left: auto;
+      overflow: hidden;
+      position: relative;
+      right: -0.2em;
+      text-align: right;
+      width: 91%; }
+    .sidebar .cta_wrapper {
+      display: block;
+      width: 100%;
+      margin-left: auto; }
+      .sidebar .cta_wrapper img {
+        display: block;
+        height: auto;
+        margin-bottom: 2em;
+        margin-left: auto;
+        width: 75%; }
+      .sidebar .cta_wrapper .cta {
+        margin-left: auto;
+        width: 80%; }
+        .sidebar .cta_wrapper .cta p {
+          line-height: 2.25em;
+          text-align: right;
+          width: 100%; }
+        .sidebar .cta_wrapper .cta a {
+          color: #000000;
+          display: block;
+          font-size: 1.4em;
+          text-align: right;
+          -webkit-transition: 0.2s all ease-in-out;
+          -moz-transition: 0.2s all ease-in-out;
+          -o-transition: 0.2s all ease-in-out;
+          transition: 0.2s all ease-in-out; }
+          .sidebar .cta_wrapper .cta a:hover {
+            color: #70A3F4; } }
+
+@media screen and (max-width: 1299px) {
+  /**
+ * This SCSS file is for creating the overall look for the right sidebar that is
+ * used throughout the entire Protfolio Site - Mobile.
+ *
+ * @author Kerick Howlett
+ **/
+  .sidebar {
+    display: block;
+    width: 100%; }
+    .sidebar__header {
+      color: #70A3F4;
+      font-size: 2.5em !important;
+      line-height: 1.5em;
+      margin-bottom: 0.5em;
+      text-align: left; }
+      .sidebar__header:first-child {
+        margin-top: 0; }
+    .sidebar .divider {
+      border: 1px solid #70A3F4;
+      border-radius: 25px;
+      display: block;
+      height: 0px;
+      margin-bottom: 3em;
+      margin-left: 0;
+      margin-right: auto;
+      overflow: hidden;
+      position: relative;
+      left: -0.2em;
+      text-align: left;
+      width: 91%; }
+    .sidebar .cta_wrapper {
+      display: block;
+      width: 100%;
+      margin-left: auto; }
+      .sidebar .cta_wrapper img {
+        display: block;
+        height: auto;
+        margin-bottom: 2em;
+        margin-right: auto;
+        width: 90%; }
+      .sidebar .cta_wrapper .cta {
+        margin-right: auto;
+        width: 80%; }
+        .sidebar .cta_wrapper .cta p {
+          line-height: 2.25em;
+          text-align: left;
+          width: 100%; }
+        .sidebar .cta_wrapper .cta a {
+          color: #000000;
+          display: block;
+          font-size: 1.4em;
+          text-align: left;
+          -webkit-transition: 0.2s all ease-in-out;
+          -moz-transition: 0.2s all ease-in-out;
+          -o-transition: 0.2s all ease-in-out;
+          transition: 0.2s all ease-in-out; }
+          .sidebar .cta_wrapper .cta a:hover {
+            color: #70A3F4; } }
+
+/**
+ * This SCSS file is to import the proper side navigation menu style sheet for
+ * based on screen size via Media Queries.
+ *
+ * @author Kerick Howlett
+ **/
+@media screen and (min-width: 1025px) {
+  /**
+ * This SCSS file is to establish the styling rules for the side navigation menu.
+ * Desktop.
+ *
+ * @author Kerick Howlett
+ **/
+  .sidenav {
+    background: #70A3F4;
+    -webkit-box-shadow: 9px 0px 14px 1px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 9px 0px 14px 1px rgba(0, 0, 0, 0.42);
+    box-shadow: 9px 0px 14px 1px rgba(0, 0, 0, 0.42);
+    color: #FFFFFF;
+    display: inline-table;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    -webkit-transform: skewX(-5deg) translateX(-50px);
+    -moz-transform: skewX(-5deg) translateX(-50px);
+    -o-transform: skewX(-5deg) translateX(-50px);
+    transform: skewX(-5deg) translateX(-50px);
+    width: 24%;
+    z-index: 100; }
+  .menu-icon {
+    display: none; }
+  .nav_links {
+    display: block;
+    height: auto;
+    margin: 7%;
+    -webkit-transform: skewX(5deg) translateX(50px);
+    -moz-transform: skewX(5deg) translateX(50px);
+    -o-transform: skewX(5deg) translateX(50px);
+    transform: skewX(5deg) translateX(50px); }
+    .nav_links ul {
+      display: table;
+      list-style: none;
+      padding: 0;
+      text-align: left; }
+      .nav_links ul li {
+        display: table-row;
+        font: 100% "roboto_medium";
+        font-size: 2.5vw;
+        line-height: 2em; }
+        .nav_links ul li:hover a {
+          color: #E4FBA5;
+          margin-left: 0.5em; }
+          .nav_links ul li:hover a span svg path {
+            fill: #E4FBA5;
+            stroke: #E4FBA5; }
+        .nav_links ul li a {
+          -webkit-transition: 0.2s all ease-in-out;
+          -moz-transition: 0.2s all ease-in-out;
+          -o-transition: 0.2s all ease-in-out;
+          transition: 0.2s all ease-in-out; }
+  .social_media_links_nav {
+    display: none; }
+    .social_media_links_nav .github_link,
+    .social_media_links_nav .linkedin_link {
+      display: none; }
+  .social_media_links {
+    display: inline-block;
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+    -webkit-transform: skewX(5deg) translateX(50px);
+    -moz-transform: skewX(5deg) translateX(50px);
+    -o-transform: skewX(5deg) translateX(50px);
+    transform: skewX(5deg) translateX(50px); }
+  .github_link,
+  .linkedin_link {
+    display: inline-block; }
+    .github_link a,
+    .linkedin_link a {
+      display: inline-block; }
+      .github_link a span,
+      .linkedin_link a span {
+        display: inline-block; }
+    .github_link:hover svg path,
+    .linkedin_link:hover svg path {
+      fill: #E4FBA5;
+      stroke: #E4FBA5; }
+  .github-logo,
+  .linkedin-logo {
+    width: 2.75em; }
+    .github-logo svg path,
+    .linkedin-logo svg path {
+      fill: #FFFFFF;
+      stroke: #FFFFFF;
+      -webkit-transition: 0.2s all ease-in-out;
+      -moz-transition: 0.2s all ease-in-out;
+      -o-transition: 0.2s all ease-in-out;
+      transition: 0.2s all ease-in-out; }
+  .linkedin-logo {
+    margin-left: 1vw; }
+  .page-content {
+    display: block;
+    height: 100%;
+    padding-left: 19%;
+    width: 100%; }
+  .wrapper {
+    height: 100%;
+    margin: 0 auto;
+    width: 100%; } }
+
+@media screen and (max-width: 1024px) {
+  /**
+ * This SCSS file is to establish the styling rules for the side navigation menu.
+ * Mobile.
+ *
+ * @author Kerick Howlett
+ **/
+  .sidenav {
+    background: #70A3F4;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.42);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.42);
+    color: #FFFFFF;
+    display: inline-block;
+    height: 5.75em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100; }
+  .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    height: 45px;
+    margin: 1.65em auto auto 25px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    vertical-align: baseline;
+    width: 60px;
+    /* Very Small Mobile View for Header */ }
+    .menu-icon span {
+      background: #FFFFFF;
+      border-radius: 9px;
+      display: block;
+      height: 6px;
+      left: 0;
+      opacity: 1;
+      position: absolute;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.25s ease-in-out;
+      -moz-transition: 0.25s ease-in-out;
+      -o-transition: 0.25s ease-in-out;
+      transition: 0.25s ease-in-out;
+      width: 90%; }
+      .menu-icon span:nth-child(1) {
+        top: 0px; }
+      .menu-icon span:nth-child(2), .menu-icon span:nth-child(3) {
+        top: 18px; }
+      .menu-icon span:nth-child(4) {
+        top: 36px; } }
+  @media screen and (max-width: 1024px) and (max-width: 445px) {
+    .menu-icon {
+      height: 43px;
+      margin: 1.85em auto auto 13px;
+      width: 41px; }
+      .menu-icon span {
+        height: 4px; }
+        .menu-icon span:nth-child(2), .menu-icon span:nth-child(3) {
+          top: 14px; }
+        .menu-icon span:nth-child(4) {
+          top: 28px; } }
+
+@media screen and (max-width: 1024px) {
+  .clicked-icon span:nth-child(1) {
+    left: 50%;
+    top: 18px;
+    width: 0%; }
+  .clicked-icon span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .clicked-icon span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  .clicked-icon span:nth-child(4) {
+    left: 50%;
+    top: 18px;
+    width: 0%; }
+  .nav_links {
+    background: rgba(112, 163, 244, 0.8);
+    display: table;
+    -webkit-transform: translate(0, -20em);
+    -moz-transform: translate(0, -20em);
+    -o-transform: translate(0, -20em);
+    transform: translate(0, -20em);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%; }
+    .nav_links ul {
+      box-sizing: border-box;
+      display: table;
+      list-style: none;
+      padding: 0;
+      width: 100%; }
+      .nav_links ul li {
+        display: inline-table;
+        font: 100% "roboto_medium";
+        font-size: 2.5em;
+        margin-top: 0.5em;
+        padding: 0.1em 0em;
+        text-align: center;
+        width: inherit; }
+        .nav_links ul li a {
+          display: table;
+          margin: 0 auto; }
+          .nav_links ul li a span svg {
+            margin: 0 0 -3% 0;
+            width: 13%; }
+            .nav_links ul li a span svg path {
+              fill: #FFFFFF;
+              stroke: #FFFFFF; }
+          .nav_links ul li a:active {
+            color: #E4FBA5; }
+            .nav_links ul li a:active span svg path {
+              fill: #E4FBA5;
+              stroke: #E4FBA5; }
+  .social_media_links_nav .github_link,
+  .social_media_links_nav .linkedin_link {
+    display: inline-block;
+    width: 15%; }
+    .social_media_links_nav .github_link svg,
+    .social_media_links_nav .linkedin_link svg {
+      margin: 0 0 -3%;
+      width: 1.65em; }
+  .social_media_links {
+    display: none; }
+  .show_links {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    visibility: visible; }
+  .page-content {
+    display: block;
+    height: 100%;
+    padding-top: 5.75em;
+    width: 100%; }
+  .wrapper {
+    height: 100%;
+    margin: 0 auto;
+    width: 100%; } }
+
+/**
+ * This SCSS file is to import the proper 'Related Technologies' style sheet
+ * based on screen size via Media Queries.
+ *
+ * @author Kerick Howlett
+ **/
+@media screen and (min-width: 1300px) {
+  /**
+ * This SCSS file is for creating the overall look for the "Related Technologies"
+ * section of the sidebar - Mobile.
+ *
+ * @author Kerick Howlett
+ **/
+  .technologies {
+    height: auto;
+    margin-left: auto;
+    width: 25em; }
+    .technologies__row {
+      background: none;
+      cursor: pointer;
+      height: auto;
+      margin-bottom: -0.5em;
+      padding: 1em;
+      overflow: hidden;
+      -webkit-transition: 0.2s all ease-in-out;
+      -moz-transition: 0.2s all ease-in-out;
+      -o-transition: 0.2s all ease-in-out;
+      transition: 0.2s all ease-in-out; }
+      .technologies__row a {
+        height: 3.5em; }
+      .technologies__row__logo {
+        float: right;
+        height: auto;
+        margin-top: 0.25em;
+        width: 16%; }
+        .technologies__row__logo img {
+          background: #FFFFFF;
+          border: 1px solid #FFFFFF;
+          border-radius: 6px;
+          display: block;
+          height: auto;
+          margin: auto;
+          padding: 3px;
+          width: 100%; }
+      .technologies__row__title {
+        color: #000000;
+        display: inline-block;
+        font-size: 1.3em;
+        text-align: left;
+        width: 84%;
+        -webkit-transition: 0.2s all ease-in-out;
+        -moz-transition: 0.2s all ease-in-out;
+        -o-transition: 0.2s all ease-in-out;
+        transition: 0.2s all ease-in-out; }
+        .technologies__row__title span {
+          display: inline-block;
+          line-height: 3.5em; }
+      .technologies__row:hover {
+        background: #70A3F4; }
+        .technologies__row:hover .technologies__row__title {
+          color: #FFFFFF; }
+    .technologies__divider {
+      border: 1px solid #CCCCCC;
+      border-radius: 25px;
+      display: inline-block;
+      height: 0px;
+      opacity: 0.5;
+      overflow: hidden;
+      width: 100%; }
+      .technologies__divider:last-child {
+        display: none; } }
+
+@media screen and (max-width: 1299px) {
+  /**
+ * This SCSS file is for creating the overall look for the "Related Technologies"
+ * section of the sidebar - Mobile.
+ *
+ * @author Kerick Howlett
+ **/
+  .technologies {
+    height: auto;
+    margin-right: auto;
+    max-width: 48em;
+    width: 90%; }
+    .technologies__row {
+      background: none;
+      cursor: pointer;
+      height: auto;
+      margin-bottom: -0.5em;
+      padding: 1em;
+      overflow: hidden;
+      -webkit-transition: 0.2s all ease-in-out;
+      -moz-transition: 0.2s all ease-in-out;
+      -o-transition: 0.2s all ease-in-out;
+      transition: 0.2s all ease-in-out; }
+      .technologies__row a {
+        height: 3.5em; }
+      .technologies__row__logo {
+        float: left;
+        height: auto;
+        margin-top: 0.25em;
+        width: 16%; }
+        .technologies__row__logo img {
+          background: #FFFFFF;
+          border: 1px solid #FFFFFF;
+          border-radius: 6px;
+          display: block;
+          height: auto;
+          margin: auto;
+          padding: 3px;
+          width: 100%; }
+      .technologies__row__title {
+        color: #000000;
+        display: inline-block;
+        font-size: 1.3em;
+        text-align: right;
+        width: 84%;
+        -webkit-transition: 0.2s all ease-in-out;
+        -moz-transition: 0.2s all ease-in-out;
+        -o-transition: 0.2s all ease-in-out;
+        transition: 0.2s all ease-in-out; }
+        .technologies__row__title span {
+          display: inline-block;
+          line-height: 12.5vw; }
+    .technologies__divider {
+      border: 1px solid #CCCCCC;
+      border-radius: 25px;
+      display: inline-block;
+      height: 0px;
+      opacity: 0.5;
+      overflow: hidden;
+      width: 100%; }
+      .technologies__divider:last-child {
+        display: none; } }
+
+/**
+ * This SCSS file is to import the proper side navigation menu style sheet for
+ * based on screen size via Media Queries.
+ *
+ * @author Kerick Howlett
+ **/
+@media screen and (min-width: 1025px) {
+  /**
+ * This SCSS file is to establish the styling rules for the Title Sequence embedded
+ * in the sidenav. - Desktop.
+ *
+ * @author Jef DeWitt & Kerick Howlett
+ **/
+  .title__sequence {
+    height: 18%;
+    margin: 10% 0 18% -16.5%;
+    position: relative;
+    -webkit-transform: skewX(5deg) translateX(50px);
+    -moz-transform: skewX(5deg) translateX(50px);
+    -o-transform: skewX(5deg) translateX(50px);
+    transform: skewX(5deg) translateX(50px);
+    width: 100%; } }
+  @media screen and (min-width: 1025px) and (min-width: 1025px) and (max-width: 1400px) {
+    .title__sequence {
+      margin-left: -20%; } }
+
+@media screen and (min-width: 1025px) {
+  .block__initials {
+    display: table;
+    height: 100%;
+    padding-top: 50%;
+    position: relative;
+    width: 100%; }
+    .block__initials h1 {
+      color: #FFFFFF;
+      font-family: "roboto_medium";
+      font-size: 5vw;
+      text-shadow: 1px 1px 1px #000000;
+      text-transform: uppercase; }
+    .block__initials:before {
+      animation: 0s rise forwards linear;
+      background: url("../images/diamond.svg");
+      background-repeat: no-repeat;
+      content: '';
+      display: inline-block;
+      height: 9vw;
+      position: absolute;
+      left: 48.5%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 9vw; }
+  @keyframes shrinkDown {
+    0% {
+      height: 9vw;
+      left: 48.5%;
+      top: 50%;
+      width: 9vw; }
+    80% {
+      height: 5.7vw;
+      left: 50.85%;
+      top: 51%;
+      width: 5.7vw; }
+    100% {
+      height: 5.7vw;
+      left: 50.85%;
+      top: 51%;
+      width: 5.7vw; } }
+  div[class^="name"] {
+    animation: rise 0s linear;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50%; }
+  .name--first {
+    -webkit-transform: translate(-100%, -50%);
+    -moz-transform: translate(-100%, -50%);
+    -o-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%); }
+    .name--first h1 {
+      height: 3vw; }
+      .name--first h1 span {
+        position: absolute;
+        right: -0.3vw;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease; }
+        .name--first h1 span:nth-child(-n+5) {
+          opacity: 0; }
+        .name--first h1 span:last-of-type {
+          opacity: 1; }
+  .name--last {
+    -webkit-transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
+    transform: translate(0%, -50%); }
+    .name--last h1 {
+      height: 3vw; }
+      .name--last h1 span {
+        opacity: 0;
+        position: absolute;
+        left: 0.6vw;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease; }
+        .name--last h1 span:first-of-type {
+          opacity: 1; }
+  #first.shift span:nth-of-type(1) {
+    opacity: 1; }
+  #first.shift span:nth-of-type(2) {
+    opacity: 1; }
+  #first.shift span:nth-of-type(3) {
+    opacity: 1; }
+  #first.shift span:nth-of-type(4) {
+    opacity: 1; }
+  #first.shift span:nth-of-type(5) {
+    opacity: 1; }
+  #first.shift span:first-of-type {
+    right: 1.2vw; }
+  #first.shift span:nth-of-type(2) {
+    right: 3.2vw; }
+  #first.shift span:nth-of-type(3) {
+    right: 3.4vw; }
+  #first.shift span:nth-of-type(4) {
+    right: 5vw; }
+  #first.shift span:nth-of-type(5) {
+    right: 6.4vw; }
+  @keyframes slideUp {
+    0% {
+      font-size: 5vw;
+      -webkit-transform: translateY(0%);
+      -moz-transform: translateY(0%);
+      -o-transform: translateY(0%);
+      transform: translateY(0%); }
+    80% {
+      font-size: 2.5vw; }
+    100% {
+      font-size: 2.5vw;
+      -webkit-transform: translateY(-25%);
+      -moz-transform: translateY(-25%);
+      -o-transform: translateY(-25%);
+      transform: translateY(-25%); } }
+  #last.shift span:nth-of-type(2) {
+    opacity: 1; }
+  #last.shift span:nth-of-type(3) {
+    opacity: 1; }
+  #last.shift span:nth-of-type(4) {
+    opacity: 1; }
+  #last.shift span:nth-of-type(5) {
+    opacity: 1; }
+  #last.shift span:nth-of-type(6) {
+    opacity: 1; }
+  #last.shift span:nth-of-type(7) {
+    opacity: 1; }
+  #last.shift span:nth-of-type(2) {
+    left: 2.3vw; }
+  #last.shift span:nth-of-type(3) {
+    left: 4.2vw; }
+  #last.shift span:nth-of-type(4) {
+    left: 6vw; }
+  #last.shift span:nth-of-type(5) {
+    left: 7.4vw; }
+  #last.shift span:nth-of-type(6) {
+    left: 9vw; }
+  #last.shift span:last-of-type {
+    left: 10.6vw; }
+  @keyframes slideDown {
+    0% {
+      font-size: 5vw;
+      -webkit-transform: translateY(0%);
+      -moz-transform: translateY(0%);
+      -o-transform: translateY(0%);
+      transform: translateY(0%); }
+    80% {
+      font-size: 2.5vw; }
+    100% {
+      font-size: 2.5vw;
+      -webkit-transform: translateY(25%);
+      -moz-transform: translateY(25%);
+      -o-transform: translateY(25%);
+      transform: translateY(25%); } }
+  @keyframes rise {
+    0% {
+      opacity: 0;
+      filter: blur(0.5em);
+      -webkit-filter: blur(0.5em); }
+    100% {
+      opacity: 1;
+      filter: blur(0);
+      -webkit-filter: blur(0); } }
+  /* Animation automatically triggers on Home Page. */
+  .home_page .block__initials:before {
+    animation: 3s rise forwards linear, 2s shrinkDown 4.5s forwards ease; }
+  .home_page div[class^="name"] {
+    animation: rise 3s linear; }
+  .home_page .name--first h1 {
+    animation: 2s slideUp 3s forwards ease; }
+  .home_page .name--last h1 {
+    animation: 2s slideDown 3s forwards ease; }
+  /* Animation to trigger when hovering over title on all other pages but Home. */
+  .other-page .title__sequence:hover .block__initials:before {
+    animation: 1s shrinkDown forwards ease; }
+  .other-page .title__sequence:hover .name--first h1 {
+    animation: 30ms slideUp forwards ease; }
+  .other-page .title__sequence:hover .name--last h1 {
+    animation: 30ms slideDown forwards ease; } }
+
+@media screen and (max-width: 1024px) {
+  /**
+ * This SCSS file is to establish the styling rules for the Title Sequence embedded
+ * in the sidenav. - Tablet.
+ *
+ * @author Jef DeWitt & Kerick Howlett
+ **/
+  .title__sequence {
+    display: inline-block;
+    height: 2.5em;
+    margin-left: 6.5%;
+    vertical-align: bottom;
+    width: 67.5%; }
+  .block__initials {
+    display: inline-block;
+    height: 1em;
+    position: relative;
+    width: 100%; }
+    .block__initials h1 {
+      color: #FFFFFF;
+      font-family: "roboto_medium";
+      font-size: 2.4em;
+      text-shadow: 1px 1px 1px #000000;
+      text-transform: uppercase; }
+    .block__initials:before {
+      background: url("../images/diamond.svg");
+      background-repeat: no-repeat;
+      content: '';
+      display: inline-block;
+      height: 4.5em;
+      position: absolute;
+      left: 48.15%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 4em; } }
+    @media screen and (max-width: 1024px) and (max-width: 650px) {
+      .block__initials:before {
+        left: 47.15%; } }
+
+@media screen and (max-width: 1024px) {
+  div[class^="name"] {
+    animation: rise 0s linear;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50%; }
+  .name--first {
+    -webkit-transform: translate(-100%, -50%);
+    -moz-transform: translate(-100%, -50%);
+    -o-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%); }
+    .name--first h1 {
+      height: 0.75em; }
+      .name--first h1 span {
+        position: absolute;
+        right: 0.1em;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease; }
+        .name--first h1 span:nth-child(-n+5) {
+          opacity: 0; }
+        .name--first h1 span:last-of-type {
+          opacity: 1; }
+  .name--last {
+    -webkit-transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
+    transform: translate(0%, -50%); }
+    .name--last h1 {
+      height: 0.75em; }
+      .name--last h1 span {
+        opacity: 0;
+        position: absolute;
+        left: 0.1em;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease; }
+        .name--last h1 span:first-of-type {
+          opacity: 1; }
+  @keyframes slideUp {
+    0% {
+      -webkit-transform: translateY(0%);
+      -moz-transform: translateY(0%);
+      -o-transform: translateY(0%);
+      transform: translateY(0%); }
+    100% {
+      -webkit-transform: translateY(-25%);
+      -moz-transform: translateY(-25%);
+      -o-transform: translateY(-25%);
+      transform: translateY(-25%); } }
+  @keyframes slideDown {
+    0% {
+      -webkit-transform: translateY(0%);
+      -moz-transform: translateY(0%);
+      -o-transform: translateY(0%);
+      transform: translateY(0%); }
+    100% {
+      -webkit-transform: translateY(25%);
+      -moz-transform: translateY(25%);
+      -o-transform: translateY(25%);
+      transform: translateY(25%); } }
+  @keyframes rise {
+    0% {
+      opacity: 0;
+      filter: blur(0.5em);
+      -webkit-filter: blur(0.5em); }
+    100% {
+      opacity: 1;
+      filter: blur(0);
+      -webkit-filter: blur(0); } }
+  /* Animation automatically triggers on Home Page. */
+  .home_page #first.shift span:nth-of-type(1) {
+    opacity: 1; }
+  .home_page #first.shift span:nth-of-type(2) {
+    opacity: 1; }
+  .home_page #first.shift span:nth-of-type(3) {
+    opacity: 1; }
+  .home_page #first.shift span:nth-of-type(4) {
+    opacity: 1; }
+  .home_page #first.shift span:nth-of-type(5) {
+    opacity: 1; }
+  .home_page #first.shift span:first-of-type {
+    right: 0.75em; }
+  .home_page #first.shift span:nth-of-type(2) {
+    right: 1.65em; }
+  .home_page #first.shift span:nth-of-type(3) {
+    right: 1.8em; }
+  .home_page #first.shift span:nth-of-type(4) {
+    right: 2.5em; }
+  .home_page #first.shift span:nth-of-type(5) {
+    right: 3.1em; }
+  .home_page #last.shift span:nth-of-type(2) {
+    opacity: 1; }
+  .home_page #last.shift span:nth-of-type(3) {
+    opacity: 1; }
+  .home_page #last.shift span:nth-of-type(4) {
+    opacity: 1; }
+  .home_page #last.shift span:nth-of-type(5) {
+    opacity: 1; }
+  .home_page #last.shift span:nth-of-type(6) {
+    opacity: 1; }
+  .home_page #last.shift span:nth-of-type(7) {
+    opacity: 1; }
+  .home_page #last.shift span:nth-of-type(2) {
+    left: 0.8em; }
+  .home_page #last.shift span:nth-of-type(3) {
+    left: 1.6em; }
+  .home_page #last.shift span:nth-of-type(4) {
+    left: 2.35em; }
+  .home_page #last.shift span:nth-of-type(5) {
+    left: 2.95em; }
+  .home_page #last.shift span:nth-of-type(6) {
+    left: 3.6em; }
+  .home_page #last.shift span:last-of-type {
+    left: 4.25em; }
+  .home_page .block__initials:before {
+    animation: 3s rise forwards linear, 2s shrinkDown 4.5s forwards ease; }
+  .home_page div[class^="name"] {
+    animation: rise 3s linear; }
+  .home_page .name--first h1 {
+    animation: 2s slideUp 3s forwards ease; }
+  .home_page .name--last h1 {
+    animation: 2s slideDown 3s forwards ease; }
+  /* No animation on all child pages. */
+  .other-page #first span:nth-of-type(1) {
+    opacity: 1; }
+  .other-page #first span:nth-of-type(2) {
+    opacity: 1; }
+  .other-page #first span:nth-of-type(3) {
+    opacity: 1; }
+  .other-page #first span:nth-of-type(4) {
+    opacity: 1; }
+  .other-page #first span:nth-of-type(5) {
+    opacity: 1; }
+  .other-page #first span:first-of-type {
+    right: 0.75em; }
+  .other-page #first span:nth-of-type(2) {
+    right: 1.65em; }
+  .other-page #first span:nth-of-type(3) {
+    right: 1.8em; }
+  .other-page #first span:nth-of-type(4) {
+    right: 2.5em; }
+  .other-page #first span:nth-of-type(5) {
+    right: 3.1em; }
+  .other-page #last span:nth-of-type(2) {
+    opacity: 1; }
+  .other-page #last span:nth-of-type(3) {
+    opacity: 1; }
+  .other-page #last span:nth-of-type(4) {
+    opacity: 1; }
+  .other-page #last span:nth-of-type(5) {
+    opacity: 1; }
+  .other-page #last span:nth-of-type(6) {
+    opacity: 1; }
+  .other-page #last span:nth-of-type(7) {
+    opacity: 1; }
+  .other-page #last span:nth-of-type(2) {
+    left: 0.8em; }
+  .other-page #last span:nth-of-type(3) {
+    left: 1.6em; }
+  .other-page #last span:nth-of-type(4) {
+    left: 2.35em; }
+  .other-page #last span:nth-of-type(5) {
+    left: 2.95em; }
+  .other-page #last span:nth-of-type(6) {
+    left: 3.6em; }
+  .other-page #last span:last-of-type {
+    left: 4.25em; }
+  .other-page .title__sequence .block__initials:before {
+    animation: 0s shrinkDown forwards ease; }
+  .other-page .title__sequence .name--first h1 {
+    animation: 0s slideUp forwards ease; }
+  .other-page .title__sequence .name--last h1 {
+    animation: 0s slideDown forwards ease; } }
