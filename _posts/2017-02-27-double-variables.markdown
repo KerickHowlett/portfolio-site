@@ -3,7 +3,7 @@ layout: posts
 title:  "Double Variables"
 author: "Kerick Howlett"
 feature_image: double_variable
-date:   2017-02-28 11:32:00 -0400
+date:   2017-02-27 11:32:00 -0400
 excerpt_separator: <!-- more -->
 technologies:
 - name: "HTML"

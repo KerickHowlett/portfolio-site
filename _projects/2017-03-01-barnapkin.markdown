@@ -4,7 +4,7 @@ title:  "The BarNapkin"
 author: "Kerick Howlett"
 feature_image: barnapkin
 excerpt_separator: <!-- more -->
-date:   2017-02-28 15:20:00 -0400
+date:   2017-03-01 15:20:00 -0400
 technologies:
   - name: "AngularJS"
     image: "angular.png"
