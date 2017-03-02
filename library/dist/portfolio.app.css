@@ -398,6 +398,10 @@
     font-size: 1.75em;
     padding: 0 0.75em; }
 
+@media screen and (max-width: 767px) {
+  .breadcrumb {
+    display: none; } }
+
 /**
  * This SCSS file is to import the proper contact/connect form style sheet for
  * based on screen size via Media Queries.
@@ -441,6 +445,9 @@
       margin-top: 1%;
       padding: 0 1em;
       width: 40%; }
+      .connect__body__cta h2 {
+        color: #70A3F4;
+        font-size: 4em; }
       .connect__body__cta img {
         height: auto;
         width: 100%; }
@@ -550,9 +557,8 @@
  * @author Kerick Howlett
  **/
   .connect-header {
-    background: url("/library/images/headers/mail.jpg") top right no-repeat fixed;
+    background: url("/library/images/headers/mail.jpg") top right no-repeat;
     background-size: cover;
-    background-position-y: -20em;
     display: table;
     height: 25em;
     overflow: hidden;
@@ -572,6 +578,9 @@
     .connect__body__cta {
       display: block;
       width: 100%; }
+      .connect__body__cta h2 {
+        color: #70A3F4;
+        font-size: 4em; }
       .connect__body__cta img {
         height: auto;
         width: 100%; }
@@ -1671,8 +1680,7 @@ a,
       .sidebar .cta_wrapper img {
         display: block;
         height: auto;
-        margin-bottom: 2em;
-        margin-right: auto;
+        margin: 0 auto 2em 0;
         width: 90%; }
       .sidebar .cta_wrapper .cta {
         margin-right: auto;
@@ -1817,7 +1825,7 @@ a,
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.42);
     color: #FFFFFF;
     display: inline-block;
-    height: 5.75em;
+    height: 4.75em;
     position: fixed;
     top: 0;
     width: 100%;
@@ -1825,8 +1833,8 @@ a,
   .menu-icon {
     cursor: pointer;
     display: inline-block;
-    height: 45px;
-    margin: 1.65em auto auto 25px;
+    height: 43px;
+    margin: 1.5em auto auto 13px;
     position: relative;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -1837,13 +1845,13 @@ a,
     -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
     vertical-align: baseline;
-    width: 60px;
+    width: 41px;
     /* Very Small Mobile View for Header */ }
     .menu-icon span {
       background: #FFFFFF;
       border-radius: 9px;
       display: block;
-      height: 6px;
+      height: 4px;
       left: 0;
       opacity: 1;
       position: absolute;
@@ -1859,9 +1867,9 @@ a,
       .menu-icon span:nth-child(1) {
         top: 0px; }
       .menu-icon span:nth-child(2), .menu-icon span:nth-child(3) {
-        top: 18px; }
+        top: 14px; }
       .menu-icon span:nth-child(4) {
-        top: 36px; } }
+        top: 28px; } }
   @media screen and (max-width: 1024px) and (max-width: 445px) {
     .menu-icon {
       height: 43px;
@@ -1895,7 +1903,8 @@ a,
     width: 0%; }
   .nav_links {
     background: rgba(112, 163, 244, 0.8);
-    display: table;
+    display: block;
+    height: 83vh;
     -webkit-transform: translate(0, -20em);
     -moz-transform: translate(0, -20em);
     -o-transform: translate(0, -20em);
@@ -1905,16 +1914,19 @@ a,
     -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
     opacity: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
     visibility: hidden;
+    -webkit-overflow-scrolling: touch;
     width: 100%; }
     .nav_links ul {
       box-sizing: border-box;
-      display: table;
+      display: block;
       list-style: none;
       padding: 0;
       width: 100%; }
       .nav_links ul li {
-        display: inline-table;
+        display: block;
         font: 100% "roboto_medium";
         font-size: 2.5em;
         margin-top: 0.5em;
@@ -1947,15 +1959,15 @@ a,
     display: none; }
   .show_links {
     opacity: 1;
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(0, 0);
+    -webkit-transform: translate(0, -0.1em);
+    -moz-transform: translate(0, -0.1em);
+    -o-transform: translate(0, -0.1em);
+    transform: translate(0, -0.1em);
     visibility: visible; }
   .page-content {
     display: block;
     height: 100%;
-    padding-top: 5.75em;
+    padding-top: 4.75em;
     width: 100%; }
   .wrapper {
     height: 100%;
@@ -1978,7 +1990,8 @@ a,
   .technologies {
     height: auto;
     margin-left: auto;
-    width: 25em; }
+    min-width: 15em;
+    width: 90%; }
     .technologies__row {
       background: none;
       cursor: pointer;
@@ -1996,7 +2009,7 @@ a,
         float: right;
         height: auto;
         margin-top: 0.25em;
-        width: 16%; }
+        width: 4em; }
         .technologies__row__logo img {
           background: #FFFFFF;
           border: 1px solid #FFFFFF;
@@ -2011,7 +2024,6 @@ a,
         display: inline-block;
         font-size: 1.3em;
         text-align: left;
-        width: 84%;
         -webkit-transition: 0.2s all ease-in-out;
         -moz-transition: 0.2s all ease-in-out;
         -o-transition: 0.2s all ease-in-out;
@@ -2339,7 +2351,7 @@ a,
     .block__initials h1 {
       color: #FFFFFF;
       font-family: "roboto_medium";
-      font-size: 2.4em;
+      font-size: 2em;
       text-shadow: 1px 1px 1px #000000;
       text-transform: uppercase; }
     .block__initials:before {
@@ -2347,20 +2359,15 @@ a,
       background-repeat: no-repeat;
       content: '';
       display: inline-block;
-      height: 4.5em;
+      height: 3.5em;
       position: absolute;
-      left: 48.15%;
+      left: 46%;
       top: 50%;
       -webkit-transform: translate(-50%, -50%);
       -moz-transform: translate(-50%, -50%);
       -o-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      width: 4em; } }
-    @media screen and (max-width: 1024px) and (max-width: 650px) {
-      .block__initials:before {
-        left: 47.15%; } }
-
-@media screen and (max-width: 1024px) {
+      width: 3em; }
   div[class^="name"] {
     animation: rise 0s linear;
     position: absolute;

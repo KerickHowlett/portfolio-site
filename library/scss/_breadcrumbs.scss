@@ -30,3 +30,9 @@
 		padding: 0 0.75em;
 	}
 }
+
+@media screen and ( max-width: 767px ) {
+	.breadcrumb {
+		display: none;
+	}
+}

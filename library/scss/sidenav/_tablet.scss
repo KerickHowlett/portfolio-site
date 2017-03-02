@@ -10,7 +10,7 @@
 	@include box-shadow( 0px 5px 5px 0px rgba( 0, 0, 0, 0.42 ) );
 	color: $white;
 	display: inline-block;
-	height: 5.75em;
+	height: 4.75em;
 	position: fixed;
 		top: 0;
 	width: 100%;
@@ -20,18 +20,18 @@
 .menu-icon {
 	cursor: pointer;
 	display: inline-block;
-	height: 45px;
-	margin: 1.65em auto auto 25px;
+	height: 43px;
+	margin: 1.5em auto auto 13px;
 	position: relative;
 	@include transform( rotate( 0deg ) );
 	@include transition( .5s ease-in-out );
 	vertical-align: baseline;
-	width: 60px;
+	width: 41px;
 	span {
 		background: $white;
 		border-radius: 9px;
 		display: block;
-		height: 6px;
+		height: 4px;
 		left: 0;
 		opacity: 1;
 		position: absolute;
@@ -43,10 +43,10 @@
 		}
 		&:nth-child(2),
 		&:nth-child(3) {
-			top: 18px;
+			top: 14px;
 		}
 		&:nth-child(4) {
-			top: 36px;
+			top: 28px;
 		}
 	}
 	/* Very Small Mobile View for Header */
@@ -90,20 +90,24 @@
 
 .nav_links {
 	background: rgba( 112, 163, 244, 0.8 );
-	display: table;
+	display: block;
+	height: 83vh;
 	@include transform( translate( 0, -20em ) );
 	@include transition( all 0.2s ease-out );
 	opacity: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
 	visibility: hidden;
+	-webkit-overflow-scrolling: touch;
 	width: 100%;
 	ul {
 		box-sizing: border-box;
-		display: table;
+		display: block;
 		list-style: none;
 		padding: 0;
 		width: 100%;
 		li {
-			display: inline-table;
+			display: block;
 			font: 100% $roboto_medium;
 			font-size: 2.5em;
 			margin-top: 0.5em;
@@ -157,14 +161,14 @@
 
 .show_links {
 	opacity: 1;
-	@include transform( translate( 0, 0 ) );
+	@include transform( translate( 0, -0.1em ) );
 	visibility: visible;
 }
 
 .page-content {
 	display: block;
 	height: 100%;
-	padding-top: 5.75em;
+	padding-top: 4.75em;
 	width: 100%;
 }
 
