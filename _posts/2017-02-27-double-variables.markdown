@@ -53,8 +53,8 @@ $collection = [ 'legend_1', 'legend_2', 'legend_fireworks' ];
 
 // Legend Variables.
 $legend_1 = "<h2>Legend One</h2>";
-$legend_1 = "<h2>Legend Two</h2>";
-$legend_1 = "<h2>Legend Fireworks</h2>";
+$legend_2 = "<h2>Legend Two</h2>";
+$legend_fireworks = "<h2>Legend Fireworks</h2>";
 
 // The loop & Double Variable.
 foreach( $collection as $item ) echo $$item;
