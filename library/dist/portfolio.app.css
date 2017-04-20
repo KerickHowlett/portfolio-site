@@ -1730,6 +1730,16 @@ a,
     transform: skewX(-5deg) translateX(-50px);
     width: 24%;
     z-index: 100; }
+    .sidenav:before {
+      background: #70A3F4;
+      content: '';
+      display: inline-block;
+      height: 100%;
+      position: absolute;
+      right: 100%;
+      top: 0;
+      width: 100px;
+      z-index: 1; }
   .menu-icon {
     display: none; }
   .nav_links {

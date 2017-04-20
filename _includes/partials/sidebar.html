@@ -57,7 +57,7 @@
 	<span class="divider"></span>
 	<div class="recent_posts">
 		<ul>
-			{% for post in site.posts reversed sort: 'date' limit: 4 %}
+			{% for post in site.posts sort: 'date' limit: 4 %}
 				<li>
 					<a href="{{post.url}}">
 						<span class="recent_title">{{post.title}}</span>

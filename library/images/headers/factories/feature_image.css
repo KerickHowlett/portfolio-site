@@ -1,0 +1,20 @@
+/**
+ * This is the style rules for the post header.
+ **/
+
+ @media screen and ( max-width: 766px ) {
+ 	.archive-header,
+ 	.post-header {
+ 		background: url( '/library/images/headers/factories/feature_image.jpg' ) top right no-repeat;
+ 		background-size: cover;
+ 	}
+ }
+
+@media screen and ( min-width: 767px ) {
+	.archive-header,
+	.post-header {
+		background: url( '/library/images/headers/factories/feature_image.jpg' ) top right no-repeat fixed;
+		background-size: cover;
+		background-position-y: -30em;
+	}
+}
