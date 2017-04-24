@@ -1,0 +1,133 @@
+---
+layout: posts
+title:  "Angular $q"
+author: "Kerick Howlett"
+feature_image: q
+date:   2017-04-20 08:00:00 -0400
+excerpt_separator: <!-- more -->
+technologies:
+- name: "AngularJS"
+  image: "angular.png"
+  link: "https://angularjs.org/"
+- name: "Apache Cordova"
+  image: "cordova.png"
+  link: "https://cordova.apache.org/"
+- name: "Ionic"
+  image: "ionic.png"
+  link: "https://ionicframework.com/"
+related_links:
+- title: "Official Documentation"
+  href: "https://docs.angularjs.org/api/ng/service/$q"
+---
+Angular apps are a complex "machine" with many working modules, so it's natural that many of them may find themselves repeatedly relying on the same component, such as a factory or a service. However, using standard functions can cause your application to lag and hang for various lengths of time. So what you need is the means of creating an asynchronous function that will continue to work behind-the-scenes while your End-User continues interfacing with the app. This is known as the **$q module**. The best way to remember that is to think of it as a **queue**, which stashes a series of objects or commands to be processed one at a time in a way that it doesn't affect the Angular application's performance.
+
+<!-- more -->
+
+## $q
+
+In terms of syntax, **$q** is pretty much just shorthand for the **defer()** method. This is a quick and explicit way of creating a means to return a promise or an error once the request is fully completed.
+
+Regardless how you choose to do it, though; all defer objects have a property called **promise** and three methods: **resolve()**, **reject()**, and **notify()**.
+
+##### Promise
+The **promise** essentially contains the value, object, or exception information that the defer is returning.
+
+##### Resolve
+**Resolve()** is a function that labels the defer object as "acceptable" and gives the green light to process and return it. Once that's complete, it will move on to the next deferred object if there is one.
+
+##### Reject
+**Reject()** is a function that labels the defer object as being **NOT** acceptable, and prevents it from being processed any further. However, it will still continue to run through additional deferred objects if there are any at that moment.
+
+##### Notify
+**Notify()** is a function that you shouldn't need to call upon too often, as it's certainly not a functional critical method or anything. The only purpose for it is to return the most recent status updates on the promise's current progress.
+
+## Constructor Method
+
+Now, there are multiple ways to accomplish this, but choosing to go with the constructor makes it easier to read and deduce what it's doing.
+
+```javascript
+function watchMovie( movie ) {
+	return $q( function( resolve, reject ) {
+		if ( movie.status === 200 ) {
+			resolve( movie );
+		} else {
+			reject( movie );
+		}
+	} );
+}
+```
+
+## Defer Method
+
+Of course, if you prefer the approach that involves the absolute bare minimum that actually returns a deferred object, then one can't go wrong with this approach. The important thing to remember is to end your function with `return deferred.promise();`{:.hljs .javascript .inline-code}.
+
+```javascript
+function preloadImage( imgSrc ) {
+	var deferred = $q.defer();
+	deferred.notify( 'Loading ' + movie '...' )
+	if ( movie.status === 200 ) {
+		deferred.resolve( movie );
+	} else {
+		deferred.reject( movie );
+	}
+	return deferred.promise;
+}
+```
+
+## Promise Chaining
+
+It's also important to know when NOT to use this, because knowing that will save you a lot of headaches in the future. And even though the end-user most likely won't notice any type of lag or hanging, it still uses processing power in the background, so it's imperative that you **don't over use it**.
+
+```javascript
+return $http.get( 'movies.json').then( function( response ) {
+	return response.data;
+} );
+```
+
+## Real World Example
+
+Here's a real world example of a Factory method that I created to send out an app for an Ionic / Cordova app that I was working on. The purpose of it was to send a series of text messages to as many as five people. And I needed to tailor each method to work differently for both the iOS and Android platforms (showing just the Android method for this example) due to how the overall mobile app worked.
+
+**Important to Note:** You will always need to include **$q** as one of your controller's, factory's, or whatever's dependencies whenever you implement an asynchronous function.
+
+```javascript
+angular.module( 'sendSMSService', [ ] )
+.factory( "SendSmsAll", function ( $cordovaSms, $ionicPopup, $q, $timeout ) {
+	return {
+		sendAndroidSms: function ( contacts, message, language ) {
+			var options = {
+				replaceLineBreaks: false,
+				android: {
+					intent: ''
+				}
+			};
+			var defer = $q.defer();
+			var promises = [];
+			function lastTask() {
+				var success = language.home.success;
+				var smsPopup = $ionicPopup.alert( {
+					title: success.title,
+					template: success.content,
+					buttons: [
+						{
+							text: success.confirm
+						}
+					]
+				} );
+				$timeout( function () {
+					smsPopup.close();
+				}, 2000 );
+				defer.resolve();
+			}
+			angular.forEach( contacts.filter( withNumberOnly ), function ( contact ) {
+				promises.push( $cordovaSms.send( contact.phone, message, options, $q.defer().resolve(), $q.defer().reject() ) );
+			} );
+			function withNumberOnly( contact ) {
+				return contact.hasOwnProperty( 'phone' );
+			}
+			$q.all( promises ).then( lastTask );
+			return defer.promise;
+		}
+	}
+} );
+```

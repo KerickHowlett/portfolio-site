@@ -16,7 +16,7 @@ technologies:
   image: "ionic.png"
   link: "https://ionicframework.com/"
 related_links:
-  - title: "AngularJS Providers"
+  - title: "Official Documentation"
     href: "https://docs.angularjs.org/guide/providers"
 ---
 More often than not, there will be a need to call upon functions and objects throughout multiple controllers in your Angular or Ionic/Cordova app. So instead of just copying the same block of code in each of your controllers -- which is ALWAYS a bad idea! -- there are special modules that you can inject into any of your controllers with a dependency. Creating these will also do wonders in both cleaning up and simplifying your code, making it much easier to read and debug. These special modules are called: Values, Constants, Factories, Services, and Providers.
@@ -25,7 +25,7 @@ More often than not, there will be a need to call upon functions and objects thr
 
 ## Values
 
-These are as useful as they are limited. Basically, this provider is only good for sharing a particular static value or object throughout the app. The best examples would probably be an API key or ClientID. However, these can only be injected into *Service* and *Controller* Modules.
+These are as useful as they are limited. Basically, this provider is only good for sharing a particular static value or object throughout the app. The best examples would probably be an API key or ClientID. However, these can only be injected into **Service** and **Controller** Modules.
 
 ```javascript
 var app = angular.module( 'myValue', [] )
@@ -37,7 +37,7 @@ app.value( 'user', {
 } );
 ```
 
-Once created, this can be called upon from anywhere by simply injecting the *APIKey* dependency into your chosen controllers.
+Once created, this can be called upon from anywhere by simply injecting the **APIKey** dependency into your chosen controllers.
 
 ```javascript
 angular.module( 'app.controller', [] )
@@ -49,7 +49,7 @@ angular.module( 'app.controller', [] )
 
 ## Constants ##
 
-For those wondering how to create a static value that can only be injected into *Config* Modules, this is the special module type that you want. It works in a near identical matter to the Values method. Again, the only difference is that these CANNOT be injected into the *Service* or *Controller* Modules, ONLY the *Config* modules.
+For those wondering how to create a static value that can only be injected into **Config** Modules, this is the special module type that you want. It works in a near identical matter to the Values method. Again, the only difference is that these CANNOT be injected into the **Service** or **Controller** Modules, ONLY the **Config** modules.
 
 These can be useful for establishing, say the Base URL for your Angular App.
 
@@ -58,7 +58,7 @@ var app = angular.module( 'myValue', [] )
 app.constant( 'BASE_URL', 'http://fakesite.com/' );
 ```
 
-Again, all you need to do at this point is just inject it into your *Config Module*.
+Again, all you need to do at this point is just inject it into your **Config Module**.
 
 ```javascript
 angular.module( 'app.controller', [] )
@@ -123,7 +123,7 @@ angular.module( 'app.controller', [] )
 } ] );
 ```
 
-Now, that primarily deals with the bare minimum methods of ngStorage (local storage). It's also possible to include your own "business logic" to these methods as well; though, I tend to put that in another factory and inject the *$localstorage* factory into that one to make things easier to code and debug in the long run.
+Now, that primarily deals with the bare minimum methods of ngStorage (local storage). It's also possible to include your own "business logic" to these methods as well; though, I tend to put that in another factory and inject the **$localstorage** factory into that one to make things easier to code and debug in the long run.
 
 ## Services
 
@@ -153,7 +153,7 @@ Movie.logMovie(); // Logs movie properties.
 
 ```
 
-To inject the dependency into a controller is basically the same as calling a *new* object. Effectively, making it to where all of the object's properties are now part of the controller by binding with the *this* keyword. Or in other words: `myService = this`{:.hljs .javascript .inline-code}.
+To inject the dependency into a controller is basically the same as calling a **new** object. Effectively, making it to where all of the object's properties are now part of the controller by binding with the **this** keyword. Or in other words: `myService = this`{:.hljs .javascript .inline-code}.
 
 Services are great for doing things like creating Shopping Carts for online stores, or even calling to an API for both Angular, Ionic, and Cordova apps. And while you can actually create private properties and helper functions in Factories, I find that I use them more often here, as those are often closely tied with Object-Oriented Programming (OOP).
 
@@ -209,13 +209,13 @@ angular.module( 'app.controller', [] )
 } ] );
 ```
 
-While Factories are great for creating multiple objects, Services are primarily used for creating and processing Singleton objects. What *Singleton Objects* mean is that you can't have multiple instances of any given service running at one time. As the name, Singleton, implies, it's only there for a *single* use. Now, that doesn't mean the object goes away immediately after you called it. It'll stick around for as long as you need it, and if you want changes made to it, you'll just have to overwrite its properties.
+While Factories are great for creating multiple objects, Services are primarily used for creating and processing Singleton objects. What **Singleton Objects** mean is that you can't have multiple instances of any given service running at one time. As the name, Singleton, implies, it's only there for a **single** use. Now, that doesn't mean the object goes away immediately after you called it. It'll stick around for as long as you need it, and if you want changes made to it, you'll just have to overwrite its properties.
 
 ## Providers
 
-Some apps may require functions to run throughout the entire app or module *before it even starts*, so this is where Providers come in. These are also the only ones out of the special module types that can exchange data with an app's *Config Module*.
+Some apps may require functions to run throughout the entire app or module **before it even starts**, so this is where Providers come in. These are also the only ones out of the special module types that can exchange data with an app's **Config Module**.
 
-While the Config Module has access to just about everything within the Provider, the controllers only has access to everything within the *$get* method, which acts as a built-in Factory method.
+While the Config Module has access to just about everything within the Provider, the controllers only has access to everything within the **$get** method, which acts as a built-in Factory method.
 
 And just like with Services and Factories, you can create Private Properties and Helper Functions within your Providers.
 
@@ -268,4 +268,4 @@ angular.module( 'app.controller', [] )
 } ] );
 ```
 
-Of course, this was just a very basic example, as Providers can do so much more advanced tasks. For example, in Ionic's Framework, they use *$ionicConfigProvider* to establish many of their configuration settings before the app even starts. Such as things for the mobile app's navigation tabs, how to setup the keyboard, etc. Having your own provider that is setup to be application-wide could give you the means of establishing your own different settings for each of your app's modules. Implementing this may very well clean up your code GREATLY, as well as help locate where any possible bugs are coming from in the long run, especially if your application has many modules that each need particular functions to run before they initiate.
+Of course, this was just a very basic example, as Providers can do so much more advanced tasks. For example, in Ionic's Framework, they use **$ionicConfigProvider** to establish many of their configuration settings before the app even starts. Such as things for the mobile app's navigation tabs, how to setup the keyboard, etc. Having your own provider that is setup to be application-wide could give you the means of establishing your own different settings for each of your app's modules. Implementing this may very well clean up your code GREATLY, as well as help locate where any possible bugs are coming from in the long run, especially if your application has many modules that each need particular functions to run before they initiate.
