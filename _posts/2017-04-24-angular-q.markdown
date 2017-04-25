@@ -62,7 +62,7 @@ function watchMovie( movie ) {
 Of course, if you prefer the approach that involves the absolute bare minimum that actually returns a deferred object, then one can't go wrong with this approach. The important thing to remember is to end your function with `return deferred.promise();`{:.hljs .javascript .inline-code}.
 
 ```javascript
-function preloadImage( imgSrc ) {
+function watchMovie( movie ) {
 	var deferred = $q.defer();
 	deferred.notify( 'Loading ' + movie '...' )
 	if ( movie.status === 200 ) {
