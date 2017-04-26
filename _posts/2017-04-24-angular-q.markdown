@@ -3,7 +3,7 @@ layout: posts
 title:  "Angular $q"
 author: "Kerick Howlett"
 feature_image: q
-date:   2017-04-20 08:00:00 -0400
+date:   2017-04-24 08:00:00 -0400
 excerpt_separator: <!-- more -->
 technologies:
 - name: "AngularJS"
