@@ -10,6 +10,8 @@
 {% endif %}
 {% if page.feature_image %}
 	{% capture page_image %}{{ site.baseurl}}/library/images/headers/{{ page.feature_image }}/feature_image.jpg{% endcapture %}
+{% elseif page.url == "/" || page.url == "/index.html" %}
+	{% capture page_image %}{{ site.baseurl}}/library/images/portfolio1.jpg{% endcapture %}
 {% else %}
 	{% capture page_image %}{{ site.baseurl}}/library/images/headers/default/feature_image.jpg{% endcapture %}
 {% endif %}
