@@ -10,10 +10,17 @@
 {% endif %}
 {% if page.feature_image %}
 	{% capture page_image %}{{ site.baseurl}}/library/images/headers/{{ page.feature_image }}/feature_image.jpg{% endcapture %}
-{% elseif page.url == "/" || page.url == "/index.html" %}
-	{% capture page_image %}{{ site.baseurl}}/library/images/portfolio1.jpg{% endcapture %}
 {% else %}
-	{% capture page_image %}{{ site.baseurl}}/library/images/headers/default/feature_image.jpg{% endcapture %}
+	{% if page.url == "/" || page.url == "/index.html" %}
+		{% capture page_image %}{{ site.baseurl}}/library/images/portfolio1.jpg{% endcapture %}
+	{% else %}
+		{% capture page_image %}{{ site.baseurl}}/library/images/headers/default/feature_image.jpg{% endcapture %}
+	{% endif %}
+{% endif %}
+{% if page.url == "/" || page.url == "/index.html" %}
+	{% capture page_url %}{{ site.url}}{% endcapture %}
+{% else %}
+	{% capture page_url %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
 {% endif %}
 <meta name="locale" content="en_US"/>
 <meta name="title" content="{{ page_title }}"/>
@@ -24,7 +31,7 @@
 <meta property="og:site_name" content="{{ site.title }}"/>
 <meta property="og:description" content="{{ page_excerpt }}"/>
 <meta property="og:image" content="{{ page_image }}"/>
-<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
+<meta property="og:url" content="{{ page_url }}"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:description" content="{{ page_excerpt }}"/>
 <meta name="twitter:title" content="{{ page_title }}"/>
