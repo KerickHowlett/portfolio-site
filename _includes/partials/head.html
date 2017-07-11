@@ -1,16 +1,18 @@
 <head>
 	<meta charset='utf-8'>
 	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1"/>
 	{% if page.title %}
 		{% capture page_title %}{{page.title}} | Kerick Howlett{% endcapture %}
 	{% else %}
 		{% capture page_title %}{{site.title}}{% endcapture %}
 	{% endif %}
 	<title>{{page_title}}</title>
-	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	{% include partials/meta_head.html %}
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
 	<link rel='stylesheet' href={{ '/library/dist/portfolio.app.min.css' | prepend: site.baseurl }}>
 	<link rel='stylesheet' href={{ '/library/highlight/styles/atom-one-dark.css' | prepend: site.baseurl }}>
 	{% if page.feature_image %}
