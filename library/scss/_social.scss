@@ -1,0 +1,12 @@
+/**
+ * This SCSS file is to import the proper social share button styles.
+ *
+ * @author Kerick Howlett
+ **/
+
+@media screen and ( min-width: 1025px ) {
+	@import 'social/desktop';
+}
+@media screen and ( max-width: 1024px ) {
+	@import 'social/mobile';
+}
