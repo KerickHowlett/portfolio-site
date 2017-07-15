@@ -9,12 +9,12 @@
 	{% capture page_excerpt %}{{ site.description }}{% endcapture %}
 {% endif %}
 {% if page.feature_image %}
-	{% capture page_image %}{{ site.baseurl}}/library/images/headers/{{ page.feature_image }}/feature_image.jpg{% endcapture %}
+	{% capture page_image %}{{ site.url}}/library/images/headers/{{ page.feature_image }}/feature_image.jpg{% endcapture %}
 {% else %}
 	{% if page.url == "/" || page.url == "/index.html" %}
-		{% capture page_image %}{{ site.baseurl}}/library/images/portfolio1.jpg{% endcapture %}
+		{% capture page_image %}{{ site.url}}/library/images/portfolio1.jpg{% endcapture %}
 	{% else %}
-		{% capture page_image %}{{ site.baseurl}}/library/images/headers/default/feature_image.jpg{% endcapture %}
+		{% capture page_image %}{{ site.url}}/library/images/headers/default/feature_image.jpg{% endcapture %}
 	{% endif %}
 {% endif %}
 {% if page.url == "/" || page.url == "/index.html" %}
