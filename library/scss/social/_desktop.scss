@@ -1,0 +1,97 @@
+/**
+ * This SCSS file is for styling the social share buttons.
+ * Desktop & Tablet.
+ *
+ * @author Kerick Howlett
+ **/
+
+.social {
+	display: inline-block;
+	position: absolute;
+		right: 0;
+}
+
+.fa {
+	color: $white;
+	@include transition( 0.2s all ease-in-out );
+}
+
+.social-icon {
+	background: $gray;
+	border: solid 1px $gray;
+	border-radius: 50%;
+	cursor: pointer;
+	display: inline-block;
+	height: 1.75em;
+	font-size: 2em;
+	margin-left: .5em;
+	padding: .15em;
+	position: relative;
+	text-align: center;
+	@include transition( 0.2s all ease-in-out );
+	vertical-align: middle;
+	width: 1.75em;
+	&:hover {
+		background: $white;
+		border: solid 1px $blue;
+		.fa {
+			color: $blue;
+		}
+	}
+}
+
+.social-icon:nth-child( 1 ) {
+	padding-top: .18em;
+}
+
+.social-icon:nth-child( 2 ) {
+	padding-left: .25em;
+	padding-top: .2em;
+}
+
+.social-icon:nth-child( 3 ) {
+	padding-top: .15em;
+	&:hover {
+		background: $blue;
+		border: solid 1px $blue;
+		.fa {
+			color: $white;
+		}
+	}
+}
+
+.social-icon:nth-child( 4 ) {
+	cursor: pointer;
+	padding-top: .35em;
+	padding-left: .15em;
+}
+
+.social-icon:nth-child( 1 ),
+.social-icon:nth-child( 2 ),
+.social-icon:nth-child( 3 ) {
+	opacity: 0;
+	@include transform( translateX( 20% ) );
+	@include transition( 'transform 400ms ease-out, opacity 400ms ease-out' );
+}
+
+.social-icon:nth-child( 1 ) .fa,
+.social-icon:nth-child( 2 ) .fa,
+.social-icon:nth-child( 3 ) .fa {
+	opacity: 0;
+	@include transform( translateX( 40% ) );
+	@include transition( 'transform 200ms ease-out, opacity 400ms ease-out' );
+}
+
+.social:hover .social-icon:nth-child( 1 ),
+.social:hover .social-icon:nth-child( 2 ),
+.social:hover .social-icon:nth-child( 3 ) {
+	opacity: 1;
+	@include transform( translateX( 0% ) );
+}
+
+.social:hover .social-icon:nth-child( 1 ) .fa,
+.social:hover .social-icon:nth-child( 2 ) .fa,
+.social:hover .social-icon:nth-child( 3 ) .fa {
+	opacity: 1;
+	@include transform( translateX( 0% ) );
+}

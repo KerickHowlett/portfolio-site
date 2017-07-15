@@ -35,8 +35,11 @@
 }
 
 .post-meta {
+	display: inline-block;
 	font: 100% $roboto;
-	margin-bottom: 1em;
+	margin-bottom: 5em;
+	position: relative;
+	width: 100%;
 	.post-author {
 		display: none;
 	}
@@ -78,7 +81,7 @@
 		color: $light-gray;
 	}
 	.inline-code {
-		display: inline-block; 
+		display: inline-block;
 		line-height: 1em;
 		margin: 0 5px;
 		padding: 0.5em;
@@ -132,6 +135,9 @@ pre.highlight code {
 .post-time {
 	font: 100% $roboto_thin;
 	font-weight: bold;
+	position: absolute;
+		top: 50%;
+	transform: translateY( 225% );
 }
 
 .raw {
