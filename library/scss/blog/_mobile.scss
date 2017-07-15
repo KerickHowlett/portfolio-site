@@ -38,6 +38,10 @@
 	margin-bottom: 5em;
 	position: relative;
 	width: 100%;
+	@media screen and ( max-width: 479px ) {
+		margin-bottom: 0;
+		text-align: center;
+	}
 	.post-author {
 		display: none;
 	}
@@ -137,6 +141,10 @@ pre.highlight code {
 	position: absolute;
 		top: 50%;
 	transform: translateY( 225% );
+	@media screen and ( max-width: 479px ) {
+		position: inherit;
+		transform: none;
+	}
 }
 
 .raw {

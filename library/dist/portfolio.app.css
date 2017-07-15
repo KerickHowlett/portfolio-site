@@ -301,7 +301,13 @@
     font: 100% "roboto";
     margin-bottom: 5em;
     position: relative;
-    width: 100%; }
+    width: 100%; } }
+  @media screen and (max-width: 1299px) and (max-width: 479px) {
+    .post-meta {
+      margin-bottom: 0;
+      text-align: center; } }
+
+@media screen and (max-width: 1299px) {
     .post-meta .post-author {
       display: none; }
   .post-content a {
@@ -377,7 +383,13 @@
     font-weight: bold;
     position: absolute;
     top: 50%;
-    transform: translateY(225%); }
+    transform: translateY(225%); } }
+  @media screen and (max-width: 1299px) and (max-width: 479px) {
+    .post-time {
+      position: inherit;
+      transform: none; } }
+
+@media screen and (max-width: 1299px) {
   .raw {
     font-size: 0.85em; }
   .no-break {
@@ -2695,7 +2707,17 @@ a,
   .social {
     display: inline-block;
     position: absolute;
-    right: 0; }
+    right: 0; } }
+  @media screen and (max-width: 1024px) and (max-width: 479px) {
+    .social {
+      margin: 0 auto;
+      overflow: hidden;
+      padding: 1em;
+      position: inherit; }
+      .social ul {
+        padding-left: 0; } }
+
+@media screen and (max-width: 1024px) {
   .fa {
     color: #FFFFFF; }
   .social-icon {
@@ -2711,19 +2733,18 @@ a,
     position: relative;
     text-align: center;
     vertical-align: middle;
-    width: 1.75em; }
+    width: 1.75em; } }
+  @media screen and (max-width: 1024px) and (max-width: 479px) {
+    .social-icon {
+      margin-left: .25em;
+      margin-right: .25em; } }
+
+@media screen and (max-width: 1024px) {
     .social-icon:active {
       background: #FFFFFF;
       border: solid 1px #70A3F4; }
       .social-icon:active .fa {
-        color: #70A3F4; } }
-
-@media screen and (max-width: 1024px) and (max-width: 479px) {
-  display: block;
-  position: inherit;
-  margin: auto; }
-
-@media screen and (max-width: 1024px) {
+        color: #70A3F4; }
   .social-icon:nth-child(1) {
     padding-top: .18em; }
   .social-icon:nth-child(2) {
