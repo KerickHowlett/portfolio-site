@@ -15,9 +15,9 @@
 # in the templates via {{ site.myvariable }}.
 title: Kerick Howlett | Web Developer
 email: kahowlett1989@gmail.com
-description: Hey, I'm Kerick Howlett and Louisville's tallest Back-end Developer with a
-    knack for creative solutions in programming. I specialize in PHP, JavaScript,
-    AngularJS, jQuery, WordPress, and Mobile App development.
+description: Hey, I'm Kerick Howlett and Louisville's tallest Application Developer, Full-Stack Developer, and Software Engineer with a
+    knack for creative solutions in programming. I specialize in PHP, JavaScript, TypeScript
+    Angular, jQuery, and Hybrid WebView Mobile App development.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://thetallestdeveloper.com/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  bigk5000
