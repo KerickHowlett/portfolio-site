@@ -20,7 +20,7 @@ description: Hey, I'm Kerick Howlett and Louisville's tallest Application Develo
     Angular, jQuery, and Hybrid WebView Mobile App development.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://thetallestdeveloper.com/" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  bigk5000
+github_username:  kerickhowlett
 linkedin_username: kerickhowlett
 twitter_username: TheTallestDev
 
